@@ -48,6 +48,7 @@
     <Compile Include="ISanPham1Service.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SanPham1Service.cs" />
+    <Compile Include="SqlDatabase.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
