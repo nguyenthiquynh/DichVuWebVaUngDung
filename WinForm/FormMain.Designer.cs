@@ -119,7 +119,7 @@
             this.btnGioiThieu.Image = ((System.Drawing.Image)(resources.GetObject("btnGioiThieu.Image")));
             this.btnGioiThieu.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnGioiThieu.Name = "btnGioiThieu";
-            this.btnGioiThieu.Size = new System.Drawing.Size(134, 35);
+            this.btnGioiThieu.Size = new System.Drawing.Size(134, 38);
             this.btnGioiThieu.Text = "Giới thiệu chương trình";
             this.btnGioiThieu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
@@ -146,7 +146,7 @@
             // 
             this.toolStripStatusLabel2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(1, 17);
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(574, 17);
             this.toolStripStatusLabel2.Spring = true;
             this.toolStripStatusLabel2.Text = "toolStripStatusLabel2";
             // 
@@ -171,7 +171,7 @@
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.statusStrip1);
             this.Name = "FormMain";
-            this.Text = "FormMain";
+            this.Text = "Chương trình quản lý bán hàng";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);

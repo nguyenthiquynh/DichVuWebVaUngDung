@@ -50,8 +50,44 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GioiThieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GioiThieu.Designer.cs">
+      <DependentUpon>GioiThieu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuanLyDonDH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyDonDH.Designer.cs">
+      <DependentUpon>QuanLyDonDH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyPhieuNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyPhieuNhap.Designer.cs">
+      <DependentUpon>QuanLyPhieuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyTonKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyTonKho.Designer.cs">
+      <DependentUpon>QuanLyTonKho.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GioiThieu.resx">
+      <DependentUpon>GioiThieu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -61,6 +97,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="QuanLyDonDH.resx">
+      <DependentUpon>QuanLyDonDH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyPhieuNhap.resx">
+      <DependentUpon>QuanLyPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyTonKho.resx">
+      <DependentUpon>QuanLyTonKho.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
