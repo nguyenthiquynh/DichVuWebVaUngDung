@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuanLyNhaSX));
             this.dgvNhaSX = new System.Windows.Forms.DataGridView();
             this.NhaSX_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -72,8 +72,8 @@
             // NhaSX_ID
             // 
             this.NhaSX_ID.DataPropertyName = "NhaSX_ID";
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.NhaSX_ID.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.NhaSX_ID.DefaultCellStyle = dataGridViewCellStyle3;
             this.NhaSX_ID.HeaderText = "Nhà sản xuất ID";
             this.NhaSX_ID.Name = "NhaSX_ID";
             this.NhaSX_ID.ReadOnly = true;
@@ -81,8 +81,8 @@
             // TenNhaSX
             // 
             this.TenNhaSX.DataPropertyName = "TenNhaSX";
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.TenNhaSX.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.TenNhaSX.DefaultCellStyle = dataGridViewCellStyle4;
             this.TenNhaSX.HeaderText = "Tên nhà sản xuất";
             this.TenNhaSX.Name = "TenNhaSX";
             this.TenNhaSX.ReadOnly = true;
@@ -241,7 +241,7 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Name = "QuanLyNhaSX";
-            this.Text = "QuanLyNhaSX";
+            this.Text = "Quản lý nhà sản xuất";
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhaSX)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);

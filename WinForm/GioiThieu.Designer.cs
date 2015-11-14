@@ -168,7 +168,7 @@
             this.ClientSize = new System.Drawing.Size(884, 443);
             this.Controls.Add(this.tableLayoutPanel);
             this.Name = "GioiThieu";
-            this.Text = "GioiThieu";
+            this.Text = "Giới thiệu";
             this.tableLayoutPanel.ResumeLayout(false);
             this.tableLayoutPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).EndInit();
