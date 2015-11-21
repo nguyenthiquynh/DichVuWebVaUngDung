@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfUngDungWeb", "WcfUngDungWeb\WcfUngDungWeb.csproj", "{7DC3DA07-479A-4BF0-9F78-8311564DBBD9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinForm", "WinForm\WinForm.csproj", "{4D07DFE0-DEB3-43AC-ABFA-F439FE746459}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7DC3DA07-479A-4BF0-9F78-8311564DBBD9} = {7DC3DA07-479A-4BF0-9F78-8311564DBBD9}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

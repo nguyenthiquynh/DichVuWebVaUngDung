@@ -12,14 +12,5 @@ namespace WinForm
 {
     public partial class QuanLySanPham : Form
     {
-        public QuanLySanPham()
-        {
-            InitializeComponent();
-        }
-
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
-        }
     }
 }

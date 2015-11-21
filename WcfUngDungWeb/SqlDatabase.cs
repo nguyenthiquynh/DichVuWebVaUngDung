@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WcfSinhVien1
+namespace WcfUngDungWeb
 {
-    class SqlDtabase
+    class SqlDatabase
     {
         public static string ConnectionString = @"Server=.\SQLEXPRESS;Initial Catalog=XDPM_Website; Integrated Security=True;Database=XDPM_Website;";
         //Execute Query
