@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="adafe38e-6616-487d-b60d-f1193e876724" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="324394c3-24ef-40b1-8acc-d7b1dbbee91f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,8 +22,10 @@
     <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/WcfUngDungWeb/NhaSXService1/mex" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="35253270-3c07-4e61-bfbf-574862e02568" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WcfUngDungWeb/NhaSXService1/mex" />
-    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="9ce750c9-9bcf-4eb2-8e83-bfc9d18fd78a" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WcfUngDungWeb/NhaSXService1/mex" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="c67d1a44-734f-49c4-9474-8eb0c63ff646" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WcfUngDungWeb/NhaSXService1/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="b357d900-62ea-4a84-8773-57b3369fc666" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WcfUngDungWeb/NhaSXService1/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="90469245-5cab-40d3-b008-ffed8c5b6b55" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WcfUngDungWeb/NhaSXService1/mex" />
+    <MetadataFile FileName="WcfUngDungWeb.xsd" MetadataType="Schema" ID="007bc7dc-633d-4fb4-8d2b-2d1e36107cd2" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WcfUngDungWeb/NhaSXService1/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

@@ -235,6 +235,12 @@ namespace WinForm.SanPhamServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISanPhamService1/TimKiemSanPham", ReplyAction="http://tempuri.org/ISanPhamService1/TimKiemSanPhamResponse")]
         System.Threading.Tasks.Task<WinForm.SanPhamServiceReference.SanPham[]> TimKiemSanPhamAsync(string tensp, int nhasxid, decimal dongiatu, decimal dongiaden);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISanPhamService1/ChiTietSanPham", ReplyAction="http://tempuri.org/ISanPhamService1/ChiTietSanPhamResponse")]
+        System.Data.DataSet ChiTietSanPham(WinForm.SanPhamServiceReference.SanPham sp);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISanPhamService1/ChiTietSanPham", ReplyAction="http://tempuri.org/ISanPhamService1/ChiTietSanPhamResponse")]
+        System.Threading.Tasks.Task<System.Data.DataSet> ChiTietSanPhamAsync(WinForm.SanPhamServiceReference.SanPham sp);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -302,6 +308,14 @@ namespace WinForm.SanPhamServiceReference {
         
         public System.Threading.Tasks.Task<WinForm.SanPhamServiceReference.SanPham[]> TimKiemSanPhamAsync(string tensp, int nhasxid, decimal dongiatu, decimal dongiaden) {
             return base.Channel.TimKiemSanPhamAsync(tensp, nhasxid, dongiatu, dongiaden);
+        }
+        
+        public System.Data.DataSet ChiTietSanPham(WinForm.SanPhamServiceReference.SanPham sp) {
+            return base.Channel.ChiTietSanPham(sp);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> ChiTietSanPhamAsync(WinForm.SanPhamServiceReference.SanPham sp) {
+            return base.Channel.ChiTietSanPhamAsync(sp);
         }
     }
 }

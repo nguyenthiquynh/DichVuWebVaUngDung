@@ -110,11 +110,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Service References\NhaSXServiceReference\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
     <Compile Include="Service References\PhieuNhapServiceReference\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -163,6 +158,7 @@
     <EmbeddedResource Include="QuanLyTonKho.resx">
       <DependentUpon>QuanLyTonKho.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -184,10 +180,6 @@
     <None Include="Service References\DonDHServiceReference\service.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\NhaSXServiceReference\service.wsdl" />
-    <None Include="Service References\NhaSXServiceReference\service.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Service References\PhieuNhapServiceReference\service.wsdl" />
     <None Include="Service References\PhieuNhapServiceReference\service.xsd">
       <SubType>Designer</SubType>
@@ -197,6 +189,9 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\SanPhamServiceReference\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SanPhamServiceReference\service2.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\SanPhamServiceReference\WcfUngDungWeb.xsd">
@@ -209,6 +204,15 @@
     <None Include="Service References\TonKhoServiceReference\service.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\TonKhoServiceReference\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TonKhoServiceReference\service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TonKhoServiceReference\WinForm.TonKhoServiceReference.TonKho.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -220,22 +224,9 @@
     <WCFMetadataStorage Include="Service References\CtDonDHServiceReference\" />
     <WCFMetadataStorage Include="Service References\CtPhieuNhapServiceReference\" />
     <WCFMetadataStorage Include="Service References\DonDHServiceReference\" />
-    <WCFMetadataStorage Include="Service References\NhaSXServiceReference\" />
     <WCFMetadataStorage Include="Service References\PhieuNhapServiceReference\" />
     <WCFMetadataStorage Include="Service References\SanPhamServiceReference\" />
     <WCFMetadataStorage Include="Service References\TonKhoServiceReference\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\SanPhamServiceReference\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\SanPhamServiceReference\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\SanPhamServiceReference\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\PhieuNhapServiceReference\configuration91.svcinfo" />
@@ -245,30 +236,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\PhieuNhapServiceReference\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\TonKhoServiceReference\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\TonKhoServiceReference\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\TonKhoServiceReference\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\NhaSXServiceReference\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\NhaSXServiceReference\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\NhaSXServiceReference\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -308,6 +275,50 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SanPhamServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SanPhamServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SanPhamServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TonKhoServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TonKhoServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TonKhoServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Hinh1\acer_01.jpg" />
+    <Content Include="Hinh1\acer_02.jpg" />
+    <Content Include="Hinh1\acer_03.jpg" />
+    <Content Include="Hinh1\acer_04.jpg" />
+    <Content Include="Hinh1\acer_05.jpg" />
+    <Content Include="Hinh1\dell_01.jpg" />
+    <Content Include="Hinh1\dell_02.jpg" />
+    <Content Include="Hinh1\dell_03.jpg" />
+    <Content Include="Hinh1\dell_04.jpg" />
+    <Content Include="Hinh1\hp_01.jpg" />
+    <Content Include="Hinh1\hp_02.jpg" />
+    <Content Include="Hinh1\hp_03.jpg" />
+    <Content Include="Hinh1\hp_04.jpg" />
+    <Content Include="Hinh1\ss_01.jpg" />
+    <Content Include="Hinh1\ss_02.jpg" />
+    <Content Include="Hinh1\ss_03.jpg" />
+    <Content Include="Hinh1\ss_04.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

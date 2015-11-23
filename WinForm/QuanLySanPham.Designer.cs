@@ -73,6 +73,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.txttimkiem = new System.Windows.Forms.TextBox();
             this.SearchBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -121,6 +122,7 @@
             // 
             // SearchBox
             // 
+            this.SearchBox.Controls.Add(this.txttimkiem);
             this.SearchBox.Controls.Add(this.cbTimNhaSX);
             this.SearchBox.Controls.Add(this.cbTimGia);
             this.SearchBox.Controls.Add(this.btnTimKiem);
@@ -543,6 +545,13 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // txttimkiem
+            // 
+            this.txttimkiem.Location = new System.Drawing.Point(307, 39);
+            this.txttimkiem.Name = "txttimkiem";
+            this.txttimkiem.Size = new System.Drawing.Size(139, 26);
+            this.txttimkiem.TabIndex = 68;
+            // 
             // QuanLySanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -612,5 +621,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.TextBox txttimkiem;
     }
 }

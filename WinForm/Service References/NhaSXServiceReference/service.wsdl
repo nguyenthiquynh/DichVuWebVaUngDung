@@ -3,24 +3,83 @@
   <wsdl:types>
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/WcfUngDungWeb" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="INhaSXService1_DoWork_InputMessage">
-    <wsdl:part name="parameters" element="tns:DoWork" />
+  <wsdl:message name="INhaSXService1_HienThiNhaSX_InputMessage">
+    <wsdl:part name="parameters" element="tns:HienThiNhaSX" />
   </wsdl:message>
-  <wsdl:message name="INhaSXService1_DoWork_OutputMessage">
-    <wsdl:part name="parameters" element="tns:DoWorkResponse" />
+  <wsdl:message name="INhaSXService1_HienThiNhaSX_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HienThiNhaSXResponse" />
+  </wsdl:message>
+  <wsdl:message name="INhaSXService1_ThemNSX_InputMessage">
+    <wsdl:part name="parameters" element="tns:ThemNSX" />
+  </wsdl:message>
+  <wsdl:message name="INhaSXService1_ThemNSX_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ThemNSXResponse" />
+  </wsdl:message>
+  <wsdl:message name="INhaSXService1_SuaNSX_InputMessage">
+    <wsdl:part name="parameters" element="tns:SuaNSX" />
+  </wsdl:message>
+  <wsdl:message name="INhaSXService1_SuaNSX_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SuaNSXResponse" />
+  </wsdl:message>
+  <wsdl:message name="INhaSXService1_XoaNSX_InputMessage">
+    <wsdl:part name="parameters" element="tns:XoaNSX" />
+  </wsdl:message>
+  <wsdl:message name="INhaSXService1_XoaNSX_OutputMessage">
+    <wsdl:part name="parameters" element="tns:XoaNSXResponse" />
   </wsdl:message>
   <wsdl:portType name="INhaSXService1">
-    <wsdl:operation name="DoWork">
-      <wsdl:input wsaw:Action="http://tempuri.org/INhaSXService1/DoWork" message="tns:INhaSXService1_DoWork_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/INhaSXService1/DoWorkResponse" message="tns:INhaSXService1_DoWork_OutputMessage" />
+    <wsdl:operation name="HienThiNhaSX">
+      <wsdl:input wsaw:Action="http://tempuri.org/INhaSXService1/HienThiNhaSX" message="tns:INhaSXService1_HienThiNhaSX_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INhaSXService1/HienThiNhaSXResponse" message="tns:INhaSXService1_HienThiNhaSX_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ThemNSX">
+      <wsdl:input wsaw:Action="http://tempuri.org/INhaSXService1/ThemNSX" message="tns:INhaSXService1_ThemNSX_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INhaSXService1/ThemNSXResponse" message="tns:INhaSXService1_ThemNSX_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SuaNSX">
+      <wsdl:input wsaw:Action="http://tempuri.org/INhaSXService1/SuaNSX" message="tns:INhaSXService1_SuaNSX_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INhaSXService1/SuaNSXResponse" message="tns:INhaSXService1_SuaNSX_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="XoaNSX">
+      <wsdl:input wsaw:Action="http://tempuri.org/INhaSXService1/XoaNSX" message="tns:INhaSXService1_XoaNSX_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INhaSXService1/XoaNSXResponse" message="tns:INhaSXService1_XoaNSX_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_INhaSXService1" type="tns:INhaSXService1">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="DoWork">
-      <soap:operation soapAction="http://tempuri.org/INhaSXService1/DoWork" style="document" />
+    <wsdl:operation name="HienThiNhaSX">
+      <soap:operation soapAction="http://tempuri.org/INhaSXService1/HienThiNhaSX" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ThemNSX">
+      <soap:operation soapAction="http://tempuri.org/INhaSXService1/ThemNSX" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuaNSX">
+      <soap:operation soapAction="http://tempuri.org/INhaSXService1/SuaNSX" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="XoaNSX">
+      <soap:operation soapAction="http://tempuri.org/INhaSXService1/XoaNSX" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

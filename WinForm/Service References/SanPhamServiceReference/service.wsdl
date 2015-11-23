@@ -5,6 +5,7 @@
       <xsd:import namespace="http://tempuri.org/" />
       <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import namespace="http://schemas.datacontract.org/2004/07/WcfUngDungWeb" />
+      <xsd:import />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="ISanPhamService1_HienThiSanPhamFull_InputMessage">
@@ -37,6 +38,12 @@
   <wsdl:message name="ISanPhamService1_TimKiemSanPham_OutputMessage">
     <wsdl:part name="parameters" element="tns:TimKiemSanPhamResponse" />
   </wsdl:message>
+  <wsdl:message name="ISanPhamService1_ChiTietSanPham_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChiTietSanPham" />
+  </wsdl:message>
+  <wsdl:message name="ISanPhamService1_ChiTietSanPham_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChiTietSanPhamResponse" />
+  </wsdl:message>
   <wsdl:portType name="ISanPhamService1">
     <wsdl:operation name="HienThiSanPhamFull">
       <wsdl:input wsaw:Action="http://tempuri.org/ISanPhamService1/HienThiSanPhamFull" message="tns:ISanPhamService1_HienThiSanPhamFull_InputMessage" />
@@ -57,6 +64,10 @@
     <wsdl:operation name="TimKiemSanPham">
       <wsdl:input wsaw:Action="http://tempuri.org/ISanPhamService1/TimKiemSanPham" message="tns:ISanPhamService1_TimKiemSanPham_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ISanPhamService1/TimKiemSanPhamResponse" message="tns:ISanPhamService1_TimKiemSanPham_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChiTietSanPham">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISanPhamService1/ChiTietSanPham" message="tns:ISanPhamService1_ChiTietSanPham_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISanPhamService1/ChiTietSanPhamResponse" message="tns:ISanPhamService1_ChiTietSanPham_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ISanPhamService1" type="tns:ISanPhamService1">
@@ -99,6 +110,15 @@
     </wsdl:operation>
     <wsdl:operation name="TimKiemSanPham">
       <soap:operation soapAction="http://tempuri.org/ISanPhamService1/TimKiemSanPham" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChiTietSanPham">
+      <soap:operation soapAction="http://tempuri.org/ISanPhamService1/ChiTietSanPham" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

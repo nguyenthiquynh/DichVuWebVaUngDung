@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a846017c-cbd3-43bb-9b31-6ddd5937da86" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="bfb773b8-946c-497d-b0ef-1f6ecbb59df5" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,8 +22,10 @@
     <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/WcfUngDungWeb/TonKhoService1/mex" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="d62d1df3-e141-41b8-b5b0-29197b2e40e6" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WcfUngDungWeb/TonKhoService1/mex" />
-    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="48b551b7-0de6-461a-aa23-7efa7a77592a" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WcfUngDungWeb/TonKhoService1/mex" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="935e12a3-fede-46ef-a1a1-5edb5a86df8f" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WcfUngDungWeb/TonKhoService1/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="3ecfbaee-773d-4e01-9a8e-97428b8937ee" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WcfUngDungWeb/TonKhoService1/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="a44ed6f4-8133-4422-ad7c-5f9594880e26" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WcfUngDungWeb/TonKhoService1/mex" />
+    <MetadataFile FileName="service2.xsd" MetadataType="Schema" ID="808786c3-e80a-43e3-8e80-d79333286153" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WcfUngDungWeb/TonKhoService1/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

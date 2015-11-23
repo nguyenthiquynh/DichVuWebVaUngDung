@@ -1,4 +1,3 @@
-D:\Năm 5\Dich vu web & ung dung\WcfUngDungWeb\DichVuWebVaUngDung\WinForm\obj\Debug\WinForm.csprojResolveAssemblyReference.cache
 D:\Năm 5\Dich vu web & ung dung\WcfUngDungWeb\DichVuWebVaUngDung\WinForm\obj\Debug\WinForm.BaoCao.resources
 D:\Năm 5\Dich vu web & ung dung\WcfUngDungWeb\DichVuWebVaUngDung\WinForm\obj\Debug\WinForm.FormMain.resources
 D:\Năm 5\Dich vu web & ung dung\WcfUngDungWeb\DichVuWebVaUngDung\WinForm\obj\Debug\WinForm.GioiThieu.resources
@@ -9,3 +8,5 @@ D:\Năm 5\Dich vu web & ung dung\WcfUngDungWeb\DichVuWebVaUngDung\WinForm\obj\De
 D:\Năm 5\Dich vu web & ung dung\WcfUngDungWeb\DichVuWebVaUngDung\WinForm\obj\Debug\WinForm.QuanLySanPham.resources
 D:\Năm 5\Dich vu web & ung dung\WcfUngDungWeb\DichVuWebVaUngDung\WinForm\obj\Debug\WinForm.QuanLyTonKho.resources
 D:\Năm 5\Dich vu web & ung dung\WcfUngDungWeb\DichVuWebVaUngDung\WinForm\obj\Debug\WinForm.csproj.GenerateResource.Cache
+D:\Năm 5\Dich vu web & ung dung\WcfUngDungWeb\DichVuWebVaUngDung\WinForm\bin\Debug\WinForm.exe.config
+D:\Năm 5\Dich vu web & ung dung\WcfUngDungWeb\DichVuWebVaUngDung\WinForm\obj\Debug\WinForm.csprojResolveAssemblyReference.cache

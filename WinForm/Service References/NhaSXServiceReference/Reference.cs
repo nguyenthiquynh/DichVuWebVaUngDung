@@ -9,17 +9,98 @@
 //------------------------------------------------------------------------------
 
 namespace WinForm.NhaSXServiceReference {
+    using System.Runtime.Serialization;
+    using System;
     
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="NhaSX", Namespace="http://schemas.datacontract.org/2004/07/WcfUngDungWeb")]
+    [System.SerializableAttribute()]
+    public partial class NhaSX : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int NhaSX_IDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TenNhaSXField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int NhaSX_ID {
+            get {
+                return this.NhaSX_IDField;
+            }
+            set {
+                if ((this.NhaSX_IDField.Equals(value) != true)) {
+                    this.NhaSX_IDField = value;
+                    this.RaisePropertyChanged("NhaSX_ID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string TenNhaSX {
+            get {
+                return this.TenNhaSXField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TenNhaSXField, value) != true)) {
+                    this.TenNhaSXField = value;
+                    this.RaisePropertyChanged("TenNhaSX");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="NhaSXServiceReference.INhaSXService1")]
     public interface INhaSXService1 {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INhaSXService1/DoWork", ReplyAction="http://tempuri.org/INhaSXService1/DoWorkResponse")]
-        void DoWork();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INhaSXService1/HienThiNhaSX", ReplyAction="http://tempuri.org/INhaSXService1/HienThiNhaSXResponse")]
+        WinForm.NhaSXServiceReference.NhaSX[] HienThiNhaSX();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INhaSXService1/DoWork", ReplyAction="http://tempuri.org/INhaSXService1/DoWorkResponse")]
-        System.Threading.Tasks.Task DoWorkAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INhaSXService1/HienThiNhaSX", ReplyAction="http://tempuri.org/INhaSXService1/HienThiNhaSXResponse")]
+        System.Threading.Tasks.Task<WinForm.NhaSXServiceReference.NhaSX[]> HienThiNhaSXAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INhaSXService1/ThemNSX", ReplyAction="http://tempuri.org/INhaSXService1/ThemNSXResponse")]
+        void ThemNSX(WinForm.NhaSXServiceReference.NhaSX nsx);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INhaSXService1/ThemNSX", ReplyAction="http://tempuri.org/INhaSXService1/ThemNSXResponse")]
+        System.Threading.Tasks.Task ThemNSXAsync(WinForm.NhaSXServiceReference.NhaSX nsx);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INhaSXService1/SuaNSX", ReplyAction="http://tempuri.org/INhaSXService1/SuaNSXResponse")]
+        void SuaNSX(WinForm.NhaSXServiceReference.NhaSX nsx);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INhaSXService1/SuaNSX", ReplyAction="http://tempuri.org/INhaSXService1/SuaNSXResponse")]
+        System.Threading.Tasks.Task SuaNSXAsync(WinForm.NhaSXServiceReference.NhaSX nsx);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INhaSXService1/XoaNSX", ReplyAction="http://tempuri.org/INhaSXService1/XoaNSXResponse")]
+        void XoaNSX(WinForm.NhaSXServiceReference.NhaSX nsx);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INhaSXService1/XoaNSX", ReplyAction="http://tempuri.org/INhaSXService1/XoaNSXResponse")]
+        System.Threading.Tasks.Task XoaNSXAsync(WinForm.NhaSXServiceReference.NhaSX nsx);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -49,12 +130,36 @@ namespace WinForm.NhaSXServiceReference {
                 base(binding, remoteAddress) {
         }
         
-        public void DoWork() {
-            base.Channel.DoWork();
+        public WinForm.NhaSXServiceReference.NhaSX[] HienThiNhaSX() {
+            return base.Channel.HienThiNhaSX();
         }
         
-        public System.Threading.Tasks.Task DoWorkAsync() {
-            return base.Channel.DoWorkAsync();
+        public System.Threading.Tasks.Task<WinForm.NhaSXServiceReference.NhaSX[]> HienThiNhaSXAsync() {
+            return base.Channel.HienThiNhaSXAsync();
+        }
+        
+        public void ThemNSX(WinForm.NhaSXServiceReference.NhaSX nsx) {
+            base.Channel.ThemNSX(nsx);
+        }
+        
+        public System.Threading.Tasks.Task ThemNSXAsync(WinForm.NhaSXServiceReference.NhaSX nsx) {
+            return base.Channel.ThemNSXAsync(nsx);
+        }
+        
+        public void SuaNSX(WinForm.NhaSXServiceReference.NhaSX nsx) {
+            base.Channel.SuaNSX(nsx);
+        }
+        
+        public System.Threading.Tasks.Task SuaNSXAsync(WinForm.NhaSXServiceReference.NhaSX nsx) {
+            return base.Channel.SuaNSXAsync(nsx);
+        }
+        
+        public void XoaNSX(WinForm.NhaSXServiceReference.NhaSX nsx) {
+            base.Channel.XoaNSX(nsx);
+        }
+        
+        public System.Threading.Tasks.Task XoaNSXAsync(WinForm.NhaSXServiceReference.NhaSX nsx) {
+            return base.Channel.XoaNSXAsync(nsx);
         }
     }
 }
