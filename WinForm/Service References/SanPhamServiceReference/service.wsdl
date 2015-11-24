@@ -44,6 +44,24 @@
   <wsdl:message name="ISanPhamService1_ChiTietSanPham_OutputMessage">
     <wsdl:part name="parameters" element="tns:ChiTietSanPhamResponse" />
   </wsdl:message>
+  <wsdl:message name="ISanPhamService1_ThemSanPham_InputMessage">
+    <wsdl:part name="parameters" element="tns:ThemSanPham" />
+  </wsdl:message>
+  <wsdl:message name="ISanPhamService1_ThemSanPham_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ThemSanPhamResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISanPhamService1_SuaSanPham_InputMessage">
+    <wsdl:part name="parameters" element="tns:SuaSanPham" />
+  </wsdl:message>
+  <wsdl:message name="ISanPhamService1_SuaSanPham_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SuaSanPhamResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISanPhamService1_XoaSanPham_InputMessage">
+    <wsdl:part name="parameters" element="tns:XoaSanPham" />
+  </wsdl:message>
+  <wsdl:message name="ISanPhamService1_XoaSanPham_OutputMessage">
+    <wsdl:part name="parameters" element="tns:XoaSanPhamResponse" />
+  </wsdl:message>
   <wsdl:portType name="ISanPhamService1">
     <wsdl:operation name="HienThiSanPhamFull">
       <wsdl:input wsaw:Action="http://tempuri.org/ISanPhamService1/HienThiSanPhamFull" message="tns:ISanPhamService1_HienThiSanPhamFull_InputMessage" />
@@ -68,6 +86,18 @@
     <wsdl:operation name="ChiTietSanPham">
       <wsdl:input wsaw:Action="http://tempuri.org/ISanPhamService1/ChiTietSanPham" message="tns:ISanPhamService1_ChiTietSanPham_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ISanPhamService1/ChiTietSanPhamResponse" message="tns:ISanPhamService1_ChiTietSanPham_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ThemSanPham">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISanPhamService1/ThemSanPham" message="tns:ISanPhamService1_ThemSanPham_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISanPhamService1/ThemSanPhamResponse" message="tns:ISanPhamService1_ThemSanPham_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SuaSanPham">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISanPhamService1/SuaSanPham" message="tns:ISanPhamService1_SuaSanPham_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISanPhamService1/SuaSanPhamResponse" message="tns:ISanPhamService1_SuaSanPham_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="XoaSanPham">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISanPhamService1/XoaSanPham" message="tns:ISanPhamService1_XoaSanPham_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISanPhamService1/XoaSanPhamResponse" message="tns:ISanPhamService1_XoaSanPham_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ISanPhamService1" type="tns:ISanPhamService1">
@@ -119,6 +149,33 @@
     </wsdl:operation>
     <wsdl:operation name="ChiTietSanPham">
       <soap:operation soapAction="http://tempuri.org/ISanPhamService1/ChiTietSanPham" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ThemSanPham">
+      <soap:operation soapAction="http://tempuri.org/ISanPhamService1/ThemSanPham" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuaSanPham">
+      <soap:operation soapAction="http://tempuri.org/ISanPhamService1/SuaSanPham" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="XoaSanPham">
+      <soap:operation soapAction="http://tempuri.org/ISanPhamService1/XoaSanPham" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

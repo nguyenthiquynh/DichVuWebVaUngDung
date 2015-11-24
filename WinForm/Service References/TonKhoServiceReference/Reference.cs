@@ -164,11 +164,11 @@ namespace WinForm.TonKhoServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITonKhoService1/XuatKho", ReplyAction="http://tempuri.org/ITonKhoService1/XuatKhoResponse")]
         System.Threading.Tasks.Task XuatKhoAsync(WinForm.TonKhoServiceReference.TonKho tk);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITonKhoService1/Xoa", ReplyAction="http://tempuri.org/ITonKhoService1/XoaResponse")]
-        void Xoa(WinForm.TonKhoServiceReference.TonKho tk);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITonKhoService1/XoaTonKho", ReplyAction="http://tempuri.org/ITonKhoService1/XoaTonKhoResponse")]
+        void XoaTonKho(WinForm.TonKhoServiceReference.TonKho tk);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITonKhoService1/Xoa", ReplyAction="http://tempuri.org/ITonKhoService1/XoaResponse")]
-        System.Threading.Tasks.Task XoaAsync(WinForm.TonKhoServiceReference.TonKho tk);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITonKhoService1/XoaTonKho", ReplyAction="http://tempuri.org/ITonKhoService1/XoaTonKhoResponse")]
+        System.Threading.Tasks.Task XoaTonKhoAsync(WinForm.TonKhoServiceReference.TonKho tk);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -270,12 +270,12 @@ namespace WinForm.TonKhoServiceReference {
             return base.Channel.XuatKhoAsync(tk);
         }
         
-        public void Xoa(WinForm.TonKhoServiceReference.TonKho tk) {
-            base.Channel.Xoa(tk);
+        public void XoaTonKho(WinForm.TonKhoServiceReference.TonKho tk) {
+            base.Channel.XoaTonKho(tk);
         }
         
-        public System.Threading.Tasks.Task XoaAsync(WinForm.TonKhoServiceReference.TonKho tk) {
-            return base.Channel.XoaAsync(tk);
+        public System.Threading.Tasks.Task XoaTonKhoAsync(WinForm.TonKhoServiceReference.TonKho tk) {
+            return base.Channel.XoaTonKhoAsync(tk);
         }
     }
 }

@@ -1,6 +1,6 @@
 D:\Năm 5\Dich vu web & ung dung\WcfUngDungWeb\DichVuWebVaUngDung\WcfUngDungWeb\bin\Debug\WcfUngDungWeb.dll.config
 D:\Năm 5\Dich vu web & ung dung\WcfUngDungWeb\DichVuWebVaUngDung\WcfUngDungWeb\bin\Debug\WcfUngDungWeb.dll
 D:\Năm 5\Dich vu web & ung dung\WcfUngDungWeb\DichVuWebVaUngDung\WcfUngDungWeb\bin\Debug\WcfUngDungWeb.pdb
+D:\Năm 5\Dich vu web & ung dung\WcfUngDungWeb\DichVuWebVaUngDung\WcfUngDungWeb\obj\Debug\WcfUngDungWeb.csprojResolveAssemblyReference.cache
 D:\Năm 5\Dich vu web & ung dung\WcfUngDungWeb\DichVuWebVaUngDung\WcfUngDungWeb\obj\Debug\WcfUngDungWeb.dll
 D:\Năm 5\Dich vu web & ung dung\WcfUngDungWeb\DichVuWebVaUngDung\WcfUngDungWeb\obj\Debug\WcfUngDungWeb.pdb
-D:\Năm 5\Dich vu web & ung dung\WcfUngDungWeb\DichVuWebVaUngDung\WcfUngDungWeb\obj\Debug\WcfUngDungWeb.csprojResolveAssemblyReference.cache

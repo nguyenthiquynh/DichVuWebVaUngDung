@@ -30,7 +30,7 @@ namespace WcfUngDungWeb
         [OperationContract]
         void XuatKho(TonKho tk);
         [OperationContract]
-        void Xoa(TonKho tk);
+        void XoaTonKho(TonKho tk);
     }
     }
     [DataContract]

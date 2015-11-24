@@ -121,14 +121,14 @@
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="Xoa">
+  <xs:element name="XoaTonKho">
     <xs:complexType>
       <xs:sequence>
         <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="tk" nillable="true" type="q10:TonKho" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="XoaResponse">
+  <xs:element name="XoaTonKhoResponse">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>

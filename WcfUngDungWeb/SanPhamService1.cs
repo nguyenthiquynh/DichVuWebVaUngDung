@@ -198,7 +198,7 @@ namespace WcfUngDungWeb
             SqlDatabase.ExecuteNonQuery(sql, CommandType.Text,spid, tensp, nhasx, cpu, ram, hdd, baohanh, dongia, hinh, mota);
         }
         // Xóa sản phẩm
-        public void Xoa(SanPham sp)
+        public void XoaSanPham(SanPham sp)
         {
             string sql = "delete SanPham where SP_ID=@SP_ID";
             SqlParameter spid = new SqlParameter("@SP_ID", sp.SP_ID);

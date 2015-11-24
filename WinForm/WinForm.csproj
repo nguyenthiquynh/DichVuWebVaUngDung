@@ -110,6 +110,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\NhaSXServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\PhieuNhapServiceReference\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -180,6 +185,19 @@
     <None Include="Service References\DonDHServiceReference\service.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\NhaSXServiceReference\service.wsdl" />
+    <None Include="Service References\NhaSXServiceReference\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NhaSXServiceReference\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NhaSXServiceReference\WcfUngDungWeb.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NhaSXServiceReference\WinForm.NhaSXServiceReference.NhaSX.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\PhieuNhapServiceReference\service.wsdl" />
     <None Include="Service References\PhieuNhapServiceReference\service.xsd">
       <SubType>Designer</SubType>
@@ -224,6 +242,7 @@
     <WCFMetadataStorage Include="Service References\CtDonDHServiceReference\" />
     <WCFMetadataStorage Include="Service References\CtPhieuNhapServiceReference\" />
     <WCFMetadataStorage Include="Service References\DonDHServiceReference\" />
+    <WCFMetadataStorage Include="Service References\NhaSXServiceReference\" />
     <WCFMetadataStorage Include="Service References\PhieuNhapServiceReference\" />
     <WCFMetadataStorage Include="Service References\SanPhamServiceReference\" />
     <WCFMetadataStorage Include="Service References\TonKhoServiceReference\" />
@@ -276,30 +295,6 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\SanPhamServiceReference\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\SanPhamServiceReference\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\SanPhamServiceReference\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\TonKhoServiceReference\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\TonKhoServiceReference\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\TonKhoServiceReference\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-  </ItemGroup>
   <ItemGroup />
   <ItemGroup>
     <Content Include="Hinh1\acer_01.jpg" />
@@ -319,6 +314,24 @@
     <Content Include="Hinh1\ss_02.jpg" />
     <Content Include="Hinh1\ss_03.jpg" />
     <Content Include="Hinh1\ss_04.jpg" />
+    <None Include="Service References\TonKhoServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\TonKhoServiceReference\configuration.svcinfo" />
+    <None Include="Service References\TonKhoServiceReference\configuration91.svcinfo" />
+    <None Include="Service References\SanPhamServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\SanPhamServiceReference\configuration.svcinfo" />
+    <None Include="Service References\SanPhamServiceReference\configuration91.svcinfo" />
+    <None Include="Service References\NhaSXServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\NhaSXServiceReference\configuration.svcinfo" />
+    <None Include="Service References\NhaSXServiceReference\configuration91.svcinfo" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

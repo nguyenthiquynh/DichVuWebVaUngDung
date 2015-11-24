@@ -28,14 +28,14 @@ namespace WcfUngDungWeb
         List<SanPham> TimKiemSanPham(string tensp, int nhasxid, decimal dongiatu, decimal dongiaden);
         [OperationContract]
         DataSet ChiTietSanPham(SanPham sp);
-        //[OperationContract]
-        //void Them(SanPham sp);
-        //[OperationContract]
-        //void Sua(SanPham sp);
-        //[OperationContract]
+        [OperationContract]
+        void ThemSanPham(SanPham sp);
+        [OperationContract]
+        void SuaSanPham(SanPham sp);
+        [OperationContract]
         //void Sua_DonGia(SanPham sp);
         //[OperationContract]
-        //void Xoa(SanPham sp);
+        void XoaSanPham(SanPham sp);
     }
     [DataContract]
     public class SanPham

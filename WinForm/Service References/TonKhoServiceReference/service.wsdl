@@ -61,11 +61,11 @@
   <wsdl:message name="ITonKhoService1_XuatKho_OutputMessage">
     <wsdl:part name="parameters" element="tns:XuatKhoResponse" />
   </wsdl:message>
-  <wsdl:message name="ITonKhoService1_Xoa_InputMessage">
-    <wsdl:part name="parameters" element="tns:Xoa" />
+  <wsdl:message name="ITonKhoService1_XoaTonKho_InputMessage">
+    <wsdl:part name="parameters" element="tns:XoaTonKho" />
   </wsdl:message>
-  <wsdl:message name="ITonKhoService1_Xoa_OutputMessage">
-    <wsdl:part name="parameters" element="tns:XoaResponse" />
+  <wsdl:message name="ITonKhoService1_XoaTonKho_OutputMessage">
+    <wsdl:part name="parameters" element="tns:XoaTonKhoResponse" />
   </wsdl:message>
   <wsdl:portType name="ITonKhoService1">
     <wsdl:operation name="SoLuongTonKho_SPID">
@@ -104,9 +104,9 @@
       <wsdl:input wsaw:Action="http://tempuri.org/ITonKhoService1/XuatKho" message="tns:ITonKhoService1_XuatKho_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ITonKhoService1/XuatKhoResponse" message="tns:ITonKhoService1_XuatKho_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="Xoa">
-      <wsdl:input wsaw:Action="http://tempuri.org/ITonKhoService1/Xoa" message="tns:ITonKhoService1_Xoa_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/ITonKhoService1/XoaResponse" message="tns:ITonKhoService1_Xoa_OutputMessage" />
+    <wsdl:operation name="XoaTonKho">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITonKhoService1/XoaTonKho" message="tns:ITonKhoService1_XoaTonKho_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITonKhoService1/XoaTonKhoResponse" message="tns:ITonKhoService1_XoaTonKho_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ITonKhoService1" type="tns:ITonKhoService1">
@@ -192,8 +192,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="Xoa">
-      <soap:operation soapAction="http://tempuri.org/ITonKhoService1/Xoa" style="document" />
+    <wsdl:operation name="XoaTonKho">
+      <soap:operation soapAction="http://tempuri.org/ITonKhoService1/XoaTonKho" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

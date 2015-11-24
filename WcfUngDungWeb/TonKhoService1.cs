@@ -186,7 +186,7 @@ namespace WcfUngDungWeb
             SqlDatabase.ExecuteNonQuery(sql, CommandType.Text, spid, thoigian, soluongton);
         }
         // Xóa sản phẩm
-        public void Xoa(TonKho tk)
+        public void XoaTonKho(TonKho tk)
         {
             string sql = "Delete TonKho where SP_ID=@SP_ID";
             SqlParameter spid = new SqlParameter("@SP_ID", tk.SP_ID);

@@ -241,6 +241,24 @@ namespace WinForm.SanPhamServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISanPhamService1/ChiTietSanPham", ReplyAction="http://tempuri.org/ISanPhamService1/ChiTietSanPhamResponse")]
         System.Threading.Tasks.Task<System.Data.DataSet> ChiTietSanPhamAsync(WinForm.SanPhamServiceReference.SanPham sp);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISanPhamService1/ThemSanPham", ReplyAction="http://tempuri.org/ISanPhamService1/ThemSanPhamResponse")]
+        void ThemSanPham(WinForm.SanPhamServiceReference.SanPham sp);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISanPhamService1/ThemSanPham", ReplyAction="http://tempuri.org/ISanPhamService1/ThemSanPhamResponse")]
+        System.Threading.Tasks.Task ThemSanPhamAsync(WinForm.SanPhamServiceReference.SanPham sp);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISanPhamService1/SuaSanPham", ReplyAction="http://tempuri.org/ISanPhamService1/SuaSanPhamResponse")]
+        void SuaSanPham(WinForm.SanPhamServiceReference.SanPham sp);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISanPhamService1/SuaSanPham", ReplyAction="http://tempuri.org/ISanPhamService1/SuaSanPhamResponse")]
+        System.Threading.Tasks.Task SuaSanPhamAsync(WinForm.SanPhamServiceReference.SanPham sp);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISanPhamService1/XoaSanPham", ReplyAction="http://tempuri.org/ISanPhamService1/XoaSanPhamResponse")]
+        void XoaSanPham(WinForm.SanPhamServiceReference.SanPham sp);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISanPhamService1/XoaSanPham", ReplyAction="http://tempuri.org/ISanPhamService1/XoaSanPhamResponse")]
+        System.Threading.Tasks.Task XoaSanPhamAsync(WinForm.SanPhamServiceReference.SanPham sp);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -316,6 +334,30 @@ namespace WinForm.SanPhamServiceReference {
         
         public System.Threading.Tasks.Task<System.Data.DataSet> ChiTietSanPhamAsync(WinForm.SanPhamServiceReference.SanPham sp) {
             return base.Channel.ChiTietSanPhamAsync(sp);
+        }
+        
+        public void ThemSanPham(WinForm.SanPhamServiceReference.SanPham sp) {
+            base.Channel.ThemSanPham(sp);
+        }
+        
+        public System.Threading.Tasks.Task ThemSanPhamAsync(WinForm.SanPhamServiceReference.SanPham sp) {
+            return base.Channel.ThemSanPhamAsync(sp);
+        }
+        
+        public void SuaSanPham(WinForm.SanPhamServiceReference.SanPham sp) {
+            base.Channel.SuaSanPham(sp);
+        }
+        
+        public System.Threading.Tasks.Task SuaSanPhamAsync(WinForm.SanPhamServiceReference.SanPham sp) {
+            return base.Channel.SuaSanPhamAsync(sp);
+        }
+        
+        public void XoaSanPham(WinForm.SanPhamServiceReference.SanPham sp) {
+            base.Channel.XoaSanPham(sp);
+        }
+        
+        public System.Threading.Tasks.Task XoaSanPhamAsync(WinForm.SanPhamServiceReference.SanPham sp) {
+            return base.Channel.XoaSanPhamAsync(sp);
         }
     }
 }
