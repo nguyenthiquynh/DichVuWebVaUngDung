@@ -165,6 +165,27 @@ namespace WcfUngDungWeb
             DataSet ds = SqlDatabase.ExecuteQueryWithDataSet(sql, CommandType.Text, spid);
             return ds;
         }
+        //public DataSet ThongTinNhapSP(PhieuNhap pn)
+        //{
+        //    CtPhieuNhapService1 dal = new CtPhieuNhapService1();
+        //    string mapn = pn.MaPhieuNhap.ToString();
+        //    string sql = "";
+        //    bool kt = dal.KiemTraMaPhieuNhap(mapn);
+        //    if (kt == true)
+        //    {
+        //        sql = string.Format("select SP_ID,TenSP,NhaSX_ID from SanPham where NhaSX_ID=@NhaSX_ID"
+        //                + " and SP_ID not in"
+        //                    + " (select ct_pn.SP_ID from SanPham sp, PhieuNhap pn, CT_PhieuNhap ct_pn"
+        //                    + " where pn.MaPhieuNhap=ct_pn.MaPhieuNhap and ct_pn.SP_ID=sp.SP_ID"
+        //                    + " and ct_pn.MaPhieuNhap='{0}')", mapn);
+        //    }
+        //    else
+        //    {
+        //        sql = "select SP_ID,TenSP,NhaSX_ID from SanPham where NhaSX_ID=@NhaSX_ID";
+        //    }
+        //    SqlParameter nhasxid = new SqlParameter("@NhaSX_ID", pn.NhaSX_ID);
+        //    return SqlDatabase.ExecuteQueryWithDataSet(sql, CommandType.Text, nhasxid);
+        //}
         //Thêm sản phẩm
         public void ThemSanPham(SanPham sp)
         {

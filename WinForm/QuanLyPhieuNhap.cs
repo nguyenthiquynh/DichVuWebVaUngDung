@@ -5,13 +5,23 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+
+
+using WinForm.PhieuNhapServiceReference1;
+using WinForm.CtPhieuNhapServiceReference;
+using WinForm.NhaSXServiceReference;
+using WinForm.SanPhamServiceReference;
+using WinForm.TonKhoServiceReference;
 
 namespace WinForm
 {
     public partial class QuanLyPhieuNhap : Form
     {
+        // phieu nhap - ctphieunhap
+
+        //WinForm.PhieuNhapServiceReference1.PhieuNhap pn1 = new WinForm.PhieuNhapServiceReference1.PhieuNhap();
+        //WinForm.SanPhamServiceReference.PhieuNhap pn = new WinForm.SanPhamServiceReference.PhieuNhap();        
         public QuanLyPhieuNhap()
         {
             InitializeComponent();

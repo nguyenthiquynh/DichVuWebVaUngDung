@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.IO;
 
 using WinForm.SanPhamServiceReference;
+using WinForm.PhieuNhapServiceReference1;
 using WinForm.TonKhoServiceReference;
 using WinForm.NhaSXServiceReference;
 namespace WinForm
