@@ -7,11 +7,10 @@ using System.Windows.Forms;
 
 namespace WinForm
 {
-
-    static class Main
+    static class Program
     {
         [STAThread]
-        static void main(String[] args)
+        static void Main(String[] args)
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

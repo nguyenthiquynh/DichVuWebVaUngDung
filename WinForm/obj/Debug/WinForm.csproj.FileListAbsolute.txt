@@ -10,3 +10,19 @@ D:\Năm 5\Dich vu web & ung dung\WcfUngDungWeb\DichVuWebVaUngDung\WinForm\obj\De
 D:\Năm 5\Dich vu web & ung dung\WcfUngDungWeb\DichVuWebVaUngDung\WinForm\obj\Debug\WinForm.QuanLyTonKho.resources
 D:\Năm 5\Dich vu web & ung dung\WcfUngDungWeb\DichVuWebVaUngDung\WinForm\obj\Debug\WinForm.csproj.GenerateResource.Cache
 D:\Năm 5\Dich vu web & ung dung\WcfUngDungWeb\DichVuWebVaUngDung\WinForm\bin\Debug\WinForm.exe.config
+C:\Users\PHAT_PC\Documents\GitHub\Dịch Vụ Web và Ứng Dụng\DichVuWebVaUngDung\WinForm\bin\Debug\WinForm.exe.config
+C:\Users\PHAT_PC\Documents\GitHub\Dịch Vụ Web và Ứng Dụng\DichVuWebVaUngDung\WinForm\obj\Debug\WinForm.csprojResolveAssemblyReference.cache
+C:\Users\PHAT_PC\Documents\GitHub\Dịch Vụ Web và Ứng Dụng\DichVuWebVaUngDung\WinForm\obj\Debug\WinForm.BaoCao.resources
+C:\Users\PHAT_PC\Documents\GitHub\Dịch Vụ Web và Ứng Dụng\DichVuWebVaUngDung\WinForm\obj\Debug\WinForm.FormMain.resources
+C:\Users\PHAT_PC\Documents\GitHub\Dịch Vụ Web và Ứng Dụng\DichVuWebVaUngDung\WinForm\obj\Debug\WinForm.GioiThieu.resources
+C:\Users\PHAT_PC\Documents\GitHub\Dịch Vụ Web và Ứng Dụng\DichVuWebVaUngDung\WinForm\obj\Debug\WinForm.Properties.Resources.resources
+C:\Users\PHAT_PC\Documents\GitHub\Dịch Vụ Web và Ứng Dụng\DichVuWebVaUngDung\WinForm\obj\Debug\WinForm.QuanLyDonDH.resources
+C:\Users\PHAT_PC\Documents\GitHub\Dịch Vụ Web và Ứng Dụng\DichVuWebVaUngDung\WinForm\obj\Debug\WinForm.QuanLyNhaSX.resources
+C:\Users\PHAT_PC\Documents\GitHub\Dịch Vụ Web và Ứng Dụng\DichVuWebVaUngDung\WinForm\obj\Debug\WinForm.QuanLyPhieuNhap.resources
+C:\Users\PHAT_PC\Documents\GitHub\Dịch Vụ Web và Ứng Dụng\DichVuWebVaUngDung\WinForm\obj\Debug\WinForm.QuanLySanPham.resources
+C:\Users\PHAT_PC\Documents\GitHub\Dịch Vụ Web và Ứng Dụng\DichVuWebVaUngDung\WinForm\obj\Debug\WinForm.QuanLyTonKho.resources
+C:\Users\PHAT_PC\Documents\GitHub\Dịch Vụ Web và Ứng Dụng\DichVuWebVaUngDung\WinForm\obj\Debug\WinForm.csproj.GenerateResource.Cache
+C:\Users\PHAT_PC\Documents\GitHub\Dịch Vụ Web và Ứng Dụng\DichVuWebVaUngDung\WinForm\bin\Debug\WinForm.exe
+C:\Users\PHAT_PC\Documents\GitHub\Dịch Vụ Web và Ứng Dụng\DichVuWebVaUngDung\WinForm\bin\Debug\WinForm.pdb
+C:\Users\PHAT_PC\Documents\GitHub\Dịch Vụ Web và Ứng Dụng\DichVuWebVaUngDung\WinForm\obj\Debug\WinForm.exe
+C:\Users\PHAT_PC\Documents\GitHub\Dịch Vụ Web và Ứng Dụng\DichVuWebVaUngDung\WinForm\obj\Debug\WinForm.pdb
