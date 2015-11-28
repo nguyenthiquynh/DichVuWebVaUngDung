@@ -31,7 +31,7 @@ namespace WinForm
         {
             InitializeComponent();
             Ds_SanPham();
-            //Ds_NhaSX();
+            Ds_NhaSX();
         }
         //Hiển thị danh sách sản phẩm lên datagridview
         public void Ds_SanPham()
@@ -61,7 +61,7 @@ namespace WinForm
 
                 name = ds.Tables[0].Rows[0]["Hinh"].ToString();
 
-                string duongdan = string.Format("../../../Webform/Hinh/Laptop/{0}", name);
+                string duongdan = string.Format("../../../Winform/Hinh1/{0}", name);
                 picHinh.Load(duongdan);
             }
             catch (Exception)
@@ -88,7 +88,7 @@ namespace WinForm
             }
         }
         //Hiển thị danh sách nhà sản xuất
-        public void HienThiDanhSachNSX()
+        public void Ds_NhaSX()
         {
             List<NhaSX> ListNSX = NhaSXClient.HienThiNhaSX().ToList();
             cbNhaSX.ValueMember = "NhaSX_ID";
@@ -103,13 +103,13 @@ namespace WinForm
         public void LamMoi()
         {
             txtBaoHanh.Text = "";
-            txtCPU.Text = "";
-            txtDonGia.Text = "0";
+            txtCPU.Text = "";            
             txtHDD.Text = "";
             txtMoTa.Text = "";
             txtRAM.Text = "";
-            txtSoLuongTon.Text = "0";
             txtTenSP.Text = "";
+            txtDonGia.Text = "0";
+            txtSoLuongTon.Text = "0";
             cbNhaSX.SelectedIndex = 0;
         }
         //Làm mờ control
@@ -122,8 +122,8 @@ namespace WinForm
             txtRAM.Enabled = trangthai;
             txtHDD.Enabled = trangthai;
             txtMoTa.Enabled = trangthai;
-            txtDonGia.Enabled = trangthai;
-            txtSoLuongTon.Enabled = trangthai;
+            //txtDonGia.Enabled = trangthai;
+            //txtSoLuongTon.Enabled = trangthai;
         }
         //Xử lý control khi bấm nút thêm
         private void btnThem_Click(object sender, EventArgs e)
@@ -213,6 +213,7 @@ namespace WinForm
             {
                 sp.TenSP = txtTenSP.Text;
                 sp.NhaSX_ID = int.Parse(cbNhaSX.SelectedValue.ToString());
+                sp.BaoHanh = txtBaoHanh.Text;
                 sp.HDD = txtHDD.Text;
                 sp.MoTa = txtMoTa.Text;
                 sp.RAM = txtRAM.Text;
@@ -272,7 +273,7 @@ namespace WinForm
         {
             if (type.Text == "Tên sản phẩm")
             {
-                if (txttimkiem.Text != null)
+                if (txttimkiem.Text != "")
                 {
                     if (SanPhamClient.TimKiemSanPham(txttimkiem.Text, 0, 0, 0).Count() > 0)
                     {
@@ -285,6 +286,7 @@ namespace WinForm
                         MessageBox.Show("Không có sản phẩm cần tìm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
+                else
                 {
                     MessageBox.Show("Nhập tên sản phẩm", "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
@@ -295,7 +297,7 @@ namespace WinForm
                 {
                     int nhasxid = int.Parse(cbTimNhaSX.SelectedValue.ToString());
                     string dongia = cbTimGia.SelectedItem.ToString();
-                    string[] gia = dongia.Split('-');
+                    string[] gia = dongia.Split();
                     decimal dongiatu = decimal.Parse(gia[0].ToString());
                     decimal dongiaden = decimal.Parse(gia[1].ToString());
 
@@ -317,6 +319,7 @@ namespace WinForm
                 }
             }
         }
+
         //Chọn hình ảnh cho sản phẩm
         private void btnThemHinh_Click(object sender, EventArgs e)
         {
@@ -325,7 +328,7 @@ namespace WinForm
             {
                 picHinh.Load(f.FileName);
                 name = f.SafeFileName;
-                string duongdanmoi = "../../../Webform/Hinh/Laptop/" + name;
+                string duongdanmoi = "../../../WinForm/Hinh1/" + name;
                 File.Copy(f.FileName, duongdanmoi);
                 MessageBox.Show(name);
             }

@@ -28,15 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuanLySanPham));
             this.btnThemHinh = new System.Windows.Forms.Button();
             this.SP_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SearchBox = new System.Windows.Forms.GroupBox();
+            this.txttimkiem = new System.Windows.Forms.TextBox();
             this.cbTimNhaSX = new System.Windows.Forms.ComboBox();
             this.cbTimGia = new System.Windows.Forms.ComboBox();
             this.btnTimKiem = new System.Windows.Forms.Button();
@@ -73,7 +74,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.txttimkiem = new System.Windows.Forms.TextBox();
             this.SearchBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -91,12 +91,13 @@
             this.btnThemHinh.TabIndex = 105;
             this.btnThemHinh.Text = "Thêm hình";
             this.btnThemHinh.UseVisualStyleBackColor = true;
+            //this.btnThemHinh.Click += new System.EventHandler(this.btnThemHinh_Click);
             // 
             // SP_ID
             // 
             this.SP_ID.DataPropertyName = "SP_ID";
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.SP_ID.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.SP_ID.DefaultCellStyle = dataGridViewCellStyle4;
             this.SP_ID.HeaderText = "Sản phẩm ID";
             this.SP_ID.Name = "SP_ID";
             this.SP_ID.ReadOnly = true;
@@ -104,8 +105,8 @@
             // TenSP
             // 
             this.TenSP.DataPropertyName = "TenSP";
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.TenSP.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.TenSP.DefaultCellStyle = dataGridViewCellStyle5;
             this.TenSP.HeaderText = "Tên sản phẩm";
             this.TenSP.Name = "TenSP";
             this.TenSP.ReadOnly = true;
@@ -113,9 +114,9 @@
             // DonGia
             // 
             this.DonGia.DataPropertyName = "DonGia";
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle3.Format = "#,##0";
-            this.DonGia.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle6.Format = "#,##0";
+            this.DonGia.DefaultCellStyle = dataGridViewCellStyle6;
             this.DonGia.HeaderText = "Đơn giá";
             this.DonGia.Name = "DonGia";
             this.DonGia.ReadOnly = true;
@@ -137,6 +138,13 @@
             this.SearchBox.TabIndex = 102;
             this.SearchBox.TabStop = false;
             this.SearchBox.Text = "Tìm kiếm";
+            // 
+            // txttimkiem
+            // 
+            this.txttimkiem.Location = new System.Drawing.Point(307, 39);
+            this.txttimkiem.Name = "txttimkiem";
+            this.txttimkiem.Size = new System.Drawing.Size(139, 26);
+            this.txttimkiem.TabIndex = 68;
             // 
             // cbTimNhaSX
             // 
@@ -182,6 +190,7 @@
             this.btnTimKiem.TabIndex = 64;
             this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // btnHienThi
             // 
@@ -195,6 +204,7 @@
             this.btnHienThi.TabIndex = 65;
             this.btnHienThi.Text = "Hiển thị tất cả";
             this.btnHienThi.UseVisualStyleBackColor = true;
+            this.btnHienThi.Click += new System.EventHandler(this.btnHienThi_Click);
             // 
             // label9
             // 
@@ -240,6 +250,7 @@
             this.dgvSanPham.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSanPham.Size = new System.Drawing.Size(836, 128);
             this.dgvSanPham.TabIndex = 0;
+            this.dgvSanPham.Click += new System.EventHandler(this.dgvSanPham_Click);
             // 
             // groupBox3
             // 
@@ -271,6 +282,7 @@
             this.btnHuy.TabIndex = 63;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnLuu
             // 
@@ -286,6 +298,7 @@
             this.btnLuu.TabIndex = 62;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnThem
             // 
@@ -299,6 +312,7 @@
             this.btnThem.TabIndex = 58;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnSua
             // 
@@ -312,6 +326,7 @@
             this.btnSua.TabIndex = 60;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
@@ -325,6 +340,7 @@
             this.btnXoa.TabIndex = 59;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // picHinh
             // 
@@ -544,13 +560,6 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // txttimkiem
-            // 
-            this.txttimkiem.Location = new System.Drawing.Point(307, 39);
-            this.txttimkiem.Name = "txttimkiem";
-            this.txttimkiem.Size = new System.Drawing.Size(139, 26);
-            this.txttimkiem.TabIndex = 68;
             // 
             // QuanLySanPham
             // 

@@ -113,7 +113,7 @@ namespace WcfUngDungWeb
         //Tìm kiếm sản phẩm theo tên, nhà sản xuất, khoảng giá
         public List<SanPham> TimKiemSanPham(string tensp, int nhasxid, decimal dongiatu, decimal dongiaden)
         {
-            List<SanPham> ListSP = new List<SanPham>();
+            List<SanPham> data = new List<SanPham>();
             string sql;
             if (tensp != "")
             {
@@ -136,10 +136,10 @@ namespace WcfUngDungWeb
                         DonGia = float.Parse(rd[7].ToString()),
                         Hinh = rd[8].ToString()
                     };
-                    ListSP.Add(sp);
+                    data.Add(sp);
                 }
             }
-            return ListSP;
+            return data;
         }
         //Hiển thị chi tiết sản phẩm
         public DataSet ChiTietSanPham(SanPham sp)
@@ -156,11 +156,11 @@ namespace WcfUngDungWeb
                             + " where sp.NhaSX_ID = nsx.NhaSX_ID and sp.SP_ID=tk.SP_ID";
             }
             else
-                {
-                    sql = "select sp.SP_ID,TenSP,sp.NhaSX_ID,TenNhaSX,CPU,RAM,HDD,BaoHanh,Hinh,DonGia,MoTa,SoLuongTon=0"
-                                + " from SanPham sp, NhaSX nsx"
-                                + " where sp.NhaSX_ID = nsx.NhaSX_ID and SP_ID=@SP_ID";
-                }
+            {
+                sql = "select sp.SP_ID,TenSP,sp.NhaSX_ID,TenNhaSX,CPU,RAM,HDD,BaoHanh,Hinh,DonGia,MoTa,SoLuongTon=0"
+                            + " from SanPham sp, NhaSX nsx"
+                            + " where sp.NhaSX_ID = nsx.NhaSX_ID and SP_ID=@SP_ID";
+            }
             SqlParameter spid = new SqlParameter("@SP_ID", sp.SP_ID);
             DataSet ds = SqlDatabase.ExecuteQueryWithDataSet(sql, CommandType.Text, spid);
             return ds;
@@ -191,13 +191,13 @@ namespace WcfUngDungWeb
         {
             string sql = "insert into SanPham values(@TenSP,@NhaSX_ID,@CPU,@RAM,@HDD,@BaoHanh,@DonGia,@Hinh,@MoTa)";
             SqlParameter tensp = new SqlParameter("@TenSP", sp.TenSP);
-            SqlParameter nhasx = new SqlParameter("@NhaSX", sp.NhaSX_ID);
+            SqlParameter nhasx = new SqlParameter("@NhaSX_ID", sp.NhaSX_ID);
             SqlParameter cpu = new SqlParameter("@CPU", sp.CPU);
             SqlParameter ram = new SqlParameter("@RAM", sp.RAM);
             SqlParameter hdd = new SqlParameter("@HDD", sp.HDD);
             SqlParameter baohanh = new SqlParameter("@BaoHanh", sp.BaoHanh);
             SqlParameter dongia = new SqlParameter("@DonGia", sp.DonGia);
-            SqlParameter hinh = new SqlParameter("Hinh", sp.Hinh);
+            SqlParameter hinh = new SqlParameter("@Hinh", sp.Hinh);
             SqlParameter mota = new SqlParameter("@MoTa", sp.MoTa);
             SqlDatabase.ExecuteNonQuery(sql, CommandType.Text, tensp, nhasx, cpu, ram, hdd, baohanh, dongia, hinh, mota);
         }
@@ -208,15 +208,15 @@ namespace WcfUngDungWeb
             string sql = "update SanPham set TenSP=@TenSP,NhaSX_ID=@NhaSX_ID,CPU=@CPU,RAM=@RAM,HDD=@HDD,BaoHanh=@BaoHanh,DonGia=@DonGia,Hinh=@Hinh,MoTa=@MoTa where SP_ID=@SP_ID";
             SqlParameter spid = new SqlParameter("@SP_ID", sp.SP_ID);
             SqlParameter tensp = new SqlParameter("@TenSP", sp.TenSP);
-            SqlParameter nhasx = new SqlParameter("@NhaSX", sp.NhaSX_ID);
+            SqlParameter nhasx = new SqlParameter("@NhaSX_ID", sp.NhaSX_ID);
             SqlParameter cpu = new SqlParameter("@CPU", sp.CPU);
             SqlParameter ram = new SqlParameter("@RAM", sp.RAM);
             SqlParameter hdd = new SqlParameter("@HDD", sp.HDD);
             SqlParameter baohanh = new SqlParameter("@BaoHanh", sp.BaoHanh);
             SqlParameter dongia = new SqlParameter("@DonGia", sp.DonGia);
-            SqlParameter hinh = new SqlParameter("Hinh", sp.Hinh);
+            SqlParameter hinh = new SqlParameter("@Hinh", sp.Hinh);
             SqlParameter mota = new SqlParameter("@MoTa", sp.MoTa);
-            SqlDatabase.ExecuteNonQuery(sql, CommandType.Text,spid, tensp, nhasx, cpu, ram, hdd, baohanh, dongia, hinh, mota);
+            SqlDatabase.ExecuteNonQuery(sql, CommandType.Text, spid, tensp, nhasx, cpu, ram, hdd, baohanh, dongia, hinh, mota);
         }
         // Xóa sản phẩm
         public void XoaSanPham(SanPham sp)
@@ -224,7 +224,7 @@ namespace WcfUngDungWeb
             string sql = "delete SanPham where SP_ID=@SP_ID";
             SqlParameter spid = new SqlParameter("@SP_ID", sp.SP_ID);
             SqlDatabase.ExecuteNonQuery(sql, CommandType.Text, spid);
-        }   
+        }
 
     }
 

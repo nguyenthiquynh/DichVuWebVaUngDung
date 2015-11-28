@@ -72,6 +72,7 @@
             this.btnSanPham.Text = "Quản lý sản phẩm";
             this.btnSanPham.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
             this.btnSanPham.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnSanPham.Click += new System.EventHandler(this.btnSanPham_Click);
             // 
             // btnNhaSX
             // 
@@ -82,6 +83,7 @@
             this.btnNhaSX.Size = new System.Drawing.Size(152, 38);
             this.btnNhaSX.Text = "Quản lý nhà sản xuất";
             this.btnNhaSX.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnNhaSX.Click += new System.EventHandler(this.btnNhaSX_Click);
             // 
             // btnDonDH
             // 
@@ -113,6 +115,7 @@
             this.btnTonKho.Text = "Quản lý tồn kho";
             this.btnTonKho.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
             this.btnTonKho.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnTonKho.Click += new System.EventHandler(this.btnTonKho_Click);
             // 
             // btnGioiThieu
             // 
@@ -122,6 +125,7 @@
             this.btnGioiThieu.Size = new System.Drawing.Size(134, 38);
             this.btnGioiThieu.Text = "Giới thiệu chương trình";
             this.btnGioiThieu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnGioiThieu.Click += new System.EventHandler(this.btnGioiThieu_Click);
             // 
             // statusStrip1
             // 
@@ -162,6 +166,7 @@
             // 
             this.timer1.Enabled = true;
             this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // FormMain
             // 
@@ -170,8 +175,11 @@
             this.ClientSize = new System.Drawing.Size(887, 411);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.statusStrip1);
+            this.IsMdiContainer = true;
             this.Name = "FormMain";
             this.Text = "Chương trình quản lý bán hàng";
+            this.Load += new System.EventHandler(this.FromMain_Load);
+            this.MdiChildActivate += new System.EventHandler(this.FromMain_MdiChildActivate);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);

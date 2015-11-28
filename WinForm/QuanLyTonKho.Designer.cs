@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvTonKho = new System.Windows.Forms.DataGridView();
             this.SP_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -100,8 +100,8 @@
             // SP_ID
             // 
             this.SP_ID.DataPropertyName = "SP_ID";
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.SP_ID.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.SP_ID.DefaultCellStyle = dataGridViewCellStyle9;
             this.SP_ID.HeaderText = "Sản phẩm ID";
             this.SP_ID.Name = "SP_ID";
             this.SP_ID.ReadOnly = true;
@@ -109,8 +109,8 @@
             // TenSP
             // 
             this.TenSP.DataPropertyName = "TenSP";
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.TenSP.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.TenSP.DefaultCellStyle = dataGridViewCellStyle10;
             this.TenSP.HeaderText = "Tên sản phẩm";
             this.TenSP.Name = "TenSP";
             this.TenSP.ReadOnly = true;
@@ -118,9 +118,9 @@
             // ThoiGian
             // 
             this.ThoiGian.DataPropertyName = "ThoiGian";
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle3.Format = "dd/MM/yyyy";
-            this.ThoiGian.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle11.Format = "dd/MM/yyyy";
+            this.ThoiGian.DefaultCellStyle = dataGridViewCellStyle11;
             this.ThoiGian.HeaderText = "Thời gian";
             this.ThoiGian.Name = "ThoiGian";
             this.ThoiGian.ReadOnly = true;
@@ -128,8 +128,8 @@
             // SoLuongTon
             // 
             this.SoLuongTon.DataPropertyName = "SoLuongTon";
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.SoLuongTon.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.SoLuongTon.DefaultCellStyle = dataGridViewCellStyle12;
             this.SoLuongTon.HeaderText = "Số lượng tồn";
             this.SoLuongTon.Name = "SoLuongTon";
             this.SoLuongTon.ReadOnly = true;
@@ -279,6 +279,7 @@
             this.cbLocTonKho.Name = "cbLocTonKho";
             this.cbLocTonKho.Size = new System.Drawing.Size(164, 24);
             this.cbLocTonKho.TabIndex = 6;
+            this.cbLocTonKho.Click += new System.EventHandler(this.cbLocTonKho_SelectedIndexChanged);
             // 
             // cbSoLuongTon
             // 
@@ -308,6 +309,7 @@
             this.btnCapNhat.TabIndex = 4;
             this.btnCapNhat.Text = "Cập nhật lại";
             this.btnCapNhat.UseVisualStyleBackColor = true;
+            this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
             // 
             // btnInBaoCao
             // 
@@ -326,6 +328,7 @@
             this.btnLoc.TabIndex = 4;
             this.btnLoc.Text = "Lọc tồn kho";
             this.btnLoc.UseVisualStyleBackColor = true;
+            this.btnLoc.Click += new System.EventHandler(this.btnLoc_Click);
             // 
             // txtSP_ID
             // 

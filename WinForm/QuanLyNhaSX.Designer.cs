@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuanLyNhaSX));
             this.dgvNhaSX = new System.Windows.Forms.DataGridView();
             this.NhaSX_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,21 +47,29 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtTenNhaSX = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.nhaSXBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nhaSXIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenNhaSXDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhaSX)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nhaSXBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvNhaSX
             // 
             this.dgvNhaSX.AllowUserToAddRows = false;
             this.dgvNhaSX.AllowUserToDeleteRows = false;
+            this.dgvNhaSX.AutoGenerateColumns = false;
             this.dgvNhaSX.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvNhaSX.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNhaSX.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NhaSX_ID,
-            this.TenNhaSX});
+            this.TenNhaSX,
+            this.nhaSXIDDataGridViewTextBoxColumn,
+            this.tenNhaSXDataGridViewTextBoxColumn});
+            this.dgvNhaSX.DataSource = this.nhaSXBindingSource;
             this.dgvNhaSX.Location = new System.Drawing.Point(7, 18);
             this.dgvNhaSX.MultiSelect = false;
             this.dgvNhaSX.Name = "dgvNhaSX";
@@ -68,12 +77,13 @@
             this.dgvNhaSX.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvNhaSX.Size = new System.Drawing.Size(359, 244);
             this.dgvNhaSX.TabIndex = 1;
+            this.dgvNhaSX.Click += new System.EventHandler(this.dgvNhaSX_Click);
             // 
             // NhaSX_ID
             // 
             this.NhaSX_ID.DataPropertyName = "NhaSX_ID";
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.NhaSX_ID.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.NhaSX_ID.DefaultCellStyle = dataGridViewCellStyle1;
             this.NhaSX_ID.HeaderText = "Nhà sản xuất ID";
             this.NhaSX_ID.Name = "NhaSX_ID";
             this.NhaSX_ID.ReadOnly = true;
@@ -81,8 +91,8 @@
             // TenNhaSX
             // 
             this.TenNhaSX.DataPropertyName = "TenNhaSX";
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.TenNhaSX.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.TenNhaSX.DefaultCellStyle = dataGridViewCellStyle2;
             this.TenNhaSX.HeaderText = "Tên nhà sản xuất";
             this.TenNhaSX.Name = "TenNhaSX";
             this.TenNhaSX.ReadOnly = true;
@@ -127,6 +137,7 @@
             this.btnHuy.TabIndex = 63;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnLuu
             // 
@@ -141,6 +152,7 @@
             this.btnLuu.TabIndex = 62;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnThem
             // 
@@ -154,6 +166,7 @@
             this.btnThem.TabIndex = 58;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnSua
             // 
@@ -167,6 +180,7 @@
             this.btnSua.TabIndex = 60;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
@@ -180,6 +194,7 @@
             this.btnXoa.TabIndex = 59;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // groupBox2
             // 
@@ -232,6 +247,24 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Tên nhà sản xuất";
             // 
+            // nhaSXBindingSource
+            // 
+            this.nhaSXBindingSource.DataSource = typeof(WinForm.NhaSXServiceReference.NhaSX);
+            // 
+            // nhaSXIDDataGridViewTextBoxColumn
+            // 
+            this.nhaSXIDDataGridViewTextBoxColumn.DataPropertyName = "NhaSX_ID";
+            this.nhaSXIDDataGridViewTextBoxColumn.HeaderText = "NhaSX_ID";
+            this.nhaSXIDDataGridViewTextBoxColumn.Name = "nhaSXIDDataGridViewTextBoxColumn";
+            this.nhaSXIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tenNhaSXDataGridViewTextBoxColumn
+            // 
+            this.tenNhaSXDataGridViewTextBoxColumn.DataPropertyName = "TenNhaSX";
+            this.tenNhaSXDataGridViewTextBoxColumn.HeaderText = "TenNhaSX";
+            this.tenNhaSXDataGridViewTextBoxColumn.Name = "tenNhaSXDataGridViewTextBoxColumn";
+            this.tenNhaSXDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // QuanLyNhaSX
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -242,12 +275,14 @@
             this.Controls.Add(this.groupBox2);
             this.Name = "QuanLyNhaSX";
             this.Text = "Quản lý nhà sản xuất";
+            this.Click += new System.EventHandler(this.Frm_QuanLyNhaSX_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhaSX)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nhaSXBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -269,5 +304,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtTenNhaSX;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nhaSXIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenNhaSXDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource nhaSXBindingSource;
     }
 }

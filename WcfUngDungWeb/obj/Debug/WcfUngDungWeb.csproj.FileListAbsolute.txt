@@ -3,9 +3,13 @@ D:\Năm 5\Dich vu web & ung dung\WcfUngDungWeb\DichVuWebVaUngDung\WcfUngDungWeb\
 D:\Năm 5\Dich vu web & ung dung\WcfUngDungWeb\DichVuWebVaUngDung\WcfUngDungWeb\bin\Debug\WcfUngDungWeb.pdb
 D:\Năm 5\Dich vu web & ung dung\WcfUngDungWeb\DichVuWebVaUngDung\WcfUngDungWeb\obj\Debug\WcfUngDungWeb.dll
 D:\Năm 5\Dich vu web & ung dung\WcfUngDungWeb\DichVuWebVaUngDung\WcfUngDungWeb\obj\Debug\WcfUngDungWeb.pdb
+<<<<<<< HEAD
+D:\Năm 5\Dich vu web & ung dung\WcfUngDungWeb\DichVuWebVaUngDung\WcfUngDungWeb\obj\Debug\WcfUngDungWeb.csprojResolveAssemblyReference.cache
+=======
 C:\Users\PHAT_PC\Documents\GitHub\Dịch Vụ Web và Ứng Dụng\DichVuWebVaUngDung\WcfUngDungWeb\bin\Debug\WcfUngDungWeb.dll.config
 C:\Users\PHAT_PC\Documents\GitHub\Dịch Vụ Web và Ứng Dụng\DichVuWebVaUngDung\WcfUngDungWeb\bin\Debug\WcfUngDungWeb.dll
 C:\Users\PHAT_PC\Documents\GitHub\Dịch Vụ Web và Ứng Dụng\DichVuWebVaUngDung\WcfUngDungWeb\bin\Debug\WcfUngDungWeb.pdb
 C:\Users\PHAT_PC\Documents\GitHub\Dịch Vụ Web và Ứng Dụng\DichVuWebVaUngDung\WcfUngDungWeb\obj\Debug\WcfUngDungWeb.csprojResolveAssemblyReference.cache
 C:\Users\PHAT_PC\Documents\GitHub\Dịch Vụ Web và Ứng Dụng\DichVuWebVaUngDung\WcfUngDungWeb\obj\Debug\WcfUngDungWeb.dll
 C:\Users\PHAT_PC\Documents\GitHub\Dịch Vụ Web và Ứng Dụng\DichVuWebVaUngDung\WcfUngDungWeb\obj\Debug\WcfUngDungWeb.pdb
+>>>>>>> 3a2b1512eefe25bb6f917bff6a1d959ff6106641
