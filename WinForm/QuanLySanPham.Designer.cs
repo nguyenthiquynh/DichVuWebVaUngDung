@@ -91,7 +91,7 @@
             this.btnThemHinh.TabIndex = 105;
             this.btnThemHinh.Text = "Thêm hình";
             this.btnThemHinh.UseVisualStyleBackColor = true;
-            //this.btnThemHinh.Click += new System.EventHandler(this.btnThemHinh_Click);
+            this.btnThemHinh.Click += new System.EventHandler(this.btnThemHinh_Click);
             // 
             // SP_ID
             // 
@@ -230,6 +230,7 @@
             this.type.Name = "type";
             this.type.Size = new System.Drawing.Size(163, 27);
             this.type.TabIndex = 3;
+            this.type.SelectedIndexChanged += new System.EventHandler(this.type_SelectedIndexChanged_1);
             // 
             // dgvSanPham
             // 

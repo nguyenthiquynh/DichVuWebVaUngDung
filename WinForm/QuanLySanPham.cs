@@ -135,6 +135,7 @@ namespace WinForm
             btnLuu.Enabled = true;
             btnHuy.Enabled = true;
             btnThemHinh.Enabled = true;
+            picHinh.InitialImage = null;
             LamMoi();
             them_moi = true;
         }
@@ -297,7 +298,7 @@ namespace WinForm
                 {
                     int nhasxid = int.Parse(cbTimNhaSX.SelectedValue.ToString());
                     string dongia = cbTimGia.SelectedItem.ToString();
-                    string[] gia = dongia.Split();
+                    string[] gia = dongia.Split('-');
                     decimal dongiatu = decimal.Parse(gia[0].ToString());
                     decimal dongiaden = decimal.Parse(gia[1].ToString());
 
@@ -353,6 +354,23 @@ namespace WinForm
         private void Frm_QuanLySanPham_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void type_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            switch (type.SelectedIndex)
+            {
+                case 0:
+                    txttimkiem.Visible = true;
+                    cbTimNhaSX.Visible = false;
+                    cbTimGia.Visible = false;
+                    break;
+                case 1:
+                    txttimkiem.Visible = false;
+                    cbTimNhaSX.Visible = true;
+                    cbTimGia.Visible = true;
+                    break;
+            }
         }
     }
 }
