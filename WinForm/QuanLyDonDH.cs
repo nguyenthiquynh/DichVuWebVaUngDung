@@ -8,13 +8,24 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using System.Data;
+using System.Data.SqlClient;
+using WinForm.DonDHServiceReference;
+using WinForm.CtDonDHServiceReference;
+using WinForm.TonKhoServiceReference;
+
 namespace WinForm
 {
     public partial class QuanLyDonDH : Form
     {
+        DonDHService1Client DonDHClient = new DonDHService1Client();
+        CtDonDHService1Client CtDonDHClient = new CtDonDHService1Client();
+        TonKhoService1Client TonKhoClient = new TonKhoService1Client();
+        TonKho tk = new TonKho();
         public QuanLyDonDH()
         {
             InitializeComponent();
+            
         }
 
         private void dgvDonDH_CellContentClick(object sender, DataGridViewCellEventArgs e)

@@ -12,8 +12,13 @@ namespace WcfUngDungWeb
     public interface ICtDonDHService1
     {
         [OperationContract]
-        void DoWork();
+        List<CtDonDH> HienThiCtDonDH(CtDonDH ct);
+        [OperationContract]
+        void Them(CtDonDH ct);
+        [OperationContract]
+        void Xoa(CtDonDH ct);
     }
+        
 }
 
 
