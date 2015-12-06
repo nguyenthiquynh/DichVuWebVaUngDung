@@ -5,13 +5,62 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
 
+using System.Data;
+using System.Data.SqlClient;
+
 namespace WcfUngDungWeb
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "CtPhieuNhapService1" in both code and config file together.
     public class CtPhieuNhapService1 : ICtPhieuNhapService1
     {
-        public void DoWork()
+
+        public List<CtPhieuNhap> HienThiCtPhieuNhap(CtPhieuNhap ct)
         {
+            List<CtPhieuNhap> data = new List<CtPhieuNhap>();
+            string sql = "select MaPhieuNhap,sp.SP_ID,sp.TenSP,DonGiaNhap,SoLuongNhap from CT_PhieuNhap ct, SanPham sp where ct.SP_ID=sp.SP_ID and MaPhieuNhap=@MaPhieuNhap";
+            SqlParameter maphieunhap = new SqlParameter("@MaPhieuNhap", ct.MaPhieuNhap);
+            SqlDataReader rd = SqlDatabase.ExecuteQueryWithDataReader(sql, CommandType.Text, maphieunhap);
+            if (rd.HasRows)
+            {
+                while (rd.Read())
+                {
+                    ct = new CtPhieuNhap()
+                    {
+                        MaPhieuNhap = rd[0].ToString(),
+                        SP_ID = int.Parse(rd[1].ToString()),
+                        TenSP = rd[2].ToString(),
+                        DonGiaNhap = float.Parse(rd[3].ToString()),
+                        SoLuongNhap = int.Parse(rd[4].ToString()),
+
+                    };
+                    data.Add(ct);
+                }
+            }
+            return data;
+           
+        }
+
+        public bool KiemTraMaPhieuNhap(string ma)
+        {
+            List<CtPhieuNhap> data = new List<CtPhieuNhap>();
+            string sql = "select MaPhieuNhap from CT_PhieuNhap where MaPhieuNhap=@MaPhieuNhap";
+            SqlParameter maphieunhap = new SqlParameter("@MaPhieuNhap", ma);
+            SqlDataReader rd = SqlDatabase.ExecuteQueryWithDataReader(sql, CommandType.Text, maphieunhap);
+            if (rd.HasRows)
+                return true;
+            else
+                return false;
+        }
+
+        public void Them(CtPhieuNhap ct)
+        {
+            string sql = "insert into CT_PhieuNhap values(@MaPhieuNhap,@SP_ID,@SoLuongNhap,@DonGiaNhap)";
+            SqlParameter maphieunhap = new SqlParameter("@MaPhieuNhap", ct.MaPhieuNhap);
+            SqlParameter spid = new SqlParameter("@SP_ID", ct.SP_ID);
+            SqlParameter dongianhap = new SqlParameter("@DonGiaNhap", ct.DonGiaNhap);
+            SqlParameter soluongnhap = new SqlParameter("@SoLuongNhap", ct.SoLuongNhap);
+
+            SqlDatabase.ExecuteNonQuery(sql, CommandType.Text, maphieunhap, spid, dongianhap, soluongnhap);
         }
     }
 }

@@ -12,6 +12,11 @@ namespace WcfUngDungWeb
     public interface ICtPhieuNhapService1
     {
         [OperationContract]
-        void DoWork();
+        List<CtPhieuNhap> HienThiCtPhieuNhap(CtPhieuNhap ct);
+        [OperationContract]
+        bool KiemTraMaPhieuNhap(string ma);
+        [OperationContract]
+        void Them(CtPhieuNhap ct);
     }
+    
 }
