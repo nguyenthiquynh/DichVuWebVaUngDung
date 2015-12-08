@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4ad01a38-a791-45b8-883d-a397c9d5c545" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="77c93d67-8c57-483a-90e6-211707781a6d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,8 +22,10 @@
     <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/WcfUngDungWeb/CtDonDHService1/mex" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="66a492bb-51c8-4c35-a059-338a52bc03d0" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WcfUngDungWeb/CtDonDHService1/mex" />
-    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="0128149e-db8d-43d8-8a43-d21cc859f40f" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WcfUngDungWeb/CtDonDHService1/mex" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="234a071f-3221-430d-8d6b-586ff5f0ea1c" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WcfUngDungWeb/CtDonDHService1/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="7103c0b9-15ce-454f-8a48-4826f02208e2" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WcfUngDungWeb/CtDonDHService1/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="9eb398ff-dac6-4703-8c2c-e007abf62ac8" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WcfUngDungWeb/CtDonDHService1/mex" />
+    <MetadataFile FileName="WcfUngDungWeb.xsd" MetadataType="Schema" ID="ddf1b204-d259-49d5-9da4-177c82daa53d" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WcfUngDungWeb/CtDonDHService1/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

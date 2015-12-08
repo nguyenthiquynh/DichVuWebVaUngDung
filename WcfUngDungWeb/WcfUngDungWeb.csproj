@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="CtDonDH.cs" />
     <Compile Include="CtDonDHService1.cs" />
+    <Compile Include="CtPhieuNhap.cs" />
     <Compile Include="CtPhieuNhapService1.cs" />
     <Compile Include="DonDH.cs" />
     <Compile Include="DonDHService1.cs" />
@@ -60,6 +61,7 @@
     <Compile Include="ITonKhoService1.cs" />
     <Compile Include="NguoiDungService1.cs" />
     <Compile Include="NhaSXService1.cs" />
+    <Compile Include="PhieuNhap.cs" />
     <Compile Include="PhieuNhap1Service1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SanPhamService1.cs" />

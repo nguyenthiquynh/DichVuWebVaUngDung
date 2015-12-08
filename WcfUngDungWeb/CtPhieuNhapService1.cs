@@ -37,9 +37,10 @@ namespace WcfUngDungWeb
                 }
             }
             return data;
-           
         }
 
+        // Hàm tự viết
+        // Kiểm tra mã phiếu nhậpp
         public bool KiemTraMaPhieuNhap(string ma)
         {
             List<CtPhieuNhap> data = new List<CtPhieuNhap>();
@@ -52,6 +53,8 @@ namespace WcfUngDungWeb
                 return false;
         }
 
+        // Hàm tự viết
+        // Thêm phiếu nhập
         public void Them(CtPhieuNhap ct)
         {
             string sql = "insert into CT_PhieuNhap values(@MaPhieuNhap,@SP_ID,@SoLuongNhap,@DonGiaNhap)";

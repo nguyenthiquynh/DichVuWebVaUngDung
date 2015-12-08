@@ -3,24 +3,64 @@
   <wsdl:types>
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/WcfUngDungWeb" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="ICtPhieuNhapService1_DoWork_InputMessage">
-    <wsdl:part name="parameters" element="tns:DoWork" />
+  <wsdl:message name="ICtPhieuNhapService1_HienThiCtPhieuNhap_InputMessage">
+    <wsdl:part name="parameters" element="tns:HienThiCtPhieuNhap" />
   </wsdl:message>
-  <wsdl:message name="ICtPhieuNhapService1_DoWork_OutputMessage">
-    <wsdl:part name="parameters" element="tns:DoWorkResponse" />
+  <wsdl:message name="ICtPhieuNhapService1_HienThiCtPhieuNhap_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HienThiCtPhieuNhapResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICtPhieuNhapService1_KiemTraMaPhieuNhap_InputMessage">
+    <wsdl:part name="parameters" element="tns:KiemTraMaPhieuNhap" />
+  </wsdl:message>
+  <wsdl:message name="ICtPhieuNhapService1_KiemTraMaPhieuNhap_OutputMessage">
+    <wsdl:part name="parameters" element="tns:KiemTraMaPhieuNhapResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICtPhieuNhapService1_Them_InputMessage">
+    <wsdl:part name="parameters" element="tns:Them" />
+  </wsdl:message>
+  <wsdl:message name="ICtPhieuNhapService1_Them_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ThemResponse" />
   </wsdl:message>
   <wsdl:portType name="ICtPhieuNhapService1">
-    <wsdl:operation name="DoWork">
-      <wsdl:input wsaw:Action="http://tempuri.org/ICtPhieuNhapService1/DoWork" message="tns:ICtPhieuNhapService1_DoWork_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/ICtPhieuNhapService1/DoWorkResponse" message="tns:ICtPhieuNhapService1_DoWork_OutputMessage" />
+    <wsdl:operation name="HienThiCtPhieuNhap">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICtPhieuNhapService1/HienThiCtPhieuNhap" message="tns:ICtPhieuNhapService1_HienThiCtPhieuNhap_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICtPhieuNhapService1/HienThiCtPhieuNhapResponse" message="tns:ICtPhieuNhapService1_HienThiCtPhieuNhap_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="KiemTraMaPhieuNhap">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICtPhieuNhapService1/KiemTraMaPhieuNhap" message="tns:ICtPhieuNhapService1_KiemTraMaPhieuNhap_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICtPhieuNhapService1/KiemTraMaPhieuNhapResponse" message="tns:ICtPhieuNhapService1_KiemTraMaPhieuNhap_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Them">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICtPhieuNhapService1/Them" message="tns:ICtPhieuNhapService1_Them_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICtPhieuNhapService1/ThemResponse" message="tns:ICtPhieuNhapService1_Them_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ICtPhieuNhapService1" type="tns:ICtPhieuNhapService1">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="DoWork">
-      <soap:operation soapAction="http://tempuri.org/ICtPhieuNhapService1/DoWork" style="document" />
+    <wsdl:operation name="HienThiCtPhieuNhap">
+      <soap:operation soapAction="http://tempuri.org/ICtPhieuNhapService1/HienThiCtPhieuNhap" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KiemTraMaPhieuNhap">
+      <soap:operation soapAction="http://tempuri.org/ICtPhieuNhapService1/KiemTraMaPhieuNhap" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Them">
+      <soap:operation soapAction="http://tempuri.org/ICtPhieuNhapService1/Them" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
