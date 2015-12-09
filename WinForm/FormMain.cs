@@ -95,5 +95,17 @@ namespace WinForm
             var gioithieu = new GioiThieu();
             openform(gioithieu);
         }
+
+        private void btnDonDH_Click(object sender, EventArgs e)
+        {
+            var dondh = new QuanLyDonDatHang();
+            openform(dondh);
+        }
+
+        private void btnNhapHang_Click(object sender, EventArgs e)
+        {
+            var phieunhap = new QuanLyPhieuNhap();
+            openform(phieunhap);
+        }
     }
 }

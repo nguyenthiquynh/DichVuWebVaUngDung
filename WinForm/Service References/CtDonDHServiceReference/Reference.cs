@@ -123,52 +123,52 @@ namespace WinForm.CtDonDHServiceReference {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="CtDonDHServiceReference.ICtDonDHService1")]
-    public interface ICtDonDHService1 {
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="CtDonDHServiceReference.ICtDonDHService")]
+    public interface ICtDonDHService {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICtDonDHService1/HienThiCtDonDH", ReplyAction="http://tempuri.org/ICtDonDHService1/HienThiCtDonDHResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICtDonDHService/HienThiCtDonDH", ReplyAction="http://tempuri.org/ICtDonDHService/HienThiCtDonDHResponse")]
         WinForm.CtDonDHServiceReference.CtDonDH[] HienThiCtDonDH(WinForm.CtDonDHServiceReference.CtDonDH ct);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICtDonDHService1/HienThiCtDonDH", ReplyAction="http://tempuri.org/ICtDonDHService1/HienThiCtDonDHResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICtDonDHService/HienThiCtDonDH", ReplyAction="http://tempuri.org/ICtDonDHService/HienThiCtDonDHResponse")]
         System.Threading.Tasks.Task<WinForm.CtDonDHServiceReference.CtDonDH[]> HienThiCtDonDHAsync(WinForm.CtDonDHServiceReference.CtDonDH ct);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICtDonDHService1/Them", ReplyAction="http://tempuri.org/ICtDonDHService1/ThemResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICtDonDHService/Them", ReplyAction="http://tempuri.org/ICtDonDHService/ThemResponse")]
         void Them(WinForm.CtDonDHServiceReference.CtDonDH ct);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICtDonDHService1/Them", ReplyAction="http://tempuri.org/ICtDonDHService1/ThemResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICtDonDHService/Them", ReplyAction="http://tempuri.org/ICtDonDHService/ThemResponse")]
         System.Threading.Tasks.Task ThemAsync(WinForm.CtDonDHServiceReference.CtDonDH ct);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICtDonDHService1/Xoa", ReplyAction="http://tempuri.org/ICtDonDHService1/XoaResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICtDonDHService/Xoa", ReplyAction="http://tempuri.org/ICtDonDHService/XoaResponse")]
         void Xoa(WinForm.CtDonDHServiceReference.CtDonDH ct);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICtDonDHService1/Xoa", ReplyAction="http://tempuri.org/ICtDonDHService1/XoaResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICtDonDHService/Xoa", ReplyAction="http://tempuri.org/ICtDonDHService/XoaResponse")]
         System.Threading.Tasks.Task XoaAsync(WinForm.CtDonDHServiceReference.CtDonDH ct);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface ICtDonDHService1Channel : WinForm.CtDonDHServiceReference.ICtDonDHService1, System.ServiceModel.IClientChannel {
+    public interface ICtDonDHServiceChannel : WinForm.CtDonDHServiceReference.ICtDonDHService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class CtDonDHService1Client : System.ServiceModel.ClientBase<WinForm.CtDonDHServiceReference.ICtDonDHService1>, WinForm.CtDonDHServiceReference.ICtDonDHService1 {
+    public partial class CtDonDHServiceClient : System.ServiceModel.ClientBase<WinForm.CtDonDHServiceReference.ICtDonDHService>, WinForm.CtDonDHServiceReference.ICtDonDHService {
         
-        public CtDonDHService1Client() {
+        public CtDonDHServiceClient() {
         }
         
-        public CtDonDHService1Client(string endpointConfigurationName) : 
+        public CtDonDHServiceClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName) {
         }
         
-        public CtDonDHService1Client(string endpointConfigurationName, string remoteAddress) : 
+        public CtDonDHServiceClient(string endpointConfigurationName, string remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public CtDonDHService1Client(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public CtDonDHServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public CtDonDHService1Client(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public CtDonDHServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
         }
         

@@ -40,6 +40,11 @@ namespace WinForm
         public QuanLyPhieuNhap()
         {
             InitializeComponent();
+            Ds_NhaSX();
+            Ds_PhieuNhap();
+
+            cbNhaSX.SelectedIndex = -1;
+            cbTim_NSX.SelectedIndex = -1;
         }
 
         float tongtien;
@@ -251,6 +256,32 @@ namespace WinForm
             dgvBangNhap.AutoGenerateColumns = false;
             DataTable dt = SanPhamClient.ThongTinNhapSP(pn).Tables[0];
             dgvBangNhap.DataSource = dt;
+        }
+
+        private void dgvPhieuNhap_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string maphieunhap = dgvPhieuNhap.CurrentRow.Cells[1].Value.ToString();
+            int nhasx_id = int.Parse(dgvPhieuNhap.CurrentRow.Cells[2].Value.ToString());
+            Ds_CtPhieuNhap(maphieunhap);
+
+            NhapSanPham(nhasx_id, maphieunhap);
+
+            txtMaPhieuNhap.Text = maphieunhap;
+            cbNhaSX.SelectedValue = nhasx_id;
+            dtpNgayNhap.Value = DateTime.Parse(dgvPhieuNhap.CurrentRow.Cells[4].Value.ToString());
+            tongtien = float.Parse(dgvPhieuNhap.CurrentRow.Cells[5].Value.ToString());
+            txtTongTien.Text = tongtien.ToString("#,##0");
+
+            if (dgvBangNhap.Rows.Count > 0)
+            {
+                btnHoanTat.Enabled = true;
+                btnLuuSanPham.Enabled = true;
+            }
+            else
+            {
+                btnHoanTat.Enabled = false;
+                btnLuuSanPham.Enabled = false;
+            }
         }
     }
        

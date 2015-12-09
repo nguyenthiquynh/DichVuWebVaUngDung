@@ -46,12 +46,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CtDonDH.cs" />
-    <Compile Include="CtDonDHService1.cs" />
+    <Compile Include="CtDonDHService.cs" />
     <Compile Include="CtPhieuNhap.cs" />
     <Compile Include="CtPhieuNhapService1.cs" />
     <Compile Include="DonDH.cs" />
     <Compile Include="DonDHService1.cs" />
-    <Compile Include="ICtDonDHService1.cs" />
+    <Compile Include="ICtDonDHService.cs" />
     <Compile Include="ICtPhieuNhapService1.cs" />
     <Compile Include="IDonDHService1.cs" />
     <Compile Include="INguoiDungService1.cs" />

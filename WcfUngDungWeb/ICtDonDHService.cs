@@ -7,9 +7,9 @@ using System.Text;
 
 namespace WcfUngDungWeb
 {
-    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IPhieuNhapService1" in both code and config file together.
+    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "ICtDonDHService" in both code and config file together.
     [ServiceContract]
-    public interface ICtDonDHService1
+    public interface ICtDonDHService
     {
         [OperationContract]
         List<CtDonDH> HienThiCtDonDH(CtDonDH ct);
@@ -18,9 +18,4 @@ namespace WcfUngDungWeb
         [OperationContract]
         void Xoa(CtDonDH ct);
     }
-        
 }
-
-
-
-

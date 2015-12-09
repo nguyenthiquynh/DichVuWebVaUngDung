@@ -80,7 +80,7 @@
             this.btnNhaSX.Image = ((System.Drawing.Image)(resources.GetObject("btnNhaSX.Image")));
             this.btnNhaSX.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnNhaSX.Name = "btnNhaSX";
-            this.btnNhaSX.Size = new System.Drawing.Size(152, 38);
+            this.btnNhaSX.Size = new System.Drawing.Size(153, 38);
             this.btnNhaSX.Text = "Quản lý nhà sản xuất";
             this.btnNhaSX.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnNhaSX.Click += new System.EventHandler(this.btnNhaSX_Click);
@@ -94,6 +94,7 @@
             this.btnDonDH.Size = new System.Drawing.Size(156, 38);
             this.btnDonDH.Text = "Quản lý đơn đặt hàng";
             this.btnDonDH.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnDonDH.Click += new System.EventHandler(this.btnDonDH_Click);
             // 
             // btnNhapHang
             // 
@@ -104,6 +105,7 @@
             this.btnNhapHang.Size = new System.Drawing.Size(136, 38);
             this.btnNhapHang.Text = "Quản lý nhập hàng";
             this.btnNhapHang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnNhapHang.Click += new System.EventHandler(this.btnNhapHang_Click);
             // 
             // btnTonKho
             // 

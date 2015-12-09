@@ -19,12 +19,13 @@ namespace WinForm
         DonDHService1Client DonDHClient = new DonDHService1Client();
         DonDH ddh = new DonDH();
         CtDonDH ctddh = new CtDonDH();
-        CtDonDHService1Client CtDonDHClient = new CtDonDHService1Client();
+        CtDonDHServiceClient CtDonDHClient = new CtDonDHServiceClient();
         TonKhoService1Client TonKhoClient = new TonKhoService1Client();
         TonKho tk = new TonKho();
         public QuanLyDonDatHang()
         {
             InitializeComponent();
+            Ds_DonDH();
         }
         public void Ds_DonDH()
         {
@@ -189,6 +190,25 @@ namespace WinForm
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
             Ds_DonDH();
+        }
+
+        private void dgvDonDH_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int vitri = dgvDonDH.CurrentRow.Index;
+            List<DonDH> list = DonDHClient.HienThiDonDH().ToList();
+            ddh = list[vitri];
+
+            txtHoTenKH.Text = ddh.HoTenKH;
+            txtDiaChi.Text = ddh.DiaChi;
+            txtDienThoai.Text = ddh.DienThoai;
+            txtEmail.Text = ddh.Email;
+            txtGhiChu.Text = ddh.GhiChu;
+            cbTinhTrang.SelectedItem = ddh.TinhTrang;
+
+            string madondh = dgvDonDH.CurrentRow.Cells[1].Value.ToString();
+
+            ctddh.MaDonDH = madondh;
+            Ds_CtDonDH(ctddh);
         }
 
     }

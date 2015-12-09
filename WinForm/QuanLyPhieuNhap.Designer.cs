@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle46 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle45 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle48 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle47 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -356,11 +356,12 @@
             this.dgvPhieuNhap.MultiSelect = false;
             this.dgvPhieuNhap.Name = "dgvPhieuNhap";
             this.dgvPhieuNhap.ReadOnly = true;
-            dataGridViewCellStyle46.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.dgvPhieuNhap.RowsDefaultCellStyle = dataGridViewCellStyle46;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.dgvPhieuNhap.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvPhieuNhap.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPhieuNhap.Size = new System.Drawing.Size(767, 190);
             this.dgvPhieuNhap.TabIndex = 0;
+            this.dgvPhieuNhap.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhieuNhap_CellContentClick);
             // 
             // PhieuNhapID
             // 
@@ -394,8 +395,8 @@
             // NgayNhap
             // 
             this.NgayNhap.DataPropertyName = "NgayNhap";
-            dataGridViewCellStyle44.Format = "dd/MM/yyyy";
-            this.NgayNhap.DefaultCellStyle = dataGridViewCellStyle44;
+            dataGridViewCellStyle1.Format = "dd/MM/yyyy";
+            this.NgayNhap.DefaultCellStyle = dataGridViewCellStyle1;
             this.NgayNhap.HeaderText = "Ngày nhập";
             this.NgayNhap.Name = "NgayNhap";
             this.NgayNhap.ReadOnly = true;
@@ -403,8 +404,8 @@
             // TongTien
             // 
             this.TongTien.DataPropertyName = "TongTien";
-            dataGridViewCellStyle45.Format = "#,##0";
-            this.TongTien.DefaultCellStyle = dataGridViewCellStyle45;
+            dataGridViewCellStyle2.Format = "#,##0";
+            this.TongTien.DefaultCellStyle = dataGridViewCellStyle2;
             this.TongTien.HeaderText = "Tổng tiền";
             this.TongTien.Name = "TongTien";
             this.TongTien.ReadOnly = true;
@@ -470,8 +471,8 @@
             this.DGNhap});
             this.dgvBangNhap.Location = new System.Drawing.Point(6, 22);
             this.dgvBangNhap.Name = "dgvBangNhap";
-            dataGridViewCellStyle43.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.dgvBangNhap.RowsDefaultCellStyle = dataGridViewCellStyle43;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.dgvBangNhap.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvBangNhap.Size = new System.Drawing.Size(761, 150);
             this.dgvBangNhap.TabIndex = 0;
             // 
@@ -526,8 +527,8 @@
             this.dgvChiTietPhieuNhap.Location = new System.Drawing.Point(6, 22);
             this.dgvChiTietPhieuNhap.Name = "dgvChiTietPhieuNhap";
             this.dgvChiTietPhieuNhap.ReadOnly = true;
-            dataGridViewCellStyle48.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.dgvChiTietPhieuNhap.RowsDefaultCellStyle = dataGridViewCellStyle48;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.dgvChiTietPhieuNhap.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvChiTietPhieuNhap.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvChiTietPhieuNhap.Size = new System.Drawing.Size(761, 190);
             this.dgvChiTietPhieuNhap.TabIndex = 1;
@@ -563,8 +564,8 @@
             // DonGiaNhap
             // 
             this.DonGiaNhap.DataPropertyName = "DonGiaNhap";
-            dataGridViewCellStyle47.Format = "#,##0";
-            this.DonGiaNhap.DefaultCellStyle = dataGridViewCellStyle47;
+            dataGridViewCellStyle5.Format = "#,##0";
+            this.DonGiaNhap.DefaultCellStyle = dataGridViewCellStyle5;
             this.DonGiaNhap.HeaderText = "Đơn giá nhập";
             this.DonGiaNhap.Name = "DonGiaNhap";
             this.DonGiaNhap.ReadOnly = true;
