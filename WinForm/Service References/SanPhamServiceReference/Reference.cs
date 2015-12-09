@@ -202,6 +202,131 @@ namespace WinForm.SanPhamServiceReference {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PhieuNhap", Namespace="http://schemas.datacontract.org/2004/07/WcfUngDungWeb")]
+    [System.SerializableAttribute()]
+    public partial class PhieuNhap : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MaPhieuNhapField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime NgayNhapField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int NhaSX_IDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int PhieuNhap_IDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TenNhaSXField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private float TongTienField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string MaPhieuNhap {
+            get {
+                return this.MaPhieuNhapField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MaPhieuNhapField, value) != true)) {
+                    this.MaPhieuNhapField = value;
+                    this.RaisePropertyChanged("MaPhieuNhap");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime NgayNhap {
+            get {
+                return this.NgayNhapField;
+            }
+            set {
+                if ((this.NgayNhapField.Equals(value) != true)) {
+                    this.NgayNhapField = value;
+                    this.RaisePropertyChanged("NgayNhap");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int NhaSX_ID {
+            get {
+                return this.NhaSX_IDField;
+            }
+            set {
+                if ((this.NhaSX_IDField.Equals(value) != true)) {
+                    this.NhaSX_IDField = value;
+                    this.RaisePropertyChanged("NhaSX_ID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int PhieuNhap_ID {
+            get {
+                return this.PhieuNhap_IDField;
+            }
+            set {
+                if ((this.PhieuNhap_IDField.Equals(value) != true)) {
+                    this.PhieuNhap_IDField = value;
+                    this.RaisePropertyChanged("PhieuNhap_ID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string TenNhaSX {
+            get {
+                return this.TenNhaSXField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TenNhaSXField, value) != true)) {
+                    this.TenNhaSXField = value;
+                    this.RaisePropertyChanged("TenNhaSX");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public float TongTien {
+            get {
+                return this.TongTienField;
+            }
+            set {
+                if ((this.TongTienField.Equals(value) != true)) {
+                    this.TongTienField = value;
+                    this.RaisePropertyChanged("TongTien");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="SanPhamServiceReference.ISanPhamService1")]
     public interface ISanPhamService1 {
@@ -235,6 +360,12 @@ namespace WinForm.SanPhamServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISanPhamService1/TimKiemSanPham", ReplyAction="http://tempuri.org/ISanPhamService1/TimKiemSanPhamResponse")]
         System.Threading.Tasks.Task<WinForm.SanPhamServiceReference.SanPham[]> TimKiemSanPhamAsync(string tensp, int nhasxid, decimal dongiatu, decimal dongiaden);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISanPhamService1/ThongTinNhapSP", ReplyAction="http://tempuri.org/ISanPhamService1/ThongTinNhapSPResponse")]
+        System.Data.DataSet ThongTinNhapSP(WinForm.SanPhamServiceReference.PhieuNhap pn);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISanPhamService1/ThongTinNhapSP", ReplyAction="http://tempuri.org/ISanPhamService1/ThongTinNhapSPResponse")]
+        System.Threading.Tasks.Task<System.Data.DataSet> ThongTinNhapSPAsync(WinForm.SanPhamServiceReference.PhieuNhap pn);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISanPhamService1/ChiTietSanPham", ReplyAction="http://tempuri.org/ISanPhamService1/ChiTietSanPhamResponse")]
         System.Data.DataSet ChiTietSanPham(WinForm.SanPhamServiceReference.SanPham sp);
@@ -326,6 +457,14 @@ namespace WinForm.SanPhamServiceReference {
         
         public System.Threading.Tasks.Task<WinForm.SanPhamServiceReference.SanPham[]> TimKiemSanPhamAsync(string tensp, int nhasxid, decimal dongiatu, decimal dongiaden) {
             return base.Channel.TimKiemSanPhamAsync(tensp, nhasxid, dongiatu, dongiaden);
+        }
+        
+        public System.Data.DataSet ThongTinNhapSP(WinForm.SanPhamServiceReference.PhieuNhap pn) {
+            return base.Channel.ThongTinNhapSP(pn);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> ThongTinNhapSPAsync(WinForm.SanPhamServiceReference.PhieuNhap pn) {
+            return base.Channel.ThongTinNhapSPAsync(pn);
         }
         
         public System.Data.DataSet ChiTietSanPham(WinForm.SanPhamServiceReference.SanPham sp) {

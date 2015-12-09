@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data;
 using System.Data.SqlClient;
 using WinForm.DonDHServiceReference;
 using WinForm.CtDonDHServiceReference;
@@ -133,7 +132,7 @@ namespace WinForm
                 Ds_DonDH();
                 cbTinhTrang.Enabled = false;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Xảy ra lỗi", "Thông báo");
             }

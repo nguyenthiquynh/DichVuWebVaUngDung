@@ -23,19 +23,19 @@ namespace WinForm.CtPhieuNhapServiceReference {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private float DonGiaNhapField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MaPhieuNhapField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int SP_IDField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private float dongianhapField;
+        private int SoLuongNhapField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string maphieunhapField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int soluongnhapField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string tenspField;
+        private string TenSPField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -44,6 +44,32 @@ namespace WinForm.CtPhieuNhapServiceReference {
             }
             set {
                 this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public float DonGiaNhap {
+            get {
+                return this.DonGiaNhapField;
+            }
+            set {
+                if ((this.DonGiaNhapField.Equals(value) != true)) {
+                    this.DonGiaNhapField = value;
+                    this.RaisePropertyChanged("DonGiaNhap");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string MaPhieuNhap {
+            get {
+                return this.MaPhieuNhapField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MaPhieuNhapField, value) != true)) {
+                    this.MaPhieuNhapField = value;
+                    this.RaisePropertyChanged("MaPhieuNhap");
+                }
             }
         }
         
@@ -61,53 +87,27 @@ namespace WinForm.CtPhieuNhapServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public float dongianhap {
+        public int SoLuongNhap {
             get {
-                return this.dongianhapField;
+                return this.SoLuongNhapField;
             }
             set {
-                if ((this.dongianhapField.Equals(value) != true)) {
-                    this.dongianhapField = value;
-                    this.RaisePropertyChanged("dongianhap");
+                if ((this.SoLuongNhapField.Equals(value) != true)) {
+                    this.SoLuongNhapField = value;
+                    this.RaisePropertyChanged("SoLuongNhap");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string maphieunhap {
+        public string TenSP {
             get {
-                return this.maphieunhapField;
+                return this.TenSPField;
             }
             set {
-                if ((object.ReferenceEquals(this.maphieunhapField, value) != true)) {
-                    this.maphieunhapField = value;
-                    this.RaisePropertyChanged("maphieunhap");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int soluongnhap {
-            get {
-                return this.soluongnhapField;
-            }
-            set {
-                if ((this.soluongnhapField.Equals(value) != true)) {
-                    this.soluongnhapField = value;
-                    this.RaisePropertyChanged("soluongnhap");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string tensp {
-            get {
-                return this.tenspField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.tenspField, value) != true)) {
-                    this.tenspField = value;
-                    this.RaisePropertyChanged("tensp");
+                if ((object.ReferenceEquals(this.TenSPField, value) != true)) {
+                    this.TenSPField = value;
+                    this.RaisePropertyChanged("TenSP");
                 }
             }
         }

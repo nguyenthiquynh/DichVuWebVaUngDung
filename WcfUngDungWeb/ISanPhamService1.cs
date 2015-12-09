@@ -27,6 +27,8 @@ namespace WcfUngDungWeb
         [OperationContract]
         List<SanPham> TimKiemSanPham(string tensp, int nhasxid, decimal dongiatu, decimal dongiaden);
         [OperationContract]
+        DataSet ThongTinNhapSP(PhieuNhap pn);
+        [OperationContract]
         DataSet ChiTietSanPham(SanPham sp);
         [OperationContract]
         void ThemSanPham(SanPham sp);

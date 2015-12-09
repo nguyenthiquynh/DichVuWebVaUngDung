@@ -21,4 +21,15 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="SanPham" nillable="true" type="tns:SanPham" />
+  <xs:complexType name="PhieuNhap">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MaPhieuNhap" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NgayNhap" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="NhaSX_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="PhieuNhap_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="TenNhaSX" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TongTien" type="xs:float" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PhieuNhap" nillable="true" type="tns:PhieuNhap" />
 </xs:schema>

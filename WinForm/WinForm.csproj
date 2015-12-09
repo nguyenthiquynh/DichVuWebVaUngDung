@@ -316,6 +316,12 @@
     <Content Include="Hinh1\ss_02.jpg" />
     <Content Include="Hinh1\ss_03.jpg" />
     <Content Include="Hinh1\ss_04.jpg" />
+    <None Include="Service References\SanPhamServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\SanPhamServiceReference\configuration.svcinfo" />
+    <None Include="Service References\SanPhamServiceReference\configuration91.svcinfo" />
     <None Include="Service References\PhieuNhapServiceReference1\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
@@ -340,12 +346,6 @@
     </None>
     <None Include="Service References\TonKhoServiceReference\configuration.svcinfo" />
     <None Include="Service References\TonKhoServiceReference\configuration91.svcinfo" />
-    <None Include="Service References\SanPhamServiceReference\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Service References\SanPhamServiceReference\configuration.svcinfo" />
-    <None Include="Service References\SanPhamServiceReference\configuration91.svcinfo" />
     <None Include="Service References\NhaSXServiceReference\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>

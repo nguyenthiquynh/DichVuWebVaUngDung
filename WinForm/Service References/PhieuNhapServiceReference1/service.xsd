@@ -13,28 +13,28 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="TimKiemPN">
+  <xs:element name="TimKiem">
     <xs:complexType>
       <xs:sequence>
         <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WcfUngDungWeb" minOccurs="0" name="pn" nillable="true" type="q2:PhieuNhap" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="TimKiemPNResponse">
+  <xs:element name="TimKiemResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WcfUngDungWeb" minOccurs="0" name="TimKiemPNResult" nillable="true" type="q3:ArrayOfPhieuNhap" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WcfUngDungWeb" minOccurs="0" name="TimKiemResult" nillable="true" type="q3:ArrayOfPhieuNhap" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="ThemPN">
+  <xs:element name="Them">
     <xs:complexType>
       <xs:sequence>
         <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WcfUngDungWeb" minOccurs="0" name="pn" nillable="true" type="q4:PhieuNhap" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="ThemPNResponse">
+  <xs:element name="ThemResponse">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>

@@ -70,10 +70,36 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="ThongTinNhapSP">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/WcfUngDungWeb" minOccurs="0" name="pn" nillable="true" type="q8:PhieuNhap" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ThongTinNhapSPResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ThongTinNhapSPResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="ChiTietSanPham">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/WcfUngDungWeb" minOccurs="0" name="sp" nillable="true" type="q8:SanPham" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/WcfUngDungWeb" minOccurs="0" name="sp" nillable="true" type="q9:SanPham" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -99,7 +125,7 @@
   <xs:element name="ThemSanPham">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/WcfUngDungWeb" minOccurs="0" name="sp" nillable="true" type="q9:SanPham" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/WcfUngDungWeb" minOccurs="0" name="sp" nillable="true" type="q10:SanPham" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -111,7 +137,7 @@
   <xs:element name="SuaSanPham">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/WcfUngDungWeb" minOccurs="0" name="sp" nillable="true" type="q10:SanPham" />
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/WcfUngDungWeb" minOccurs="0" name="sp" nillable="true" type="q11:SanPham" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -123,7 +149,7 @@
   <xs:element name="XoaSanPham">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/WcfUngDungWeb" minOccurs="0" name="sp" nillable="true" type="q11:SanPham" />
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/WcfUngDungWeb" minOccurs="0" name="sp" nillable="true" type="q12:SanPham" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

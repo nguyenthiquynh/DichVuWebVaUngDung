@@ -1,23 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
 
-using System.Data;
-using System.Data.SqlClient;
-
 namespace WcfUngDungWeb
 {
-    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "PhieuNhap1Service1" in both code and config file together.
-    public class PhieuNhap1Service1 : IPhieuNhap1Service1
+    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "PhieuNhapService1" in both code and config file together.
+    public class PhieuNhapService1 : IPhieuNhapService1
     {
-        // Hiển thị toàn bộ phiếu nhập
+
         public List<PhieuNhap> HienThiPhieuNhap()
         {
-            List<PhieuNhap> ListPN = new List<PhieuNhap>();
-            string sql = "select PhieuNhap_ID,MaPhieuNhap,pn.NhaSX_ID,TenNhaSX,NgayNhap,pn.TongTien from PhieuNhap pn,NhaSX nsx where pn.NhaSX_ID=ListNSX.NhaSX_ID";
+            List<PhieuNhap> data = new List<PhieuNhap>();
+            string sql = "select PhieuNhap_ID,MaPhieuNhap,pn.NhaSX_ID,TenNhaSX,NgayNhap,pn.TongTien from PhieuNhap pn,NhaSX nsx where pn.NhaSX_ID=nsx.NhaSX_ID";
             SqlDataReader rd = SqlDatabase.ExecuteQueryWithDataReader(sql, CommandType.Text);
             if (rd.HasRows)
             {
@@ -32,16 +31,15 @@ namespace WcfUngDungWeb
                         NgayNhap = DateTime.Parse(rd[4].ToString()),
                         TongTien = float.Parse(rd[5].ToString())
                     };
-                    ListPN.Add(pn);
+                    data.Add(pn);
                 }
             }
-            return ListPN;
+            return data;
         }
 
-        // Tìm kiếm
-        public List<PhieuNhap> TimKiemPN(PhieuNhap pn)
+        public List<PhieuNhap> TimKiem(PhieuNhap pn)
         {
-            List<PhieuNhap> ListPN = new List<PhieuNhap>();
+            List<PhieuNhap> data = new List<PhieuNhap>();
             string sql = "select PhieuNhap_ID,MaPhieuNhap,pn.NhaSX_ID,TenNhaSX,NgayNhap,pn.TongTien"
                        + " from PhieuNhap pn,NhaSX nsx where pn.NhaSX_ID=nsx.NhaSX_ID"
                        + " and (MaPhieuNhap=@MaPhieuNhap or pn.NhaSX_ID=@NhaSX_ID or NgayNhap=@NgayNhap)";
@@ -63,15 +61,13 @@ namespace WcfUngDungWeb
                         NgayNhap = DateTime.Parse(rd[4].ToString()),
                         TongTien = float.Parse(rd[5].ToString())
                     };
-                    ListPN.Add(pn);
+                    data.Add(pn);
                 }
             }
-            return ListPN;
+            return data;
         }
 
-        // Hàm tự viết
-        // Thêm phiếu nhập
-        public void ThemPN(PhieuNhap pn)
+        public void Them(PhieuNhap pn)
         {
             string sql = "insert into PhieuNhap values(@MaPhieuNhap,@NhaSX_ID,@NgayNhap,@TongTien)";
             SqlParameter maphieunhap = new SqlParameter("@MaPhieuNhap", pn.MaPhieuNhap);
@@ -81,8 +77,6 @@ namespace WcfUngDungWeb
             SqlDatabase.ExecuteNonQuery(sql, CommandType.Text, maphieunhap, nhasxid, ngaynhap, tongtien);
         }
 
-        // Hàm tự viết
-        // Cập nhật tổng tiền
         public void Sua_TongTien(PhieuNhap pn)
         {
             string sql = "update PhieuNhap set TongTien=@TongTien where MaPhieuNhap=@MaPhieuNhap";
@@ -91,5 +85,4 @@ namespace WcfUngDungWeb
             SqlDatabase.ExecuteNonQuery(sql, CommandType.Text, maphieunhap, tongtien);
         }
     }
-
 }

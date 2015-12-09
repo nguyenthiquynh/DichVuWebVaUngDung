@@ -139,58 +139,58 @@ namespace WinForm.PhieuNhapServiceReference1 {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="PhieuNhapServiceReference1.IPhieuNhap1Service1")]
-    public interface IPhieuNhap1Service1 {
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="PhieuNhapServiceReference1.IPhieuNhapService1")]
+    public interface IPhieuNhapService1 {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPhieuNhap1Service1/HienThiPhieuNhap", ReplyAction="http://tempuri.org/IPhieuNhap1Service1/HienThiPhieuNhapResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPhieuNhapService1/HienThiPhieuNhap", ReplyAction="http://tempuri.org/IPhieuNhapService1/HienThiPhieuNhapResponse")]
         WinForm.PhieuNhapServiceReference1.PhieuNhap[] HienThiPhieuNhap();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPhieuNhap1Service1/HienThiPhieuNhap", ReplyAction="http://tempuri.org/IPhieuNhap1Service1/HienThiPhieuNhapResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPhieuNhapService1/HienThiPhieuNhap", ReplyAction="http://tempuri.org/IPhieuNhapService1/HienThiPhieuNhapResponse")]
         System.Threading.Tasks.Task<WinForm.PhieuNhapServiceReference1.PhieuNhap[]> HienThiPhieuNhapAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPhieuNhap1Service1/TimKiemPN", ReplyAction="http://tempuri.org/IPhieuNhap1Service1/TimKiemPNResponse")]
-        WinForm.PhieuNhapServiceReference1.PhieuNhap[] TimKiemPN(WinForm.PhieuNhapServiceReference1.PhieuNhap pn);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPhieuNhapService1/TimKiem", ReplyAction="http://tempuri.org/IPhieuNhapService1/TimKiemResponse")]
+        WinForm.PhieuNhapServiceReference1.PhieuNhap[] TimKiem(WinForm.PhieuNhapServiceReference1.PhieuNhap pn);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPhieuNhap1Service1/TimKiemPN", ReplyAction="http://tempuri.org/IPhieuNhap1Service1/TimKiemPNResponse")]
-        System.Threading.Tasks.Task<WinForm.PhieuNhapServiceReference1.PhieuNhap[]> TimKiemPNAsync(WinForm.PhieuNhapServiceReference1.PhieuNhap pn);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPhieuNhapService1/TimKiem", ReplyAction="http://tempuri.org/IPhieuNhapService1/TimKiemResponse")]
+        System.Threading.Tasks.Task<WinForm.PhieuNhapServiceReference1.PhieuNhap[]> TimKiemAsync(WinForm.PhieuNhapServiceReference1.PhieuNhap pn);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPhieuNhap1Service1/ThemPN", ReplyAction="http://tempuri.org/IPhieuNhap1Service1/ThemPNResponse")]
-        void ThemPN(WinForm.PhieuNhapServiceReference1.PhieuNhap pn);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPhieuNhapService1/Them", ReplyAction="http://tempuri.org/IPhieuNhapService1/ThemResponse")]
+        void Them(WinForm.PhieuNhapServiceReference1.PhieuNhap pn);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPhieuNhap1Service1/ThemPN", ReplyAction="http://tempuri.org/IPhieuNhap1Service1/ThemPNResponse")]
-        System.Threading.Tasks.Task ThemPNAsync(WinForm.PhieuNhapServiceReference1.PhieuNhap pn);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPhieuNhapService1/Them", ReplyAction="http://tempuri.org/IPhieuNhapService1/ThemResponse")]
+        System.Threading.Tasks.Task ThemAsync(WinForm.PhieuNhapServiceReference1.PhieuNhap pn);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPhieuNhap1Service1/Sua_TongTien", ReplyAction="http://tempuri.org/IPhieuNhap1Service1/Sua_TongTienResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPhieuNhapService1/Sua_TongTien", ReplyAction="http://tempuri.org/IPhieuNhapService1/Sua_TongTienResponse")]
         void Sua_TongTien(WinForm.PhieuNhapServiceReference1.PhieuNhap pn);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPhieuNhap1Service1/Sua_TongTien", ReplyAction="http://tempuri.org/IPhieuNhap1Service1/Sua_TongTienResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPhieuNhapService1/Sua_TongTien", ReplyAction="http://tempuri.org/IPhieuNhapService1/Sua_TongTienResponse")]
         System.Threading.Tasks.Task Sua_TongTienAsync(WinForm.PhieuNhapServiceReference1.PhieuNhap pn);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IPhieuNhap1Service1Channel : WinForm.PhieuNhapServiceReference1.IPhieuNhap1Service1, System.ServiceModel.IClientChannel {
+    public interface IPhieuNhapService1Channel : WinForm.PhieuNhapServiceReference1.IPhieuNhapService1, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class PhieuNhap1Service1Client : System.ServiceModel.ClientBase<WinForm.PhieuNhapServiceReference1.IPhieuNhap1Service1>, WinForm.PhieuNhapServiceReference1.IPhieuNhap1Service1 {
+    public partial class PhieuNhapService1Client : System.ServiceModel.ClientBase<WinForm.PhieuNhapServiceReference1.IPhieuNhapService1>, WinForm.PhieuNhapServiceReference1.IPhieuNhapService1 {
         
-        public PhieuNhap1Service1Client() {
+        public PhieuNhapService1Client() {
         }
         
-        public PhieuNhap1Service1Client(string endpointConfigurationName) : 
+        public PhieuNhapService1Client(string endpointConfigurationName) : 
                 base(endpointConfigurationName) {
         }
         
-        public PhieuNhap1Service1Client(string endpointConfigurationName, string remoteAddress) : 
+        public PhieuNhapService1Client(string endpointConfigurationName, string remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public PhieuNhap1Service1Client(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public PhieuNhapService1Client(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public PhieuNhap1Service1Client(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public PhieuNhapService1Client(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
         }
         
@@ -202,20 +202,20 @@ namespace WinForm.PhieuNhapServiceReference1 {
             return base.Channel.HienThiPhieuNhapAsync();
         }
         
-        public WinForm.PhieuNhapServiceReference1.PhieuNhap[] TimKiemPN(WinForm.PhieuNhapServiceReference1.PhieuNhap pn) {
-            return base.Channel.TimKiemPN(pn);
+        public WinForm.PhieuNhapServiceReference1.PhieuNhap[] TimKiem(WinForm.PhieuNhapServiceReference1.PhieuNhap pn) {
+            return base.Channel.TimKiem(pn);
         }
         
-        public System.Threading.Tasks.Task<WinForm.PhieuNhapServiceReference1.PhieuNhap[]> TimKiemPNAsync(WinForm.PhieuNhapServiceReference1.PhieuNhap pn) {
-            return base.Channel.TimKiemPNAsync(pn);
+        public System.Threading.Tasks.Task<WinForm.PhieuNhapServiceReference1.PhieuNhap[]> TimKiemAsync(WinForm.PhieuNhapServiceReference1.PhieuNhap pn) {
+            return base.Channel.TimKiemAsync(pn);
         }
         
-        public void ThemPN(WinForm.PhieuNhapServiceReference1.PhieuNhap pn) {
-            base.Channel.ThemPN(pn);
+        public void Them(WinForm.PhieuNhapServiceReference1.PhieuNhap pn) {
+            base.Channel.Them(pn);
         }
         
-        public System.Threading.Tasks.Task ThemPNAsync(WinForm.PhieuNhapServiceReference1.PhieuNhap pn) {
-            return base.Channel.ThemPNAsync(pn);
+        public System.Threading.Tasks.Task ThemAsync(WinForm.PhieuNhapServiceReference1.PhieuNhap pn) {
+            return base.Channel.ThemAsync(pn);
         }
         
         public void Sua_TongTien(WinForm.PhieuNhapServiceReference1.PhieuNhap pn) {

@@ -7,101 +7,107 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
-
 using System.Data.SqlClient;
 
 using WinForm.PhieuNhapServiceReference1;
 using WinForm.CtPhieuNhapServiceReference;
 using WinForm.NhaSXServiceReference;
-using WinForm.TonKhoServiceReference;
 using WinForm.SanPhamServiceReference;
+using WinForm.TonKhoServiceReference;
 
 namespace WinForm
 {
     public partial class QuanLyPhieuNhap : Form
     {
-        //Phieu Nhap
-      
+        
         WinForm.PhieuNhapServiceReference1.PhieuNhap pn1 = new WinForm.PhieuNhapServiceReference1.PhieuNhap();
-        PhieuNhap1Service1Client PhieuNhapClient = new PhieuNhap1Service1Client();
-        //CtPhieuNhap
+        WinForm.SanPhamServiceReference.PhieuNhap pn = new WinForm.SanPhamServiceReference.PhieuNhap();
         CtPhieuNhap ctpn = new CtPhieuNhap();
+        PhieuNhapService1Client PhieuNhapClient = new PhieuNhapService1Client();
         CtPhieuNhapService1Client CtPhieuNhapClient = new CtPhieuNhapService1Client();
 
-        //NhaSX
+        //nha sx
         NhaSX nsx = new NhaSX();
         NhaSXService1Client NhaSXClient = new NhaSXService1Client();
 
-        //SanPham
+        // san pham 
         SanPham sp = new SanPham();
         SanPhamService1Client SanPhamClient = new SanPhamService1Client();
 
-        // TonKho
+        // ton kho
         TonKho tk = new TonKho();
         TonKhoService1Client TonKhoClient = new TonKhoService1Client();
-
         public QuanLyPhieuNhap()
         {
             InitializeComponent();
         }
-        public void Ds_PhieuNhap()
+
+        float tongtien;
+        public void Ds_PhieuNhap()   
         {
-            dgvPhieuNhap.AutoGenerateColumns = false; //Không tự tạo các column theo DataSource .
+            dgvPhieuNhap.AutoGenerateColumns = false;
             dgvPhieuNhap.DataSource = PhieuNhapClient.HienThiPhieuNhap();
         }
-
-        private void txtTim_MaPN_TextChanged(object sender, EventArgs e)
+        public void Ds_CtPhieuNhap(string maphieunhap)
         {
+            dgvChiTietPhieuNhap.AutoGenerateColumns = false;
+            ctpn.MaPhieuNhap = maphieunhap;
+            dgvChiTietPhieuNhap.DataSource = CtPhieuNhapClient.HienThiCtPhieuNhap(ctpn);
+        }
+       
 
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (cbTimKiem.Text == "Mã phiếu nhập")
+                {
+                    pn1.MaPhieuNhap = txtTim_MaPN.Text;
+                    pn1.NhaSX_ID = 0;
+                    pn1.NgayNhap = DateTime.MaxValue;
+                }
+                else if (cbTimKiem.Text == "Nhà sản xuất")
+                {
+                    pn1.MaPhieuNhap = "";
+                    pn1.NhaSX_ID = int.Parse(cbTim_NSX.SelectedValue.ToString());
+                    pn1.NgayNhap = DateTime.MaxValue;
+                }
+                else
+                {
+                    pn1.MaPhieuNhap = "";
+                    pn1.NhaSX_ID = 0;
+                    pn1.NgayNhap = DateTime.Parse(dtpTim_NgayNhap.Value.ToShortDateString());
+                }
+
+                dgvPhieuNhap.AutoGenerateColumns = false;
+                dgvPhieuNhap.DataSource = PhieuNhapClient.TimKiem(pn1);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Xảy ra lỗi", "Thông báo");
+            }
         }
 
         private void cbTimKiem_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(cbTimKiem.Text == "Mã phiếu nhập")
+            if (cbTimKiem.Text == "Mã phiếu nhập")
             {
-                txtMaPhieuNhap.Enabled =true;
+                txtTim_MaPN.Enabled = true;
                 cbTim_NSX.Enabled = false;
-                dtpNgayNhap.Enabled =false;
-
+                dtpTim_NgayNhap.Enabled = false;
             }
-            else if (cbTimKiem.Text == "Nhà sản xuất")
+            else if (cbTimKiem.Text == "Nhà sản xuất")
             {
-                txtMaPhieuNhap.Enabled =false;
+                txtTim_MaPN.Enabled = false;
                 cbTim_NSX.Enabled = true;
-                dtpNgayNhap.Enabled = false;
+                dtpTim_NgayNhap.Enabled = false;
             }
             else
             {
-                txtMaPhieuNhap.Enabled = false;
+                txtTim_MaPN.Enabled = false;
                 cbTim_NSX.Enabled = false;
-                dtpNgayNhap.Enabled = true;
+                dtpTim_NgayNhap.Enabled = true;
             }
-                
-        }
-
-        private void btnTimKiem_Click(object sender, EventArgs e)
-        {
-            if(cbTimKiem.Text =="Mã phiếu nhập")
-            {
-                pn1.MaPhieuNhap = (txtMaPhieuNhap.Text);
-                pn1.NgayNhap = DateTime.MaxValue;
-                pn1.NhaSX_ID = 0;
-            }
-            else if(cbTimKiem.Text == "Nhà sản xuất")
-            {
-                pn1.MaPhieuNhap = "";
-                pn1.NgayNhap = DateTime.MaxValue;
-                pn1.NhaSX_ID = int.Parse(cbTim_NSX.SelectedValue.ToString());
-
-            }
-            else
-            {
-                pn1.MaPhieuNhap = "";
-                pn1.NgayNhap = DateTime.Parse(dtpTim_NgayNhap.Value.ToShortDateString());
-            }
-            dgvPhieuNhap.AutoGenerateColumns = false;
-            dgvPhieuNhap.DataSource = PhieuNhapClient.TimKiemPN(pn1);
         }
 
         private void btnCapNhatLai_Click(object sender, EventArgs e)
@@ -113,9 +119,9 @@ namespace WinForm
         private void btnThem_Click(object sender, EventArgs e)
         {
             thoigian = DateTime.Now.ToString("yyyyMMddhhmmss");
-            txtMaPhieuNhap.Text= "PN" + thoigian;
-            dtpNgayNhap.Value = DateTime.Now;
             cbNhaSX.Enabled = true;
+            txtMaPhieuNhap.Text = "PN" + thoigian;
+            dtpNgayNhap.Value = DateTime.Now;
             btnLuu.Enabled = true;
             btnThem.Enabled = false;
         }
@@ -124,42 +130,128 @@ namespace WinForm
         {
             try
             {
-                    pn1.MaPhieuNhap = txtMaPhieuNhap.Text;
-                    pn1.NhaSX_ID = int.Parse(cbNhaSX.SelectedValue.ToString());
-                    pn1.NgayNhap = dtpNgayNhap.Value;
-                    pn1.TongTien = 0;
-                    if (cbNhaSX.SelectedIndex != -1)
+                pn1.MaPhieuNhap = txtMaPhieuNhap.Text;
+                pn1.NhaSX_ID = int.Parse(cbNhaSX.SelectedValue.ToString());
+                pn1.NgayNhap = dtpNgayNhap.Value;
+                pn1.TongTien = 0;
+                if (cbNhaSX.SelectedIndex != -1)
+                {
+                    try
                     {
-                        try
-                        {
-                            PhieuNhapClient.ThemPN(pn1);
-                            MessageBox.Show("Thêm Phiếu Nhập Thành Công", "Thông Báo");
-                        }
-                        catch
-                        {
-                            MessageBox.Show("Thêm Phiếu Nhập Thất Bại", "Thông Báo");
-                        }
-
+                        PhieuNhapClient.Them(pn1);
+                        MessageBox.Show("Thêm phiếu nhập thành công", "Thông báo");
                     }
-                    else
+                    catch (Exception ex)
                     {
-                        MessageBox.Show("Chọn Nhà Sản Xuất","Thông báo");
+                        MessageBox.Show("Thêm phiếu nhập không thành công\n" + ex.Message, "Thông báo");
                     }
-                    cbNhaSX.SelectedIndex = -1;
-                    Ds_PhieuNhap();
-
+                    txtMaPhieuNhap.Text = "";
+                }
+                else
+                {
+                    MessageBox.Show("Chọn nhà sản xuất", "Thông báo");
+                }
+                cbNhaSX.SelectedIndex = -1;
+                Ds_PhieuNhap();
             }
-            catch
+            catch (Exception)
             {
-                MessageBox.Show("Xẩy ra lỗi", "Thông báo");
+                MessageBox.Show("Xảy ra lỗi", "Thông báo");
             }
         }
-        public void Ds_ChiTietPhieuNhap(string maphieunhap)
+
+        private void btnLuuSanPham_Click(object sender, EventArgs e)
         {
-            dgvChiTietPhieuNhap.AutoGenerateColumns = false;
-            ctpn.maphieunhap = maphieunhap;// lỗi
-            dgvChiTietPhieuNhap.DataSource = CtPhieuNhapClient.HienThiCtPhieuNhap(ctpn);
-           
+            string maphieunhap = txtMaPhieuNhap.Text;
+            int soluongnhap; float dongianhap;
+
+            List<TonKho> list;
+
+            try
+            {
+                for (int i = 0; i < dgvBangNhap.Rows.Count; i++)
+                {
+                    if (dgvBangNhap.Rows[i].Cells[2].Value != null && dgvBangNhap.Rows[i].Cells[3].Value != null)
+                    {
+                        soluongnhap = int.Parse(dgvBangNhap.Rows[i].Cells[2].Value.ToString());
+                        dongianhap = float.Parse(dgvBangNhap.Rows[i].Cells[3].Value.ToString());
+                        if (soluongnhap > 0 && dongianhap > 0)
+                        {
+                            ctpn.MaPhieuNhap = maphieunhap;
+                            ctpn.SP_ID = int.Parse(dgvBangNhap.Rows[i].Cells[0].Value.ToString());
+                            ctpn.SoLuongNhap = soluongnhap;
+                            ctpn.DonGiaNhap = dongianhap;
+                            tongtien = tongtien + (soluongnhap * dongianhap);
+                            CtPhieuNhapClient.Them(ctpn);
+
+                            // cap nhat don gia trong bang san pham
+                            sp.SP_ID = int.Parse(dgvBangNhap.Rows[i].Cells[0].Value.ToString());
+                            sp.DonGia = dongianhap + (dongianhap * 10 / 100);
+                            SanPhamClient.SuaSanPham(sp);
+
+                            // ton kho
+                            //bll_tonkho.SP_ID = int.Parse(dgvBangNhap.Rows[i].Cells[0].Value.ToString());
+                            tk.SP_ID = int.Parse(dgvBangNhap.Rows[i].Cells[0].Value.ToString());
+                            tk.ThoiGian = DateTime.Now;
+                            tk.SoLuongTon = soluongnhap;
+
+                            list = TonKhoClient.TimKiemTonKho_SPID(tk).ToList(); // Kiem tra ton kho
+                            if (list.Count > 0)
+                            {
+                                // cap nhat ton kho
+                                TonKhoClient.ThemMoi(tk);
+                            }
+                            else
+                            {
+                                // them moi
+                                TonKhoClient.ThemMoi(tk);
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Nhập không hợp lệ", "Thông báo lỗi");
+                        }
+                    }
+                }
+                Ds_CtPhieuNhap(maphieunhap);
+                pn1.MaPhieuNhap = txtMaPhieuNhap.Text;
+                pn1.TongTien = tongtien;
+                PhieuNhapClient.Sua_TongTien(pn1);
+                Ds_PhieuNhap();
+                NhapSanPham(int.Parse(cbNhaSX.SelectedValue.ToString()), maphieunhap);
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Xảy ra lỗi", "Thông báo");
+            }
+        }
+
+        private void btnHoanTat_Click(object sender, EventArgs e)
+        {
+            btnThem.Enabled = true;
+            btnLuu.Enabled = false;
+            btnLuuSanPham.Enabled = false;
+            btnHoanTat.Enabled = false;
+        }
+        public void Ds_NhaSX() 
+        {
+            cbNhaSX.ValueMember = "NhaSX_ID";
+            cbNhaSX.DisplayMember = "TenNhaSX";
+            cbNhaSX.DataSource = NhaSXClient.HienThiNhaSX();
+
+            cbTim_NSX.ValueMember = "NhaSX_ID";
+            cbTim_NSX.DisplayMember = "TenNhaSX";
+            cbTim_NSX.DataSource = NhaSXClient.HienThiNhaSX();
+        }
+        public void NhapSanPham(int nhasxid, string maphieunhap)
+        {
+            pn.NhaSX_ID = nhasxid;
+            pn.MaPhieuNhap = maphieunhap;
+            dgvBangNhap.AutoGenerateColumns = false;
+            DataTable dt = SanPhamClient.ThongTinNhapSP(pn).Tables[0];
+            dgvBangNhap.DataSource = dt;
         }
     }
+       
 }
