@@ -27,17 +27,17 @@ namespace WinForm
             InitializeComponent();
             Ds_DonDH();
         }
-        public void Ds_DonDH()
+        public void Ds_DonDH()  //R
         {
             dgvDonDH.AutoGenerateColumns = false;
             dgvDonDH.DataSource = DonDHClient.HienThiDonDH();
         }
-        private void Ds_CtDonDH(CtDonDH ct)
+        private void Ds_CtDonDH(CtDonDH ct)  //R
         {
             dgvChiTietDonDH.AutoGenerateColumns = false;
             dgvChiTietDonDH.DataSource = CtDonDHClient.HienThiCtDonDH(ct);
         }
-        private void dgvDonDH_Click(object sender, EventArgs e)
+        private void dgvDonDH_Click(object sender, EventArgs e)  //R
         {
             int vitri = dgvDonDH.CurrentRow.Index;
             List<DonDH> list = DonDHClient.HienThiDonDH().ToList();
@@ -56,7 +56,34 @@ namespace WinForm
             Ds_CtDonDH(ctddh);
         }
       
-        private void btnTimKiem_Click(object sender, EventArgs e)
+        private void btnTimKiem_Click(object sender, EventArgs e)  //R
+        {
+            if (cbTimKiem.Text == "Mã đơn đặt hàng")
+            {
+                if (txtTim_MaDonDH.Text != "")
+                {
+                    dgvDonDH.AutoGenerateColumns = false;
+                    dgvDonDH.DataSource = DonDHClient.TimKiem(txtTim_MaDonDH.Text, DateTime.Now);
+                }
+                else
+                {
+                    MessageBox.Show("Nhập mã đơn đặt hàng");
+                }
+            }
+            else if (cbTimKiem.Text == "Ngày đặt")
+            {
+                dgvDonDH.AutoGenerateColumns = false;
+                dgvDonDH.DataSource = DonDHClient.TimKiem("", dtpTim_NgayDat.Value);
+            }
+            else
+            {
+                dgvDonDH.AutoGenerateColumns = false;
+                string tt = cbTimTinhTrang.SelectedItem.ToString();
+                dgvDonDH.DataSource = DonDHClient.TimKiem_TinhTrang(tt);
+            }
+        }
+
+        private void cbTimKiem_SelectedIndexChanged(object sender, EventArgs e)  //R
         {
             if (cbTimKiem.Text == "Mã đơn đặt hàng")
             {
@@ -78,29 +105,7 @@ namespace WinForm
             }
         }
 
-        private void cbTimKiem_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cbTimKiem.Text == "Mã đơn đặt hàng")
-            {
-                txtTim_MaDonDH.Enabled = true;
-                dtpTim_NgayDat.Enabled = false;
-                cbTimTinhTrang.Enabled = false;
-            }
-            else if (cbTimKiem.Text == "Ngày đặt")
-            {
-                txtTim_MaDonDH.Enabled = false;
-                dtpTim_NgayDat.Enabled = true;
-                cbTimTinhTrang.Enabled = false;
-            }
-            else
-            {
-                txtTim_MaDonDH.Enabled = false;
-                dtpTim_NgayDat.Enabled = false;
-                cbTimTinhTrang.Enabled = true;
-            }
-        }
-
-        private void btnCapNhatLai_Click(object sender, EventArgs e)
+        private void btnCapNhatLai_Click(object sender, EventArgs e) //R
         {
             Ds_DonDH();
             cbTimKiem.SelectedIndex = 0;
@@ -112,7 +117,7 @@ namespace WinForm
 
         }
 
-        private void btnSua_Click(object sender, EventArgs e)
+        private void btnSua_Click(object sender, EventArgs e) //R
         {
             string tinhtrang = dgvDonDH.CurrentRow.Cells[5].Value.ToString();
             if (tinhtrang == "Chưa giao hàng")
@@ -121,7 +126,7 @@ namespace WinForm
             }
         }
 
-        private void btnLuu_Click(object sender, EventArgs e)
+        private void btnLuu_Click(object sender, EventArgs e) //R
         {
             try
             {
@@ -139,7 +144,7 @@ namespace WinForm
             }
         }
 
-        private void btnXoa_Click(object sender, EventArgs e)
+        private void btnXoa_Click(object sender, EventArgs e) //R
         {
             string thoigian = DateTime.Now.ToString("yyyyMMddhhmmss");
             if (MessageBox.Show("Chương trình sẽ xóa đơn đặt hàng và chi tiết ?", "Thông báo xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
@@ -182,7 +187,7 @@ namespace WinForm
 
         }
 
-        private void btnHuy_Click(object sender, EventArgs e)
+        private void btnHuy_Click(object sender, EventArgs e)  //R
         {
             cbTinhTrang.Enabled = false;
         }
@@ -192,7 +197,7 @@ namespace WinForm
             Ds_DonDH();
         }
 
-        private void dgvDonDH_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvDonDH_CellContentClick(object sender, DataGridViewCellEventArgs e) //R
         {
             int vitri = dgvDonDH.CurrentRow.Index;
             List<DonDH> list = DonDHClient.HienThiDonDH().ToList();
