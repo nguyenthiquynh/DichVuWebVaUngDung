@@ -216,5 +216,10 @@ namespace WinForm
             Ds_CtDonDH(ctddh);
         }
 
+        private void QuanLyDonDatHang_Load(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
