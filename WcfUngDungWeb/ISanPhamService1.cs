@@ -27,8 +27,6 @@ namespace WcfUngDungWeb
         [OperationContract]
         List<SanPham> TimKiemSanPham(string tensp, int nhasxid, decimal dongiatu, decimal dongiaden);
         [OperationContract]
-        DataSet ThongTinNhapSP(PhieuNhap pn);
-        [OperationContract]
         DataSet ChiTietSanPham(SanPham sp);
         [OperationContract]
         void ThemSanPham(SanPham sp);
@@ -38,6 +36,51 @@ namespace WcfUngDungWeb
         //void Sua_DonGia(SanPham sp);
         //[OperationContract]
         void XoaSanPham(SanPham sp);
+
+        [OperationContract]
+        List<SanPham> Spnew();
+
+        [OperationContract]
+        List<SanPham> Spfea();
+
+        [OperationContract]
+        List<SanPham> Sprun();
+
+        [OperationContract]
+        List<SanPham> SpAcer();
+
+        [OperationContract]
+        List<SanPham> SpSam();
+
+        [OperationContract]
+        List<SanPham> SpHP();
+
+        [OperationContract]
+        List<SanPham> SpDell();
+
+        [OperationContract]
+        List<SanPham> SpApple();
+
+        [OperationContract]
+        List<SanPham> Category(int ID);
+
+        [OperationContract]
+        SanPham Detail(int ID);
+
+        [OperationContract]
+        SanPham Searchid (int ID);
+        
+        [OperationContract]
+        bool Create(SanPham sp);
+
+        [OperationContract]
+        bool Edit(SanPham sp,int ID);
+
+        [OperationContract]
+        bool Delete(int ID);
+
+        [OperationContract]
+        List<SanPham> listpro();
     }
     [DataContract]
     public class SanPham
@@ -121,5 +164,15 @@ namespace WcfUngDungWeb
             get { return mota; }
             set { mota = value; }
         }
+
+        private string tennsx;
+        [DataMember]
+        public string TenNhaSX
+        {
+            get { return tennsx; }
+            set { tennsx = value; }
+        }
+
+
     }
 }
