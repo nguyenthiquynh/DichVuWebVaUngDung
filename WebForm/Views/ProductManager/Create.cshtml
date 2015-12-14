@@ -1,0 +1,99 @@
+﻿@{
+    ViewBag.Title = "Thêm sản phẩm";
+    Layout = "~/Views/Shared/Admin.cshtml";
+}
+
+@model WebForm.SanPhamService.SanPham
+<div class="row">
+    <div class="col-lg-12">
+        <div class="box dark">
+            <header>
+                <div class="icons"><i class="icon-edit"></i></div>
+                <h5>@ViewBag.Title</h5>
+                @if (ViewBag.Suscess != null)
+                {
+                    <div class="alert alert-success">
+                        @ViewBag.Suscess
+                    </div>
+                }
+                <div class="toolbar">
+                    <ul class="nav">
+                        <li>
+                            <a class="accordion-toggle minimize-box" data-toggle="collapse" href="#div-1">
+                                <i class="icon-chevron-up"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+            <div id="div-1" class="accordion-body collapse in body">
+                @using (Html.BeginForm("Create", "ProductManager", FormMethod.Post, new { @class = "form-horizontal", enctype = "multipart/form-data" }))
+                {
+                    @Html.AntiForgeryToken()          // this is for prevent CSRF attack
+                                                    @Html.ValidationSummary(true)
+
+                                                    <div class="form-group">
+                                                        <label class="control-label col-lg-4">Tên truyện</label>
+
+                                                        <div class="col-lg-8">
+                                                            @Html.TextBoxFor(a => a.TenSP, new { @class = "form-control" })
+                                                            <p class="help-block">@Html.ValidationMessageFor(a => a.TenSP)</p>
+                                                        </div>
+                                                    </div>
+                                                   
+                                                    <div class="form-group">
+                                                        <label for="text2" class="control-label col-lg-4">Giá mới</label>
+
+                                                        <div class="col-lg-8">
+                                                            @Html.TextBoxFor(a => a.DonGia, new { @class = "form-control" })
+                                                            <p class="help-block">@Html.ValidationMessageFor(a => a.DonGia)</p>
+                                                        </div>
+                                                    </div>
+                                                    @*<div class="form-group">
+                                                        <label class="control-label col-lg-4">Số lượng</label>
+
+                                                        <div class="col-lg-8">
+                                                            @Html.TextBoxFor(a => a.SoLuongTon, new { @class = "form-control" })
+                                                            <p class="help-block">@Html.ValidationMessageFor(a => a.SoLuong)</p>
+                                                        </div>
+                                                    </div>*@
+                                                    <div class="form-group">
+                                                        <label class="control-label col-lg-4">Nhà sản xuất</label>
+                                                        <div class="col-lg-8">
+                                                            <select class="form-control" name="Group_Id" id="Group_Id">
+                                                                <option value="1">Acer</option>
+                                                                <option value="2">Sam Sung</option>
+                                                                <option value="3">HP</option>
+                                                                <option value="4">Dell</option>
+                                                                <option value="5">Apple</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="text4" class="control-label col-lg-4">Mô tả</label>
+                                                        <div class="col-lg-8">
+                                                            @Html.TextAreaFor(a => a.MoTa, new { @class = "form-control" })
+                                                            <p class="help-block">@Html.ValidationMessageFor(a => a.MoTa)</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-lg-4">Ảnh đại diện</label>
+                                                        <div class="col-lg-8">
+                                                            @Html.TextBoxFor(a => a.Hinh, new { @class = "form-control", type = "file" })
+                                                            <p class="help-block">@Html.ValidationMessageFor(a => a.Hinh)</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <div class="col-lg-8">
+                                                            <button type="submit" class="btn btn-primary" name="Submit" value="Upload">Lưu</button>
+                                                            <button type="reset" class="btn btn-danger">Nhập lại</button>
+                                                        </div>
+                                                    </div>
+                }
+
+            </div>
+        </div>
+    </div>
+
+</div>
+

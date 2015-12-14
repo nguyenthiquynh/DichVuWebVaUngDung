@@ -1,0 +1,239 @@
+﻿@if (Session["LogedUserFullname"] == null)
+{
+    Response.Redirect("/Home/Index");
+}
+else
+{
+    if (int.Parse(Session["LogedUserRule"].ToString()) == 1)
+    {
+        Response.Redirect("/Home/Index");
+    }
+    else
+    {
+    }
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>@ViewBag.Title</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+
+    <!-- GLOBAL STYLES -->
+
+    <link href="~/Content/Admin/plugins/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/Admin/css/main.css" rel="stylesheet" />
+    <link href="~/Content/Admin/css/theme.css" rel="stylesheet" />
+    <link href="~/Content/Admin/css/MoneAdmin.css" rel="stylesheet" />
+    <link href="~/Content/Admin/plugins/Font-Awesome/css/font-awesome.css" rel="stylesheet" />
+    <!--END GLOBAL STYLES -->
+    <!-- PAGE LEVEL STYLES -->
+    <link href="~/Content/Admin/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/Admin/css/bootstrap-fileupload.min.css" rel="stylesheet" />
+    <!-- END PAGE LEVEL  STYLES -->
+    <link rel="shortcut icon" href="~/favicon.ico">
+</head>
+<!-- END HEAD -->
+<!-- BEGIN BODY -->
+<body class="padTop53 ">
+
+    <!-- MAIN WRAPPER -->
+    <div id="wrap">
+
+
+        <!-- HEADER SECTION -->
+        <div id="top">
+
+            <nav class="navbar navbar-inverse navbar-fixed-top " style="padding-top: 10px;">
+                <a data-original-title="Show/Hide Menu" data-placement="bottom" data-tooltip="tooltip" class="accordion-toggle btn btn-primary btn-sm visible-xs" data-toggle="collapse" href="#menu" id="menu-toggle">
+                    <i class="icon-align-justify"></i>
+                </a>
+                <!-- LOGO SECTION -->
+                <header class="navbar-header">
+
+                    <a href="/Admin/Index" class="navbar-brand">
+                        <img src="~/Content/Admin/img/logo.png" alt="" />
+                    </a>
+                </header>
+                <!-- END LOGO SECTION -->
+                <ul class="nav navbar-top-links navbar-right">
+
+                    <!--ADMIN SETTINGS SECTIONS -->
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <i class="icon-user "></i>&nbsp; <i class="icon-chevron-down "></i>
+                        </a>
+
+                        <ul class="dropdown-menu dropdown-user">
+                            <li>
+                                <a href="/Home/Index"><i class="icon-home"></i> Cửa hàng </a>
+                            </li>
+                            <li>
+                                <a href=""><i class="icon-user"></i> Thông tin cá nhân </a>
+                            </li>
+                            <li>
+                                <a href=""><i class="icon-gear"></i> Cài đặt </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="/Account/Logout"><i class="icon-signout"></i> Đăng xuất </a>
+                            </li>
+                        </ul>
+
+                    </li>
+                    <!--END ADMIN SETTINGS -->
+                </ul>
+
+            </nav>
+
+        </div>
+        <!-- END HEADER SECTION -->
+        <!--============================================= MENU SECTION =======================================================-->
+        <div id="left">
+            <div class="media user-media well-small">
+                <a class="user-link" href="#">
+                    <img class="media-object img-thumbnail user-img" alt="User Picture" src="~/Content/Admin/img/usera5.png" />
+                </a>
+                <br />
+                <div class="media-body">
+                    <h5 class="media-heading">@Session["LogedUserFullname"]</h5>
+                    <ul class="list-unstyled user-info">
+
+                        <li>
+                            <a class="btn btn-success btn-xs btn-circle" style="width: 10px;height: 12px;"></a> Online
+
+                        </li>
+
+                    </ul>
+                </div>
+                <br />
+            </div>
+            @if (@Session["LogedUserFullname"] != null && int.Parse(Session["LogedUserRule"].ToString()) == 0)
+            {
+                <ul id="menu" class="collapse">
+                    <li class="panel active">
+                        <a href="#" data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#component-nav">
+                            <i class="icon-tasks"> </i> Quản lí tài khoản
+
+                            <span class="pull-right">
+                                <i class="icon-angle-left"></i>
+                            </span>
+                        </a>
+                        <ul class="collapse" id="component-nav">
+
+                            <li class=""><a href="/UsersManager/Create"><i class="icon-angle-right"></i> Thêm tài khoản </a></li>
+                            <li class=""><a href="/UsersManager/UserManager"><i class="icon-angle-right"></i> Danh sách tài khoản </a></li>
+
+                        </ul>
+                    </li>
+                    <li class="panel ">
+                        <a href="#" data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#component-bal">
+                            <i class="icon-tasks"> </i> Quản lí sản phẩm
+
+                            <span class="pull-right">
+                                <i class="icon-angle-left"></i>
+                            </span>
+                        </a>
+                        <ul class="collapse" id="component-bal">
+                            <li class=""><a href="/ProductManager/Create"><i class="icon-angle-right"></i> Nhập sản phẩm </a></li>
+                            <li class=""><a href="/ProductManager/ProductManager"><i class="icon-angle-right"></i> Danh sách sản phẩm </a></li>
+                            <li class=""><a href="/ProductManager/Browse"><i class="icon-angle-right"></i> Duyệt sản phẩm </a></li>
+                        </ul>
+                    </li>
+                    <li class="panel">
+                        <a href="#" data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#component-nav-order">
+                            <i class="icon-tasks"> </i> Quản lí hóa đơn
+
+                            <span class="pull-right">
+                                <i class="icon-angle-left"></i>
+                            </span>
+                        </a>
+                        <ul class="collapse" id="component-nav-order">
+
+                            <li class=""><a href="/OrderManager/OrderAdminManager"><i class="icon-angle-right"></i> Danh sách hóa đơn </a></li>
+
+                        </ul>
+                    </li>
+                    <li class="panel ">
+                        <a href="#" data-parent="#menu" data-toggle="collapse" class="accordion-toggle collapsed" data-target="#form-nav">
+                            <i class="icon-pencil"></i> Thống kê
+
+                            <span class="pull-right">
+                                <i class="icon-angle-left"></i>
+                            </span>
+                        </a>
+                        <ul class="collapse" id="form-nav">
+                            <li class=""><a href="#"><i class="icon-angle-right"></i> Demo </a></li>
+                            <li class=""><a href="#"><i class="icon-angle-right"></i> Demo </a></li>
+                        </ul>
+                    </li>
+                </ul>
+            }
+
+
+        </div>
+        <!--=====================================================END MENU SECTION====================================================== -->
+        <!--PAGE CONTENT -->
+        <div id="content">
+
+            <div class="inner">
+                <div class="row">
+                    <div class="col-lg-12">
+
+
+                        <h2> @ViewBag.Title </h2>
+
+
+
+                    </div>
+                </div>
+
+                <hr />
+                <div>
+                    @RenderBody()
+                </div>
+            </div>
+
+
+
+
+        </div>
+        <!--END PAGE CONTENT -->
+
+
+    </div>
+
+    <!--END MAIN WRAPPER -->
+    <!-- FOOTER -->
+    <div id="footer">
+        <p>&copy;  minhduc.tran.sgu &nbsp;2014 &nbsp;</p>
+
+
+    </div>
+    <!--END FOOTER -->
+    <!-- GLOBAL SCRIPTS -->
+    <script src="~/Content/Admin/plugins/jquery-2.0.3.min.js"></script>
+    <script src="~/Content/Admin/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/Content/Admin/plugins/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <!-- END GLOBAL SCRIPTS -->
+    <!-- PAGE LEVEL SCRIPTS -->
+    <script src="~/Content/Admin/plugins/jasny/js/bootstrap-fileupload.js"></script>
+    <script src="~/Content/Admin/plugins/dataTables/jquery.dataTables.js"></script>
+    <script src="~/Content/Admin/plugins/dataTables/dataTables.bootstrap.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#dataTables-example').dataTable();
+        });
+    </script>
+    <!-- END PAGE LEVEL SCRIPTS -->
+</body>
+<!-- END BODY -->
+</html>
+
+

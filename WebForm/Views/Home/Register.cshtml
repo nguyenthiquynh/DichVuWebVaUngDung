@@ -1,0 +1,80 @@
+﻿@{
+    ViewBag.Title = "Đăng ký";
+    Layout = "~/Views/Shared/Customer.cshtml";
+}
+@model WebForm.NguoiDungService.NguoiDung
+
+<main id="authentication" class="inner-bottom-md">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <section class="section sign-in inner-right-xs">
+                    <h2 class="bordered">Đăng ký tài khoản</h2>
+                    <p>Thông tin cá nhân</p>
+                    <p style="color:red">*Vui lòng nhập đầy đủ và chính xác để sử dụng YinggShop an toàn*</p>
+                    <div class="social-auth-buttons">
+                        <div class="row">
+
+                        </div>
+                    </div>
+                    @using (Html.BeginForm("Register", "Customer", FormMethod.Post, new { @class = "login-form cf-style-1", role = "form" }))
+                    {
+                        @Html.AntiForgeryToken()          // this is for prevent CSRF attack
+                                                        @Html.ValidationSummary(true)
+                        if (@ViewBag.Message != null)
+                        {
+                            <div class="alert alert-success">
+                                @ViewBag.Message
+                            </div>
+                        }
+                        <div class="field-row">
+                            <label>Họ và tên</label>
+                            @Html.TextBoxFor(a => a.Ten, new { @class = "le-input" })
+                            <span class="help-block">@Html.ValidationMessageFor(a => a.Ten)</span>
+                        </div>
+
+                        <div class="field-row">
+                            <label>Email</label>
+                            @Html.TextBoxFor(a => a.Email, new { @class = "le-input" })
+                            <span class="help-block">@Html.ValidationMessageFor(a => a.Email)</span>
+                        </div>
+
+                        <div class="field-row">
+                            <label>Số điện thoại</label>
+                            @Html.TextBoxFor(a => a.SoDienThoai, new { @class = "le-input" })
+                            <span class="help-block">@Html.ValidationMessageFor(a => a.SoDienThoai)</span>
+                        </div>
+
+                        <div class="field-row">
+                            <label>Địa chỉ</label>
+                            @Html.TextBoxFor(a => a.DiaChi, new { @class = "le-input" })
+                            <span class="help-block">@Html.ValidationMessageFor(a => a.DiaChi)</span>
+                        </div>
+
+                        <div class="field-row">
+                            <label>Tên đăng nhập</label>
+                            @Html.TextBoxFor(a => a.TenDangNhap, new { @class = "le-input" })
+                            <span class="help-block">@Html.ValidationMessageFor(a => a.TenDangNhap)</span>
+                        </div>
+
+                        <div class="field-row">
+                            <label>Mật khẩu</label>
+                            @Html.PasswordFor(a => a.MatKhau, new { @class = "le-input" })
+                            <span class="help-block">@Html.ValidationMessageFor(a => a.MatKhau)</span>
+                        </div>
+
+                        <div class="field-row">
+                            <label>Nhập lại mật khẩu</label>
+                            @Html.PasswordFor(a => a.MatKhau, new { @class = "le-input" })
+                            <span class="help-block">@Html.ValidationMessageFor(a => a.MatKhau)</span>
+                        </div>
+                        <input data-val="true" data-val-number="The field Rule must be a number." id="Rule" name="Rule" type="hidden" value="3">
+                        <div class="buttons-holder">
+                            <button type="submit" class="le-button huge">Đăng Kí</button>
+                        </div><!-- /.buttons-holder -->
+                    }
+                </section><!-- /.register -->
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</main><!-- /.authentication -->

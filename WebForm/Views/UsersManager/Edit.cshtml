@@ -1,0 +1,124 @@
+﻿@{
+    ViewBag.Title = "Cập nhật thông tin khách hàng";
+    Layout = "~/Views/Shared/Admin.cshtml";
+}
+
+@model WebForm.NguoiDungService.NguoiDung
+<div class="row">
+    <div class="col-lg-12">
+        <div class="box dark">
+            <header>
+                <div class="icons"><i class="icon-edit"></i></div>
+                <h5>@ViewBag.Title</h5>
+                @if (ViewBag.Suscess != null)
+                {
+                    <div class="alert alert-success">
+                        @ViewBag.Suscess
+                    </div>
+                }
+                <div class="toolbar">
+                    <ul class="nav">
+                        <li>
+                            <a class="accordion-toggle minimize-box" data-toggle="collapse" href="#div-1">
+                                <i class="icon-chevron-up"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+            <div id="div-1" class="accordion-body collapse in body">
+                @using (Html.BeginForm("Edit", "UsersManager", FormMethod.Post, new { @class = "form-horizontal", enctype = "multipart/form-data" }))
+                {
+                    @Html.AntiForgeryToken()          // this is for prevent CSRF attack
+                                                    @Html.ValidationSummary(true)
+                                                    <div class="form-group">
+                                                        <label class="control-label col-lg-4">Họ và Tên</label>
+
+                                                        <div class="col-lg-8">
+                                                            @Html.TextBoxFor(a => a.Ten, new { @class = "form-control" })
+                                                            <p class="help-block">@Html.ValidationMessageFor(a => a.Ten)</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-lg-4">Tên đăng nhập</label>
+
+                                                        <div class="col-lg-8">
+                                                            @Html.TextBoxFor(a => a.TenDangNhap, new { @class = "form-control" })
+                                                            <p class="help-block">@Html.ValidationMessageFor(a => a.TenDangNhap)</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="text2" class="control-label col-lg-4">Mật khẩu</label>
+
+                                                        <div class="col-lg-8">
+                                                            @Html.TextBoxFor(a => a.MatKhau, new { @class = "form-control" })
+                                                            <p class="help-block">@Html.ValidationMessageFor(a => a.MatKhau)</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="text2" class="control-label col-lg-4">Nhập lại mật khẩu</label>
+
+                                                        <div class="col-lg-8">
+                                                            @Html.TextBoxFor(a => a.MatKhau, new { @class = "form-control" })
+                                                            <p class="help-block">@Html.ValidationMessageFor(a => a.MatKhau)</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-lg-4">Chức vụ</label>
+
+                                                        <div class="col-lg-8">
+                                                            @Html.TextBoxFor(a => a.Quyen, new { @class = "form-control" })
+                                                            <p class="help-block">@Html.ValidationMessageFor(a => a.Quyen)</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-lg-4">Trạng thái</label>
+
+                                                        <div class="col-lg-8">
+                                                            @Html.TextBoxFor(a => a.Status, new { @class = "form-control" })
+                                                            <p class="help-block">@Html.ValidationMessageFor(a => a.Status)</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-lg-4">Email</label>
+
+                                                        <div class="col-lg-8">
+                                                            @Html.TextBoxFor(a => a.Email, new { @class = "form-control" })
+                                                            <p class="help-block">@Html.ValidationMessageFor(a => a.Email)</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-lg-4">Địa chỉ</label>
+
+                                                        <div class="col-lg-8">
+                                                            @Html.TextBoxFor(a => a.DiaChi, new { @class = "form-control" })
+                                                            <p class="help-block">@Html.ValidationMessageFor(a => a.DiaChi)</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-lg-4">Điện thoại</label>
+
+                                                        <div class="col-lg-8">
+                                                            @Html.TextBoxFor(a => a.SoDienThoai, new { @class = "form-control" })
+                                                            <p class="help-block">@Html.ValidationMessageFor(a => a.SoDienThoai)</p>
+                                                        </div>
+                                                    </div>
+                                                  
+
+                    /*<div class="form-group">
+                        <label class="control-label col-lg-4">Ảnh đại diện</label>
+                        <div class="col-lg-8"><input type="file" name="file" /></div>
+                    </div>*/
+                    <div class="form-group">
+                        <div class="col-lg-8">
+                            <button type="submit" class="btn btn-primary" name="Submit" value="Upload">Lưu</button>
+                            <button type="reset" class="btn btn-danger">Nhập lại</button>
+                        </div>
+                    </div>
+                }
+
+            </div>
+        </div>
+    </div>
+
+</div>

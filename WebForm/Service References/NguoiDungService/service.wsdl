@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="NguoiDungService1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/WcfUngDungWeb" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="INguoiDungService1_listuser_InputMessage">
+    <wsdl:part name="parameters" element="tns:listuser" />
+  </wsdl:message>
+  <wsdl:message name="INguoiDungService1_listuser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:listuserResponse" />
+  </wsdl:message>
+  <wsdl:message name="INguoiDungService1_Register_InputMessage">
+    <wsdl:part name="parameters" element="tns:Register" />
+  </wsdl:message>
+  <wsdl:message name="INguoiDungService1_Register_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterResponse" />
+  </wsdl:message>
+  <wsdl:message name="INguoiDungService1_Authentication_InputMessage">
+    <wsdl:part name="parameters" element="tns:Authentication" />
+  </wsdl:message>
+  <wsdl:message name="INguoiDungService1_Authentication_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticationResponse" />
+  </wsdl:message>
+  <wsdl:message name="INguoiDungService1_Searchuser_InputMessage">
+    <wsdl:part name="parameters" element="tns:Searchuser" />
+  </wsdl:message>
+  <wsdl:message name="INguoiDungService1_Searchuser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchuserResponse" />
+  </wsdl:message>
+  <wsdl:message name="INguoiDungService1_Searchid_InputMessage">
+    <wsdl:part name="parameters" element="tns:Searchid" />
+  </wsdl:message>
+  <wsdl:message name="INguoiDungService1_Searchid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchidResponse" />
+  </wsdl:message>
+  <wsdl:message name="INguoiDungService1_Create_InputMessage">
+    <wsdl:part name="parameters" element="tns:Create" />
+  </wsdl:message>
+  <wsdl:message name="INguoiDungService1_Create_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateResponse" />
+  </wsdl:message>
+  <wsdl:message name="INguoiDungService1_Edit_InputMessage">
+    <wsdl:part name="parameters" element="tns:Edit" />
+  </wsdl:message>
+  <wsdl:message name="INguoiDungService1_Edit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditResponse" />
+  </wsdl:message>
+  <wsdl:message name="INguoiDungService1_Delete_InputMessage">
+    <wsdl:part name="parameters" element="tns:Delete" />
+  </wsdl:message>
+  <wsdl:message name="INguoiDungService1_Delete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="INguoiDungService1_Lock_InputMessage">
+    <wsdl:part name="parameters" element="tns:Lock" />
+  </wsdl:message>
+  <wsdl:message name="INguoiDungService1_Lock_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LockResponse" />
+  </wsdl:message>
+  <wsdl:message name="INguoiDungService1_Unlock_InputMessage">
+    <wsdl:part name="parameters" element="tns:Unlock" />
+  </wsdl:message>
+  <wsdl:message name="INguoiDungService1_Unlock_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UnlockResponse" />
+  </wsdl:message>
+  <wsdl:portType name="INguoiDungService1">
+    <wsdl:operation name="listuser">
+      <wsdl:input wsaw:Action="http://tempuri.org/INguoiDungService1/listuser" message="tns:INguoiDungService1_listuser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INguoiDungService1/listuserResponse" message="tns:INguoiDungService1_listuser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Register">
+      <wsdl:input wsaw:Action="http://tempuri.org/INguoiDungService1/Register" message="tns:INguoiDungService1_Register_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INguoiDungService1/RegisterResponse" message="tns:INguoiDungService1_Register_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Authentication">
+      <wsdl:input wsaw:Action="http://tempuri.org/INguoiDungService1/Authentication" message="tns:INguoiDungService1_Authentication_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INguoiDungService1/AuthenticationResponse" message="tns:INguoiDungService1_Authentication_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Searchuser">
+      <wsdl:input wsaw:Action="http://tempuri.org/INguoiDungService1/Searchuser" message="tns:INguoiDungService1_Searchuser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INguoiDungService1/SearchuserResponse" message="tns:INguoiDungService1_Searchuser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Searchid">
+      <wsdl:input wsaw:Action="http://tempuri.org/INguoiDungService1/Searchid" message="tns:INguoiDungService1_Searchid_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INguoiDungService1/SearchidResponse" message="tns:INguoiDungService1_Searchid_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Create">
+      <wsdl:input wsaw:Action="http://tempuri.org/INguoiDungService1/Create" message="tns:INguoiDungService1_Create_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INguoiDungService1/CreateResponse" message="tns:INguoiDungService1_Create_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Edit">
+      <wsdl:input wsaw:Action="http://tempuri.org/INguoiDungService1/Edit" message="tns:INguoiDungService1_Edit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INguoiDungService1/EditResponse" message="tns:INguoiDungService1_Edit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Delete">
+      <wsdl:input wsaw:Action="http://tempuri.org/INguoiDungService1/Delete" message="tns:INguoiDungService1_Delete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INguoiDungService1/DeleteResponse" message="tns:INguoiDungService1_Delete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Lock">
+      <wsdl:input wsaw:Action="http://tempuri.org/INguoiDungService1/Lock" message="tns:INguoiDungService1_Lock_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INguoiDungService1/LockResponse" message="tns:INguoiDungService1_Lock_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Unlock">
+      <wsdl:input wsaw:Action="http://tempuri.org/INguoiDungService1/Unlock" message="tns:INguoiDungService1_Unlock_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INguoiDungService1/UnlockResponse" message="tns:INguoiDungService1_Unlock_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_INguoiDungService1" type="tns:INguoiDungService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="listuser">
+      <soap:operation soapAction="http://tempuri.org/INguoiDungService1/listuser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Register">
+      <soap:operation soapAction="http://tempuri.org/INguoiDungService1/Register" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Authentication">
+      <soap:operation soapAction="http://tempuri.org/INguoiDungService1/Authentication" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Searchuser">
+      <soap:operation soapAction="http://tempuri.org/INguoiDungService1/Searchuser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Searchid">
+      <soap:operation soapAction="http://tempuri.org/INguoiDungService1/Searchid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Create">
+      <soap:operation soapAction="http://tempuri.org/INguoiDungService1/Create" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Edit">
+      <soap:operation soapAction="http://tempuri.org/INguoiDungService1/Edit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Delete">
+      <soap:operation soapAction="http://tempuri.org/INguoiDungService1/Delete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Lock">
+      <soap:operation soapAction="http://tempuri.org/INguoiDungService1/Lock" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Unlock">
+      <soap:operation soapAction="http://tempuri.org/INguoiDungService1/Unlock" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="NguoiDungService1">
+    <wsdl:port name="BasicHttpBinding_INguoiDungService1" binding="tns:BasicHttpBinding_INguoiDungService1">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/WcfUngDungWeb/NguoiDungService1/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

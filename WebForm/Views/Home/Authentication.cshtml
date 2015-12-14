@@ -1,0 +1,71 @@
+﻿@{
+    ViewBag.Title = "Đăng nhập";
+    Layout = "~/Views/Shared/Customer.cshtml";
+}
+
+@model WebForm.NguoiDungService.NguoiDung
+<main id="authentication" class="inner-bottom-md">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-6">
+                <section class="section sign-in inner-right-xs">
+                    <h2 class="bordered">Đăng Nhập</h2>
+                    <p>Chào bạn , Vui lòng đăng nhập</p>
+                    <div class="social-auth-buttons">
+
+                        @if (Session["Success"] != null)
+                        {
+                            <div class="alert alert-success">
+                                @Session["Success"]
+                            </div>
+                        }
+                    </div>
+                    @using (Html.BeginForm("Authentication", "Home", FormMethod.Post, new { @class = "login-form cf-style-1", role = "form" }))
+                    {
+                        //this  is for create form tag
+                        @Html.AntiForgeryToken()          // this is for prevent CSRF attack
+                                                        @Html.ValidationSummary(true)
+                        if (@ViewBag.Message != null)
+                        {
+                            <div class="alert alert-danger">
+                                @ViewBag.Message
+
+                            </div>
+                        }
+                        <div class="field-row">
+                            <label>Tên đăng nhập</label>
+                            @Html.TextBox("Username","", new {@class = "le-input"  })
+                            <span class="help-block">@Html.ValidationMessageFor(a => a.TenDangNhap)</span>
+
+                        </div><!-- /.field-row -->
+                        <div class="field-row">
+                            <label>Mật khẩu</label>
+                            @Html.Password("Password","", new {@class = "le-input" })
+                            <span class="help-block">@Html.ValidationMessageFor(a => a.MatKhau)</span>
+                        </div><!-- /.field-row -->
+
+                        <div class="field-row clearfix">
+                            <span class="pull-left">
+                                <label class="content-color"><input type="checkbox" class="le-checbox auto-width inline"> <span class="bold">Nhớ đăng nhập</span></label>
+                            </span>
+                            <span class="pull-right">
+                                <a href="#" class="content-color bold">Quên Tài Khoản ?</a>
+                            </span>
+                        </div>
+                        <div class="buttons-holder">
+                            <button type="submit" class="le-button huge">Đăng Nhập</button>
+                        </div><!-- /.buttons-holder -->
+                    }
+                </section><!-- /.sign-in -->
+            </div><!-- /.col -->
+            <div class="col-md-6">
+                <section class="section register inner-left-xs">
+                    <h2 class="bordered">Đăng Kí Tài Khoản</h2>
+                    <p>Tạo tài khoản của bạn</p>
+                    <a href=" /Customer/Register" class="le-button huge">Đăng Kí</a>
+                </section><!-- /.register -->
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</main><!-- /.authentication -->

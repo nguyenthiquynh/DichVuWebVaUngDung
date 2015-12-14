@@ -1,0 +1,163 @@
+﻿@{
+    ViewBag.Title = "Chi tiết";
+    Layout = "~/Views/Shared/Customer.cshtml";
+}
+@model IEnumerable<WebForm.SanPhamService.SanPham>
+
+<!--============================================ADD TO CART=========================================================-->
+<script lang="javascript">
+    function AddToCart(id, name, salesman, image, price, size) {
+        id = parseInt(id);
+        name = "" + name;
+        salesman = "" + salesman;
+        image = "" + image;
+        price = parseFloat(price);
+        size = parseInt(size);
+        $.ajax({
+            url: '/Home/AddToCart',
+            type: 'POST',
+            contentType: 'application/json;',
+            data: JSON.stringify({ id: id, name: name, salesman: salesman, image: image, price: price, size: size }),
+            success: function (result) {
+                console.log(result); //log to the console to see whether it worked
+                alert("Thêm giỏ hàng thành công!");
+            },
+            error: function (error) {
+                alert("Lỗi upload dữ liệu lên sever: " + error.responseText);
+            }
+        });
+    }
+</script>
+<!--======================================== ADD TO CART END =========================================================-->
+
+<div id="single-product">
+    <div class="container">
+        <div class="no-margin col-xs-12 col-sm-6 col-md-5 gallery-holder">
+            <div class="product-item-holder size-big single-product-gallery small-gallery">g
+                <div id="owl-single-product">
+                    <div class="single-product-gallery-item" id="slide1">
+                        <a data-rel="prettyphoto" href="#">
+                            <img class="img-responsive" alt="" width="67" height="50" src="/IMAGE/blank.gif" data-echo="@Url.Content("~/Images/product/"+ViewBag.Image)" />
+                        </a>
+                    </div><!-- /.single-product-gallery-item -->
+                </div><!-- /.single-product-slider -->
+
+                <div class="single-product-gallery-thumbs gallery-thumbs">
+                    <div id="owl-single-product-thumbnails">
+                        <a class="horizontal-thumb active" data-target="#owl-single-product" data-slide="0" href="#slide1">
+                            <img width="67" alt="" src="/IMAGE/blank.gif" data-echo="@Url.Content("~/Images/product/"+ViewBag.Image)" />
+                        </a>
+                    </div><!-- /#owl-single-product-thumbnails -->
+                    <div class="nav-holder left hidden-xs">
+                        <a class="prev-btn slider-prev" data-target="#owl-single-product-thumbnails" href="#prev"></a>
+                    </div><!-- /.nav-holder -->
+
+                    <div class="nav-holder right hidden-xs">
+                        <a class="next-btn slider-next" data-target="#owl-single-product-thumbnails" href="#next"></a>
+                    </div><!-- /.nav-holder -->
+                </div><!-- /.gallery-thumbs -->
+            </div><!-- /.single-product-gallery -->
+        </div><!-- /.gallery-holder -->
+        <div class="no-margin col-xs-12 col-sm-7 body-holder">
+            <div class="body">
+                <div class="availability"><label></label><span class="available"></span></div>
+                <div class="title"><a href="#" style="color:black">@ViewBag.Name</a></div>
+                @*<div class="brand">@Html.Raw(ViewBag.UName)</div>*@
+            <br/>
+                <div class="social-row">
+                    <span class="st_facebook_hcount"></span>
+                    <span class="st_twitter_hcount"></span>
+                    <span class="st_pinterest_hcount"></span>
+                </div> <br /> <br />
+                <div class="prices">
+                    <div class="price-current pull-left" style="font-size: 25px; color:orange">
+                        <font color="green" size="5"> - Giá:</font> @String.Format("{0:0,0}", @ViewBag.Price) đ
+                    </div>
+                </div> <br /><br />
+                <div class="quantity">
+                    <div class="price-current pull-left" style="font-size:30px;color:orange"><a style="color:green;font-size:20px"> - Còn lại: </a>@ViewBag.Quantity</div><br /><br />
+                </div>
+
+                <div class="qnt-holder">
+                    <div class="le-quantity">
+                        <form>
+                            <a class="minus" href="#reduce"></a>
+                            <input name="quantity" readonly="readonly" type="text" value="1" />
+                            <a class="plus" href="#add"></a>
+                        </form>
+                    </div><br /> <br />
+                    <button id="addto-cart" class="le-button " onclick="AddToCart('@ViewBag.ID','@ViewBag.Name'','@ViewBag.Image','@ViewBag.Price','@ViewBag.Quantity')">Thêm vào giỏ hàng</button>
+                </div><!-- /.qnt-holder -->
+            </div><!-- /.body -->
+        </div><!-- /.body-holder -->
+    </div><!-- /.container -->
+</div><!-- /.single-product -->
+<!-- ========================================= SINGLE PRODUCT TAB ========================================= -->
+<section id="single-product-tab">
+    <div class="container">
+        <div class="tab-holder">
+
+            <ul class="nav nav-tabs simple">
+                <li class="active"><a href="#description" data-toggle="tab">Giới thiệu</a></li>
+                <li><a href="#additional-info" data-toggle="tab">Chi tiết</a></li>
+            </ul><!-- /.nav-tabs -->
+            <div class="tab-content">
+                <div class="tab-pane active" id="description">
+                    <p>@ViewBag.Detail</p>
+                    <div class="meta-row">
+                        <div class="inline">
+                            <label>categories:</label>
+                            <span><a href="#">Truyện tranh</a>,</span>
+                            <span><a href="#">Action</a>,</span>
+                            <span><a href="#">Võ thuật</a></span>
+                        </div><!-- /.inline -->
+                        <span class="seperator">/</span>
+                        <div class="inline">
+                            <label>tag:</label>
+                            <span><a href="#">Horror</a>,</span>
+                            <span><a href="#">Art</a>,</span>
+                            <span><a href="#">Light</a></span>
+                        </div><!-- /.inline -->
+                    </div><!-- /.meta-row -->
+                </div><!-- /.tab-pane #description -->
+                <div class="tab-pane" id="additional-info">
+                    <ul class="tabled-data">
+                        <li>
+                            <label>Dành cho</label>
+                            <div class="value">Tất cả mọi lứa tuổi</div>
+                        </li>
+                        <li>
+                            <label>Giá cả</label>
+                            <div class="value">...</div>
+                        </li>
+                        <li>
+                            <label>Thể loại</label>
+                            <div class="value">Manga - Novel</div>
+                        </li>
+                        <li>
+                            <label>Màu</label>
+                            <div class="value">All</div>
+                        </li>
+
+                    </ul><!-- /.tabled-data -->
+                    <div class="meta-row">
+                        <div class="inline">
+                            <label>categories:</label>
+                            <span><a href="#">Truyện tranh</a>,</span>
+                            <span><a href="#">Action</a>,</span>
+                            <span><a href="#">Võ thuật</a></span>
+                        </div><!-- /.inline -->
+                        <span class="seperator">/</span>
+                        <div class="inline">
+                            <label>tag:</label>
+                            <span><a href="#">Horror</a>,</span>
+                            <span><a href="#">Art</a>,</span>
+                            <span><a href="#">Light</a></span>
+                        </div><!-- /.inline -->
+                    </div><!-- /.tab-pane #additional-info -->
+                </div><!-- /.tab-content -->
+            </div><!-- /.tab-holder -->
+        </div><!-- /.container -->
+    </div>
+</section><!-- /#single-product-tab -->
+<!-- ========================================= SINGLE PRODUCT TAB : END ========================================= -->

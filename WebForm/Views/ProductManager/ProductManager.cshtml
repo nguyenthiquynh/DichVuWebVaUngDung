@@ -1,0 +1,65 @@
+﻿@{
+    ViewBag.Title = "Danh sách sản phẩm";
+    Layout = "~/Views/Shared/Admin.cshtml";
+    WebForm.TonKhoService.TonKhoService1Client tonkho = new WebForm.TonKhoService.TonKhoService1Client();
+    
+}
+<script lang="javascript">
+    function NhaSX(x) {
+        if (x == 1) return "Acer";
+        if (x == 2) return "SamSung";
+        if (x == 3) return "HP";
+        if (x == 4) return "Dell";
+        return "Apple";
+    }
+</script>
+@model IEnumerable<WebForm.SanPhamService.SanPham>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <a href="/ProductManager/Create" class="btn btn-success"><i class="icon-plus-sign icon-white"></i>&nbsp;Thêm sản phẩm</a>
+            </div>
+
+            <div class="panel-body">
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                        <thead>
+                            <tr>
+                                <th>Mã SP</th>
+                                <th >Tên SP</th>
+                                <th style="width: 150px">Nhà sản xuất</th>
+                                <th style="width: 200px">Đơn giá</th>
+                                <th>Số lượng</th>
+                                <th> Sửa / Xóa </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            @foreach (var sp in Model)
+                            {
+                                <tr class="odd gradeX">
+                                    <td>@sp.SP_ID</td>
+                                    <td>@sp.TenSP</td>
+                                    <td>
+                                        <script lang="javascript">document.write(NhaSX(@sp.NhaSX_ID));</script>
+                                    </td>
+                                    <td>@sp.DonGia</td>
+                                    <td>@tonkho.SoLuongTonKho_SPID(sp.SP_ID)</td>
+                                    <td class="center">
+                                        @Html.ActionLink(" ", "Edit", new { id = @sp.SP_ID }, new { @class = "btn btn-primary icon-pencil icon-white" }) &nbsp
+                                        @Html.ActionLink(" ", "Delete", new { id = @sp.SP_ID }, new { onclick = "return confirm('Có muốn xóa sản phẩm không?');", @class = "btn btn-danger icon-remove icon-white" }) &nbsp
+
+                                    </td>
+                                </tr>
+                            }
+
+
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="48ff9468-5300-4863-b9e8-c6c6a953b4e2" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/WcfUngDungWeb/NguoiDungService1/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="0835c8b8-ec72-4376-9e81-d9e207319366" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WcfUngDungWeb/NguoiDungService1/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="5b1210d0-123e-4d5b-8951-d2c79d5e30d9" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WcfUngDungWeb/NguoiDungService1/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="1b53d38b-9cc2-4fee-bab7-24d8cbb1b47e" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WcfUngDungWeb/NguoiDungService1/mex" />
+    <MetadataFile FileName="WcfUngDungWeb.xsd" MetadataType="Schema" ID="e6451f9f-f353-43ae-9589-767b2469c4d0" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WcfUngDungWeb/NguoiDungService1/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

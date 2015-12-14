@@ -1,0 +1,217 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Customer.cshtml";
+    List<WebForm.SanPhamService.SanPham> listnew = new WebForm.SanPhamService.SanPhamService1Client().Spnew().Take(4).ToList();
+    List<WebForm.SanPhamService.SanPham> listfea = new WebForm.SanPhamService.SanPhamService1Client().Spfea().Take(4).ToList();
+    List<WebForm.SanPhamService.SanPham> listrun = new WebForm.SanPhamService.SanPhamService1Client().Sprun().Take(4).ToList();
+    List<WebForm.SanPhamService.SanPham> acer = new WebForm.SanPhamService.SanPhamService1Client().SpAcer().Take(6).ToList();
+    List<WebForm.SanPhamService.SanPham> sam = new WebForm.SanPhamService.SanPhamService1Client().SpSam().Take(4).ToList();
+    List<WebForm.SanPhamService.SanPham> hp = new WebForm.SanPhamService.SanPhamService1Client().SpHP().Take(4).ToList();
+    List<WebForm.SanPhamService.SanPham> dell = new WebForm.SanPhamService.SanPhamService1Client().SpDell().Take(4).ToList();
+    List<WebForm.SanPhamService.SanPham> apple = new WebForm.SanPhamService.SanPhamService1Client().SpApple().Take(4).ToList();
+}
+
+
+
+
+
+<div id="top-banner-and-menu" class="homepage2">
+    <div class="container">
+        <div class="col-xs-12">
+            <!-- ========================================== SECTION – HERO ========================================= -->
+
+            <div id="hero">
+                <div id="owl-main" class="owl-carousel height-lg owl-inner-nav owl-ui-lg">
+                    <div class="item" style="background-image: url(/Images/sliders/banner-danh-muc-laptop-Phuctri.jpg);">
+                    </div><!-- /.item -->
+                    <div class="item" style="background-image: url(/Images/sliders/laptop1.jpg); ">
+                    </div><!-- /.item -->
+                    <div class="item" style="background-image: url(/Images/sliders/laptop2.jpg);">
+                    </div><!-- /.item -->
+                    <div class="item" style="background-image: url(/Images/sliders/laptop3.jpg);">
+                    </div><!-- /.item -->
+                </div><!-- /.owl-carousel -->
+            </div>
+
+            <!-- ========================================= SECTION – HERO : END ========================================= -->
+        </div>
+    </div>
+</div>
+
+
+<div id="products-tab" class="wow fadeInUp animated" style="visibility: visible;">
+    <div class="container">
+        <div class="tab-holder">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#featured" data-toggle="tab">Mới nhất</a></li>
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div class="tab-pane active" id="featured">
+                    <div class="product-grid-holder">
+                        @foreach (var item in listnew)
+                        {
+                            <div class="col-sm-4 col-md-3 no-margin product-item-holder hover ">
+                                <div class="product-item ">
+                                    <div class="ribbon blue "><span> New! </span></div>
+                                    <div class="image "><img src="@Url.Content("~/Images/product/"+item.Hinh)" /></div>
+                                    <div class="body">
+                                        <div class="label-discount clear "></div>
+                                        <div class="title ">
+                                            <a href="/Home/Detail?id=@item.SP_ID"> @item.TenSP</a>
+                                        </div>
+                                        <div style="font-size:12px">Nsx: @item.TenNhaSX</div>
+                                    </div>
+                                    <div class="prices">
+                                        <div class="price-current text-right" style="font-size: 20px">
+                                            Giá: @String.Format("{0:0,0}", @item.DonGia) đ
+                                        </div>
+                                    </div>
+                                    <div class="hover-area ">
+                                        <div class="add-cart-button ">
+                                            <a href="#  " class="le-button " onclick="AddToCart( '@item.SP_ID', '@item.TenSP', '@item.TenNhaSX, '@item.Hinh ', '@item.DonGia', '') ">Thêm vào giỏ hàng</a>
+                                        </div>
+                                        <div class="wish-compare ">
+                                            <a class="btn-add-to-wishlist " href="# ">Yêu thích </a>
+                                            <a class="btn-add-to-compare " href="# ">So sánh</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+
+                    </div>
+                    <div class="loadmore-holder text-center">
+                        <a class="btn-loadmore" href="#">
+                            <i class="fa fa-plus"></i>
+                            Xem tất cả
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+@*========================================= BEST SELLERS  =========================================*@
+<section id="bestsellers" class="wow fadeInUp">
+    <div id="products-tab" class="wow fadeInUp animated" style="visibility: visible;">
+        <div class="container">
+            <div class="tab-holder">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#featured" data-toggle="tab">Nổi bật</a></li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div class="tab-pane active" id="featured">
+                        <div class="product-grid-holder">
+                            @foreach (var item in listfea)
+                            {
+                                <div class="col-sm-4 col-md-3 no-margin product-item-holder hover ">
+                                    <div class="product-item ">
+                                        <div class="ribbon blue "><span> HOT! </span></div>
+                                        <div class="image "><img src="@Url.Content("~/Images/product/"+item.Hinh)" /></div>
+                                        <div class="body">
+                                            <div class="label-discount clear "></div>
+                                            <div class="title ">
+                                                <a href="/Home/Detail?id=@item.SP_ID"> @item.TenSP</a>
+                                            </div>
+                                            <div style="font-size:12px">Nsx: @item.TenNhaSX</div>
+                                        </div>
+                                        <div class="prices">
+                                            <div class="price-current text-right" style="font-size: 20px">
+                                                Giá: @String.Format("{0:0,0}", @item.DonGia) đ
+                                            </div>
+                                        </div>
+                                        <div class="hover-area ">
+                                            <div class="add-cart-button ">
+                                                <a href="#  " class="le-button " onclick="AddToCart( '@item.SP_ID', '@item.TenSP', '@item.TenNhaSX, '@item.Hinh ', '@item.DonGia', '') ">Thêm vào giỏ hàng</a>
+                                            </div>
+                                            <div class="wish-compare ">
+                                                <a class="btn-add-to-wishlist " href="# ">Yêu thích </a>
+                                                <a class="btn-add-to-compare " href="# ">So sánh</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+
+                        </div>
+                        <div class="loadmore-holder text-center">
+                            <a class="btn-loadmore" href="#">
+                                <i class="fa fa-plus"></i>
+                                Xem tất cả
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section><!-- /#bestsellers -->
+<!-- ========================================= BEST SELLERS : END ========================================= -->
+<!-- ========================================= BEST SELLERS  ========================================= -->
+<section id="bestsellers" class="color-bg wow fadeInUp">
+    <div id="products-tab" class="wow fadeInUp animated" style="visibility: visible;">
+        <div class="container">
+            <div class="tab-holder">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#featured" data-toggle="tab">Bán chạy</a></li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div class="tab-pane active" id="featured">
+                        <div class="product-grid-holder">
+                            @foreach (var item in listrun)
+                            {
+                                <div class="col-sm-4 col-md-3 no-margin product-item-holder hover ">
+                                    <div class="product-item ">
+                                        <div class="ribbon blue "><span> Run! </span></div>
+                                        <div class="image "><img src="@Url.Content("~/Images/product/"+item.Hinh)" /></div>
+                                        <div class="body">
+                                            <div class="label-discount clear "></div>
+                                            <div class="title ">
+                                                <a href="/Home/Detail?id=@item.SP_ID"> @item.TenSP</a>
+                                            </div>
+                                            <div style="font-size:12px">Nsx: @item.TenNhaSX</div>
+                                        </div>
+                                        <div class="prices">
+                                            <div class="price-current text-right" style="font-size: 20px">
+                                                Giá: @String.Format("{0:0,0}", @item.DonGia) đ
+                                            </div>
+                                        </div>
+                                        <div class="hover-area ">
+                                            <div class="add-cart-button ">
+                                                <a href="#  " class="le-button " onclick="AddToCart( '@item.SP_ID', '@item.TenSP', '@item.TenNhaSX, '@item.Hinh ', '@item.DonGia', '') ">Thêm vào giỏ hàng</a>
+                                            </div>
+                                            <div class="wish-compare ">
+                                                <a class="btn-add-to-wishlist " href="# ">Yêu thích </a>
+                                                <a class="btn-add-to-compare " href="# ">So sánh</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+
+                        </div>
+                        <div class="loadmore-holder text-center">
+                            <a class="btn-loadmore" href="#">
+                                <i class="fa fa-plus"></i>
+                                Xem tất cả
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section><!-- /#bestsellers -->
+<!-- ========================================= BEST SELLERS : END ========================================= -->
