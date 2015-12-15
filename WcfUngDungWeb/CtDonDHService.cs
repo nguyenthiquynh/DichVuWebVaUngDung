@@ -57,30 +57,5 @@ namespace WcfUngDungWeb
             SqlParameter madondh = new SqlParameter("@MaDonDH", ct.MaDonDH);
             SqlDatabase.ExecuteNonQuery(sql, CommandType.Text, madondh);
         }
-
-
-        public CtDonDH Searid(int ID)
-        {
-            string sql = ("select * from CtDonDH where MaDonDH = @ID");
-            SqlParameter id = new SqlParameter("@ID", ID);
-            SqlDataReader ds = SqlDatabase.ExecuteQueryWithDataReader(sql, CommandType.Text, id);
-            if (ds.HasRows)
-            {
-                while (ds.Read())
-                {
-                    CtDonDH ct = new CtDonDH()
-                    {
-                     
-                     MaDonDH = ds[0].ToString(),
-                     SP_ID = int.Parse(ds[1].ToString()),
-                     DonGiaDat = float.Parse(ds[3].ToString()),
-                     SoLuongDat = int.Parse(ds[4].ToString()),
-                     TenSP = ds[2].ToString()
-                    };
-                    return ct;
-                }
-            }
-            return null;
-        }
     }
 }

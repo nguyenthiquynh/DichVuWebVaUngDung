@@ -25,10 +25,6 @@ namespace WcfUngDungWeb
         void SuaTinhTrang(DonDH ddh);
         [OperationContract]
         void Xoa(DonDH ddh);
-
-        [OperationContract]
-        DonDH Searid(int ID);
-
     }
     
 }

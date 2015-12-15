@@ -45,14 +45,12 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CartService.cs" />
     <Compile Include="CtDonDH.cs" />
     <Compile Include="CtDonDHService.cs" />
     <Compile Include="CtPhieuNhap.cs" />
     <Compile Include="CtPhieuNhapService1.cs" />
     <Compile Include="DonDH.cs" />
     <Compile Include="DonDHService1.cs" />
-    <Compile Include="ICartService.cs" />
     <Compile Include="ICtDonDHService.cs" />
     <Compile Include="ICtPhieuNhapService1.cs" />
     <Compile Include="IDonDHService1.cs" />

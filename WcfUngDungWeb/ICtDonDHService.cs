@@ -17,8 +17,5 @@ namespace WcfUngDungWeb
         void Them(CtDonDH ct);
         [OperationContract]
         void Xoa(CtDonDH ct);
-
-        [OperationContract]
-        CtDonDH Searid(int ID);
     }
 }

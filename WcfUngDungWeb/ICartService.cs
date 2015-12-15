@@ -12,9 +12,9 @@ namespace WcfUngDungWeb
     public interface ICartService
     {
         [OperationContract]
-        bool CheckOut(string hoten, string diachi, string sdt, string email, string total, string id, List<CartItem> cart);
+        bool CheckOut(string hoten,string diachi, string sdt, string email, DateTime ngaydat, string total,string id,List
+            <CartItem> cart);
     }
-
     [DataContract]
     public class CartItem
     {
