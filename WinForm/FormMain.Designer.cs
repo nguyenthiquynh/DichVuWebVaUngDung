@@ -174,12 +174,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(887, 411);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.statusStrip1);
             this.IsMdiContainer = true;
             this.Name = "FormMain";
-            this.Text = "Chương trình quản lý bán hàng";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FromMain_Load);
             this.MdiChildActivate += new System.EventHandler(this.FromMain_MdiChildActivate);
             this.toolStrip1.ResumeLayout(false);

@@ -48,12 +48,12 @@ namespace WinForm
         }
 
         float tongtien;
-        public void Ds_PhieuNhap()   
+        public void Ds_PhieuNhap()   //R
         {
             dgvPhieuNhap.AutoGenerateColumns = false;
             dgvPhieuNhap.DataSource = PhieuNhapClient.HienThiPhieuNhap();
         }
-        public void Ds_CtPhieuNhap(string maphieunhap)
+        public void Ds_CtPhieuNhap(string maphieunhap)  //R
         {
             dgvChiTietPhieuNhap.AutoGenerateColumns = false;
             ctpn.MaPhieuNhap = maphieunhap;
@@ -61,7 +61,7 @@ namespace WinForm
         }
        
 
-        private void btnTimKiem_Click(object sender, EventArgs e)
+        private void btnTimKiem_Click(object sender, EventArgs e)  //R
         {
             try
             {
@@ -93,7 +93,7 @@ namespace WinForm
             }
         }
 
-        private void cbTimKiem_SelectedIndexChanged(object sender, EventArgs e)
+        private void cbTimKiem_SelectedIndexChanged(object sender, EventArgs e)  //R
         {
             if (cbTimKiem.Text == "Mã phiếu nhập")
             {
@@ -115,13 +115,13 @@ namespace WinForm
             }
         }
 
-        private void btnCapNhatLai_Click(object sender, EventArgs e)
+        private void btnCapNhatLai_Click(object sender, EventArgs e) //R
         {
             Ds_PhieuNhap();
         }
 
         public string thoigian;
-        private void btnThem_Click(object sender, EventArgs e)
+        private void btnThem_Click(object sender, EventArgs e) //R
         {
             thoigian = DateTime.Now.ToString("yyyyMMddhhmmss");
             cbNhaSX.Enabled = true;
@@ -131,7 +131,7 @@ namespace WinForm
             btnThem.Enabled = false;
         }
 
-        private void btnLuu_Click(object sender, EventArgs e)
+        private void btnLuu_Click(object sender, EventArgs e)  //R
         {
             try
             {
@@ -165,7 +165,7 @@ namespace WinForm
             }
         }
 
-        private void btnLuuSanPham_Click(object sender, EventArgs e)
+        private void btnLuuSanPham_Click(object sender, EventArgs e)  //R
         {
             string maphieunhap = txtMaPhieuNhap.Text;
             int soluongnhap; float dongianhap;
@@ -232,14 +232,14 @@ namespace WinForm
             }
         }
 
-        private void btnHoanTat_Click(object sender, EventArgs e)
+        private void btnHoanTat_Click(object sender, EventArgs e)   //R
         {
             btnThem.Enabled = true;
             btnLuu.Enabled = false;
             btnLuuSanPham.Enabled = false;
             btnHoanTat.Enabled = false;
         }
-        public void Ds_NhaSX() 
+        public void Ds_NhaSX() //R
         {
             cbNhaSX.ValueMember = "NhaSX_ID";
             cbNhaSX.DisplayMember = "TenNhaSX";
@@ -249,7 +249,7 @@ namespace WinForm
             cbTim_NSX.DisplayMember = "TenNhaSX";
             cbTim_NSX.DataSource = NhaSXClient.HienThiNhaSX();
         }
-        public void NhapSanPham(int nhasxid, string maphieunhap)
+        public void NhapSanPham(int nhasxid, string maphieunhap) //R
         {
             pn.NhaSX_ID = nhasxid;
             pn.MaPhieuNhap = maphieunhap;
@@ -258,7 +258,7 @@ namespace WinForm
             dgvBangNhap.DataSource = dt;
         }
 
-        private void dgvPhieuNhap_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvPhieuNhap_CellContentClick(object sender, DataGridViewCellEventArgs e) //R
         {
             string maphieunhap = dgvPhieuNhap.CurrentRow.Cells[1].Value.ToString();
             int nhasx_id = int.Parse(dgvPhieuNhap.CurrentRow.Cells[2].Value.ToString());
