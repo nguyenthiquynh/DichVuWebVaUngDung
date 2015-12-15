@@ -87,7 +87,12 @@ namespace WebForm.Controllers
             ViewBag.UName = "";
             return View();
         }
-
+        public ActionResult Logout()
+        {
+            Session["LogedUserID"] = null;
+            Session["LogedUserFullname"] = null;
+            return RedirectToAction("Index","Home");
+        }
 
     }
 }

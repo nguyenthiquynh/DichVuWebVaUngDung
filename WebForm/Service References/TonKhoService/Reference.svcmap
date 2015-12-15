@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b60e1729-0749-4458-8f7e-a575b17bc134" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="fa322b97-6e97-4d51-8d83-388fe6d05146" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,10 +22,10 @@
     <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/WcfUngDungWeb/TonKhoService1/mex" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="1a64ca7b-8b18-455c-86d4-c364a9a9aa82" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WcfUngDungWeb/TonKhoService1/mex" />
-    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="21873ae1-c451-438d-99e8-8d3c95e6c967" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WcfUngDungWeb/TonKhoService1/mex" />
-    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="ddd05a37-2d6d-4e6a-97ed-adc9868b234c" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WcfUngDungWeb/TonKhoService1/mex" />
-    <MetadataFile FileName="service2.xsd" MetadataType="Schema" ID="dba5a133-ad34-4aab-aa24-14056681553d" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WcfUngDungWeb/TonKhoService1/mex" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="e894c333-732c-4fef-8d42-425f8d88a1b0" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WcfUngDungWeb/TonKhoService1/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="c28f71fe-d60b-4f97-804a-9877e93e5ffd" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WcfUngDungWeb/TonKhoService1/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="72cea62f-25ac-475b-8474-90974da34504" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WcfUngDungWeb/TonKhoService1/mex" />
+    <MetadataFile FileName="service2.xsd" MetadataType="Schema" ID="655e872b-01d1-480e-a563-5f591fd42bf6" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WcfUngDungWeb/TonKhoService1/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

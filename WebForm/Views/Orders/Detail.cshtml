@@ -1,0 +1,106 @@
+﻿@{
+    ViewBag.Title = "Xem hóa đơn";
+    Layout = "~/Views/Shared/Admin.cshtml";
+    WebForm.DonHangService.DonDHService1Client ord = new WebForm.DonHangService.DonDHService1Client();
+    WebForm.SanPhamService.SanPhamService1Client sp = new WebForm.SanPhamService.SanPhamService1Client();
+}
+
+@model WebForm.CTDHService.CtDonDH
+<div class="row">
+    <div class="col-lg-12">
+        <div class="box dark">
+            <div id="div-1" class="accordion-body collapse in body">
+                @using (Html.BeginForm("Detail", "OrdersManager", FormMethod.Post, new { @class = "form-horizontal", enctype = "multipart/form-data" }))
+                {
+                    @Html.AntiForgeryToken()          // this is for prevent CSRF attack
+                                                    @Html.ValidationSummary(true)
+
+
+                                                    <div class="form-group">
+                                                        <label class="control-label col-lg-4">Mã hóa đơn:</label>
+
+                                                        <div class="col-lg-8">
+                                                            @Html.TextBoxFor(a => a.MaDonDH, new { @class = "form-control", @readonly = "readonly" })
+                                                            <p class="help-block">@Html.ValidationMessageFor(a => a.MaDonDH)</p>
+                                                        </div>
+                                                    </div>
+                                                  
+                                                    <div class="form-group">
+                                                        <label class="control-label col-lg-4">Tên khách hàng:</label>
+
+                                                        <div class="col-lg-8">
+                                                            @Html.TextBox(ord.Searid(int.Parse(Model.MaDonDH)).HoTenKH, new { @class = "form-control", @readonly = "readonly" })
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-lg-4">Số điện thoại:</label>
+
+                                                        <div class="col-lg-8">
+                                                            @Html.TextBox(ord.Searid(int.Parse(Model.MaDonDH)).DienThoai, new { @class = "form-control", @readonly = "readonly" })
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-lg-4">Địa chỉ:</label>
+
+                                                        <div class="col-lg-8">
+                                                            @Html.TextBox(ord.Searid(int.Parse(Model.MaDonDH)).DiaChi, new { @class = "form-control", @readonly = "readonly" })
+
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label class="control-label col-lg-4">Mã sản phẩm:</label>
+
+                                                        <div class="col-lg-8">
+                                                            @Html.TextBoxFor(a => a.SP_ID, new { @class = "form-control", @readonly = "readonly" })
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-lg-4">Tên sản phẩm:</label>
+
+                                                        <div class="col-lg-8">
+                                                            @Html.TextBox(sp.Searchid(Model.SP_ID).TenSP, new { @class = "form-control", @readonly = "readonly" })
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-lg-4">Số lượng đặt</label>
+
+                                                        <div class="col-lg-8">
+                                                            @Html.TextBoxFor(a => a.SoLuongDat, new { @class = "form-control", @readonly = "readonly" })
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-lg-4">Tổng tiền:</label>
+
+                                                        <div class="col-lg-8">
+                                                            @Html.TextBox(ord.Searid(int.Parse(Model.MaDonDH)).TongTien.ToString(), new { @class = "form-control", @readonly = "readonly" })
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-lg-4">Ngày đặt:</label>
+
+                                                        <div class="col-lg-8">
+                                                            @Html.TextBox(ord.Searid(int.Parse(Model.MaDonDH)).NgayDat.ToString(), new { @class = "form-control", @readonly = "readonly" })
+
+                                                        </div>
+                                                    </div>
+                                                     <div class="form-group">
+                                                        <label class="control-label col-lg-4">Ngày giao:</label>
+
+                                                        <div class="col-lg-8">
+                                                            @Html.TextBox(ord.Searid(int.Parse(Model.MaDonDH)).NgayDat.ToString(), new { @class = "form-control", @readonly = "readonly" })
+
+                                                        </div>
+                                                    </div>
+                }
+
+            </div>
+        </div>
+    </div>
+
+</div>

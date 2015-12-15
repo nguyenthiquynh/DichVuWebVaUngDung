@@ -1,0 +1,77 @@
+﻿@{
+    ViewBag.Title = "Thanh toán";
+    Layout = "~/Views/Shared/Customer.cshtml";
+}
+<script lang="javascript">
+
+    function MakeOrder() {
+        
+        var name = document.getElementById("ten").value;
+        var phone = document.getElementById("sdt").value;
+        var email = document.getElementById("email").value;
+        var address = document.getElementById("diachi").value;
+        
+
+        name = "" + name;
+        phone = "" + phone;
+        address = "" + address;
+        email = "" + email;
+        
+        $.ajax({
+            url: '/Cart/MakeOrder',
+            type: 'POST',
+            contentType: 'application/json;',
+            data: JSON.stringify({ hoten: name, diachi: address, sdt: phone,email:email }),
+            success: function (result) {
+                console.log(result); //log to the console to see whether it worked
+                alert("Thanh toán thành công!");
+                location.href = ' /';
+            },
+            error: function (error) {
+                alert("Lỗi cập nhật dữ liệu lên server: " + error.responseText);
+            }
+        });
+    }
+</script>
+<section id="checkout-page">
+    <div class="container">
+        <div class="col-xs-12 no-margin">
+            <!-- /.billing-address -->
+            @Html.Raw(ViewBag.Billing)
+            <!-- /.billing-address -->
+            <!-- your-order -->
+            <section id="your-order">
+                <h2 class="border h1">Sản phẩm đã chọn</h2>
+                <form>
+                    @Html.Raw(ViewBag.Order)
+                </form>
+            </section>
+            <!-- /#your-order -->
+            <div id="total-area" class="row no-margin">
+                <div class="col-xs-12 col-lg-4 col-lg-offset-8 no-margin-right">
+                    <div id="subtotal-holder">
+                        <ul class="tabled-data inverse-bold no-border">
+                            <li>
+                                <label>Tổng tiền</label>
+                                <div class="value ">@Html.Raw(ViewBag.Total)</div>
+                            </li>
+                        </ul><!-- /.tabled-data -->
+                        <ul id="total-field" class="tabled-data inverse-bold ">
+                            <li>
+                                <label>Tổng hóa đơn</label>
+                                <div class="value">@Html.Raw(ViewBag.Total)</div>
+                            </li>
+                        </ul><!-- /.tabled-data -->
+                    </div><!-- /#subtotal-holder -->
+                </div><!-- /.col -->
+            </div><!-- /#total-area -->
+
+            <div class="place-order-button">
+                @if (Session["LogedUserFullname"] != null)
+                {
+                    <button class="le-button big" onclick="MakeOrder()">Thanh toán</button>
+                }
+            </div><!-- /.place-order-button -->
+        </div><!-- /.col -->
+    </div><!-- /.container -->
+</section><!-- /#checkout-page -->

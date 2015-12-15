@@ -18,6 +18,12 @@ namespace WebForm
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+
+            routes.MapRoute(
+                name: "Add to cart",
+                url: "addtocart",
+                defaults: new { controller = "Cart", action = "AddItem", id = UrlParameter.Optional }
+            );
         }
     }
 }
