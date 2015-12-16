@@ -29,8 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuanLyDonDatHang));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -44,12 +45,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvDonDH = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.btnCapNhat = new System.Windows.Forms.Button();
@@ -76,6 +71,12 @@
             this.TenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoLuongDat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DonGiaDat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -245,54 +246,6 @@
             this.dgvDonDH.Size = new System.Drawing.Size(952, 194);
             this.dgvDonDH.TabIndex = 0;
             this.dgvDonDH.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDonDH_CellContentClick);
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "DonDH_ID";
-            this.Column1.HeaderText = "Đơn Đặt Hàng ID";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 163;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "MaDonDH";
-            this.Column2.HeaderText = "Mã Đơn Đặt Hàng";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 128;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "NgayDat";
-            this.Column3.HeaderText = "Ngày Đặt";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 128;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "NgayGiao";
-            this.Column4.HeaderText = "Ngày Giao";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 128;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "TongTien";
-            this.Column5.HeaderText = "Tổng Tiền";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 128;
-            // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "TinhTrang";
-            this.Column6.HeaderText = "Tình Trạng";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Width = 128;
             // 
             // tabPage2
             // 
@@ -559,8 +512,8 @@
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.DataPropertyName = "MaDonDH";
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewTextBoxColumn2.HeaderText = "Mã đơn hàng";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
@@ -582,11 +535,62 @@
             // DonGiaDat
             // 
             this.DonGiaDat.DataPropertyName = "DonGiaDat";
-            dataGridViewCellStyle4.Format = "#,##0";
-            this.DonGiaDat.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle3.Format = "#,##0";
+            this.DonGiaDat.DefaultCellStyle = dataGridViewCellStyle3;
             this.DonGiaDat.HeaderText = "Đơn giá đặt";
             this.DonGiaDat.Name = "DonGiaDat";
             this.DonGiaDat.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "DonDH_ID";
+            this.Column1.HeaderText = "Đơn Đặt Hàng ID";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 163;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "MaDonDH";
+            this.Column2.HeaderText = "Mã Đơn Đặt Hàng";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 150;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "NgayDat";
+            this.Column3.HeaderText = "Ngày Đặt";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 128;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "NgayGiao";
+            this.Column4.HeaderText = "Ngày Giao";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 128;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "TongTien";
+            dataGridViewCellStyle1.Format = "C0";
+            dataGridViewCellStyle1.NullValue = null;
+            this.Column5.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Column5.HeaderText = "Tổng Tiền";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 128;
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "TinhTrang";
+            this.Column6.HeaderText = "Tình Trạng";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Width = 128;
             // 
             // QuanLyDonDatHang
             // 
@@ -631,12 +635,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgvDonDH;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.GroupBox groupBox4;
@@ -663,5 +661,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TenSP;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuongDat;
         private System.Windows.Forms.DataGridViewTextBoxColumn DonGiaDat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
     }
 }
