@@ -50,6 +50,9 @@ namespace WinForm.SanPhamServiceReference {
         private int SP_IDField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TenNhaSXField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string TenSPField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
@@ -175,6 +178,19 @@ namespace WinForm.SanPhamServiceReference {
                 if ((this.SP_IDField.Equals(value) != true)) {
                     this.SP_IDField = value;
                     this.RaisePropertyChanged("SP_ID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string TenNhaSX {
+            get {
+                return this.TenNhaSXField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TenNhaSXField, value) != true)) {
+                    this.TenNhaSXField = value;
+                    this.RaisePropertyChanged("TenNhaSX");
                 }
             }
         }
@@ -361,17 +377,17 @@ namespace WinForm.SanPhamServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISanPhamService1/TimKiemSanPham", ReplyAction="http://tempuri.org/ISanPhamService1/TimKiemSanPhamResponse")]
         System.Threading.Tasks.Task<WinForm.SanPhamServiceReference.SanPham[]> TimKiemSanPhamAsync(string tensp, int nhasxid, decimal dongiatu, decimal dongiaden);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISanPhamService1/ThongTinNhapSP", ReplyAction="http://tempuri.org/ISanPhamService1/ThongTinNhapSPResponse")]
-        System.Data.DataSet ThongTinNhapSP(WinForm.SanPhamServiceReference.PhieuNhap pn);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISanPhamService1/ThongTinNhapSP", ReplyAction="http://tempuri.org/ISanPhamService1/ThongTinNhapSPResponse")]
-        System.Threading.Tasks.Task<System.Data.DataSet> ThongTinNhapSPAsync(WinForm.SanPhamServiceReference.PhieuNhap pn);
-        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISanPhamService1/ChiTietSanPham", ReplyAction="http://tempuri.org/ISanPhamService1/ChiTietSanPhamResponse")]
         System.Data.DataSet ChiTietSanPham(WinForm.SanPhamServiceReference.SanPham sp);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISanPhamService1/ChiTietSanPham", ReplyAction="http://tempuri.org/ISanPhamService1/ChiTietSanPhamResponse")]
         System.Threading.Tasks.Task<System.Data.DataSet> ChiTietSanPhamAsync(WinForm.SanPhamServiceReference.SanPham sp);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISanPhamService1/ThongTinNhapSP", ReplyAction="http://tempuri.org/ISanPhamService1/ThongTinNhapSPResponse")]
+        System.Data.DataSet ThongTinNhapSP(WinForm.SanPhamServiceReference.PhieuNhap pn);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISanPhamService1/ThongTinNhapSP", ReplyAction="http://tempuri.org/ISanPhamService1/ThongTinNhapSPResponse")]
+        System.Threading.Tasks.Task<System.Data.DataSet> ThongTinNhapSPAsync(WinForm.SanPhamServiceReference.PhieuNhap pn);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISanPhamService1/ThemSanPham", ReplyAction="http://tempuri.org/ISanPhamService1/ThemSanPhamResponse")]
         void ThemSanPham(WinForm.SanPhamServiceReference.SanPham sp);
@@ -390,6 +406,96 @@ namespace WinForm.SanPhamServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISanPhamService1/XoaSanPham", ReplyAction="http://tempuri.org/ISanPhamService1/XoaSanPhamResponse")]
         System.Threading.Tasks.Task XoaSanPhamAsync(WinForm.SanPhamServiceReference.SanPham sp);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISanPhamService1/Spnew", ReplyAction="http://tempuri.org/ISanPhamService1/SpnewResponse")]
+        WinForm.SanPhamServiceReference.SanPham[] Spnew();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISanPhamService1/Spnew", ReplyAction="http://tempuri.org/ISanPhamService1/SpnewResponse")]
+        System.Threading.Tasks.Task<WinForm.SanPhamServiceReference.SanPham[]> SpnewAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISanPhamService1/Spfea", ReplyAction="http://tempuri.org/ISanPhamService1/SpfeaResponse")]
+        WinForm.SanPhamServiceReference.SanPham[] Spfea();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISanPhamService1/Spfea", ReplyAction="http://tempuri.org/ISanPhamService1/SpfeaResponse")]
+        System.Threading.Tasks.Task<WinForm.SanPhamServiceReference.SanPham[]> SpfeaAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISanPhamService1/Sprun", ReplyAction="http://tempuri.org/ISanPhamService1/SprunResponse")]
+        WinForm.SanPhamServiceReference.SanPham[] Sprun();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISanPhamService1/Sprun", ReplyAction="http://tempuri.org/ISanPhamService1/SprunResponse")]
+        System.Threading.Tasks.Task<WinForm.SanPhamServiceReference.SanPham[]> SprunAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISanPhamService1/SpAcer", ReplyAction="http://tempuri.org/ISanPhamService1/SpAcerResponse")]
+        WinForm.SanPhamServiceReference.SanPham[] SpAcer();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISanPhamService1/SpAcer", ReplyAction="http://tempuri.org/ISanPhamService1/SpAcerResponse")]
+        System.Threading.Tasks.Task<WinForm.SanPhamServiceReference.SanPham[]> SpAcerAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISanPhamService1/SpSam", ReplyAction="http://tempuri.org/ISanPhamService1/SpSamResponse")]
+        WinForm.SanPhamServiceReference.SanPham[] SpSam();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISanPhamService1/SpSam", ReplyAction="http://tempuri.org/ISanPhamService1/SpSamResponse")]
+        System.Threading.Tasks.Task<WinForm.SanPhamServiceReference.SanPham[]> SpSamAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISanPhamService1/SpHP", ReplyAction="http://tempuri.org/ISanPhamService1/SpHPResponse")]
+        WinForm.SanPhamServiceReference.SanPham[] SpHP();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISanPhamService1/SpHP", ReplyAction="http://tempuri.org/ISanPhamService1/SpHPResponse")]
+        System.Threading.Tasks.Task<WinForm.SanPhamServiceReference.SanPham[]> SpHPAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISanPhamService1/SpDell", ReplyAction="http://tempuri.org/ISanPhamService1/SpDellResponse")]
+        WinForm.SanPhamServiceReference.SanPham[] SpDell();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISanPhamService1/SpDell", ReplyAction="http://tempuri.org/ISanPhamService1/SpDellResponse")]
+        System.Threading.Tasks.Task<WinForm.SanPhamServiceReference.SanPham[]> SpDellAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISanPhamService1/SpApple", ReplyAction="http://tempuri.org/ISanPhamService1/SpAppleResponse")]
+        WinForm.SanPhamServiceReference.SanPham[] SpApple();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISanPhamService1/SpApple", ReplyAction="http://tempuri.org/ISanPhamService1/SpAppleResponse")]
+        System.Threading.Tasks.Task<WinForm.SanPhamServiceReference.SanPham[]> SpAppleAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISanPhamService1/Category", ReplyAction="http://tempuri.org/ISanPhamService1/CategoryResponse")]
+        WinForm.SanPhamServiceReference.SanPham[] Category(int ID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISanPhamService1/Category", ReplyAction="http://tempuri.org/ISanPhamService1/CategoryResponse")]
+        System.Threading.Tasks.Task<WinForm.SanPhamServiceReference.SanPham[]> CategoryAsync(int ID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISanPhamService1/Detail", ReplyAction="http://tempuri.org/ISanPhamService1/DetailResponse")]
+        WinForm.SanPhamServiceReference.SanPham Detail(int ID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISanPhamService1/Detail", ReplyAction="http://tempuri.org/ISanPhamService1/DetailResponse")]
+        System.Threading.Tasks.Task<WinForm.SanPhamServiceReference.SanPham> DetailAsync(int ID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISanPhamService1/Searchid", ReplyAction="http://tempuri.org/ISanPhamService1/SearchidResponse")]
+        WinForm.SanPhamServiceReference.SanPham Searchid(int ID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISanPhamService1/Searchid", ReplyAction="http://tempuri.org/ISanPhamService1/SearchidResponse")]
+        System.Threading.Tasks.Task<WinForm.SanPhamServiceReference.SanPham> SearchidAsync(int ID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISanPhamService1/Create", ReplyAction="http://tempuri.org/ISanPhamService1/CreateResponse")]
+        bool Create(WinForm.SanPhamServiceReference.SanPham sp);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISanPhamService1/Create", ReplyAction="http://tempuri.org/ISanPhamService1/CreateResponse")]
+        System.Threading.Tasks.Task<bool> CreateAsync(WinForm.SanPhamServiceReference.SanPham sp);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISanPhamService1/Edit", ReplyAction="http://tempuri.org/ISanPhamService1/EditResponse")]
+        bool Edit(WinForm.SanPhamServiceReference.SanPham sp, int ID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISanPhamService1/Edit", ReplyAction="http://tempuri.org/ISanPhamService1/EditResponse")]
+        System.Threading.Tasks.Task<bool> EditAsync(WinForm.SanPhamServiceReference.SanPham sp, int ID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISanPhamService1/Delete", ReplyAction="http://tempuri.org/ISanPhamService1/DeleteResponse")]
+        bool Delete(int ID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISanPhamService1/Delete", ReplyAction="http://tempuri.org/ISanPhamService1/DeleteResponse")]
+        System.Threading.Tasks.Task<bool> DeleteAsync(int ID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISanPhamService1/listpro", ReplyAction="http://tempuri.org/ISanPhamService1/listproResponse")]
+        WinForm.SanPhamServiceReference.SanPham[] listpro();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISanPhamService1/listpro", ReplyAction="http://tempuri.org/ISanPhamService1/listproResponse")]
+        System.Threading.Tasks.Task<WinForm.SanPhamServiceReference.SanPham[]> listproAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -459,20 +565,20 @@ namespace WinForm.SanPhamServiceReference {
             return base.Channel.TimKiemSanPhamAsync(tensp, nhasxid, dongiatu, dongiaden);
         }
         
-        public System.Data.DataSet ThongTinNhapSP(WinForm.SanPhamServiceReference.PhieuNhap pn) {
-            return base.Channel.ThongTinNhapSP(pn);
-        }
-        
-        public System.Threading.Tasks.Task<System.Data.DataSet> ThongTinNhapSPAsync(WinForm.SanPhamServiceReference.PhieuNhap pn) {
-            return base.Channel.ThongTinNhapSPAsync(pn);
-        }
-        
         public System.Data.DataSet ChiTietSanPham(WinForm.SanPhamServiceReference.SanPham sp) {
             return base.Channel.ChiTietSanPham(sp);
         }
         
         public System.Threading.Tasks.Task<System.Data.DataSet> ChiTietSanPhamAsync(WinForm.SanPhamServiceReference.SanPham sp) {
             return base.Channel.ChiTietSanPhamAsync(sp);
+        }
+        
+        public System.Data.DataSet ThongTinNhapSP(WinForm.SanPhamServiceReference.PhieuNhap pn) {
+            return base.Channel.ThongTinNhapSP(pn);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> ThongTinNhapSPAsync(WinForm.SanPhamServiceReference.PhieuNhap pn) {
+            return base.Channel.ThongTinNhapSPAsync(pn);
         }
         
         public void ThemSanPham(WinForm.SanPhamServiceReference.SanPham sp) {
@@ -497,6 +603,126 @@ namespace WinForm.SanPhamServiceReference {
         
         public System.Threading.Tasks.Task XoaSanPhamAsync(WinForm.SanPhamServiceReference.SanPham sp) {
             return base.Channel.XoaSanPhamAsync(sp);
+        }
+        
+        public WinForm.SanPhamServiceReference.SanPham[] Spnew() {
+            return base.Channel.Spnew();
+        }
+        
+        public System.Threading.Tasks.Task<WinForm.SanPhamServiceReference.SanPham[]> SpnewAsync() {
+            return base.Channel.SpnewAsync();
+        }
+        
+        public WinForm.SanPhamServiceReference.SanPham[] Spfea() {
+            return base.Channel.Spfea();
+        }
+        
+        public System.Threading.Tasks.Task<WinForm.SanPhamServiceReference.SanPham[]> SpfeaAsync() {
+            return base.Channel.SpfeaAsync();
+        }
+        
+        public WinForm.SanPhamServiceReference.SanPham[] Sprun() {
+            return base.Channel.Sprun();
+        }
+        
+        public System.Threading.Tasks.Task<WinForm.SanPhamServiceReference.SanPham[]> SprunAsync() {
+            return base.Channel.SprunAsync();
+        }
+        
+        public WinForm.SanPhamServiceReference.SanPham[] SpAcer() {
+            return base.Channel.SpAcer();
+        }
+        
+        public System.Threading.Tasks.Task<WinForm.SanPhamServiceReference.SanPham[]> SpAcerAsync() {
+            return base.Channel.SpAcerAsync();
+        }
+        
+        public WinForm.SanPhamServiceReference.SanPham[] SpSam() {
+            return base.Channel.SpSam();
+        }
+        
+        public System.Threading.Tasks.Task<WinForm.SanPhamServiceReference.SanPham[]> SpSamAsync() {
+            return base.Channel.SpSamAsync();
+        }
+        
+        public WinForm.SanPhamServiceReference.SanPham[] SpHP() {
+            return base.Channel.SpHP();
+        }
+        
+        public System.Threading.Tasks.Task<WinForm.SanPhamServiceReference.SanPham[]> SpHPAsync() {
+            return base.Channel.SpHPAsync();
+        }
+        
+        public WinForm.SanPhamServiceReference.SanPham[] SpDell() {
+            return base.Channel.SpDell();
+        }
+        
+        public System.Threading.Tasks.Task<WinForm.SanPhamServiceReference.SanPham[]> SpDellAsync() {
+            return base.Channel.SpDellAsync();
+        }
+        
+        public WinForm.SanPhamServiceReference.SanPham[] SpApple() {
+            return base.Channel.SpApple();
+        }
+        
+        public System.Threading.Tasks.Task<WinForm.SanPhamServiceReference.SanPham[]> SpAppleAsync() {
+            return base.Channel.SpAppleAsync();
+        }
+        
+        public WinForm.SanPhamServiceReference.SanPham[] Category(int ID) {
+            return base.Channel.Category(ID);
+        }
+        
+        public System.Threading.Tasks.Task<WinForm.SanPhamServiceReference.SanPham[]> CategoryAsync(int ID) {
+            return base.Channel.CategoryAsync(ID);
+        }
+        
+        public WinForm.SanPhamServiceReference.SanPham Detail(int ID) {
+            return base.Channel.Detail(ID);
+        }
+        
+        public System.Threading.Tasks.Task<WinForm.SanPhamServiceReference.SanPham> DetailAsync(int ID) {
+            return base.Channel.DetailAsync(ID);
+        }
+        
+        public WinForm.SanPhamServiceReference.SanPham Searchid(int ID) {
+            return base.Channel.Searchid(ID);
+        }
+        
+        public System.Threading.Tasks.Task<WinForm.SanPhamServiceReference.SanPham> SearchidAsync(int ID) {
+            return base.Channel.SearchidAsync(ID);
+        }
+        
+        public bool Create(WinForm.SanPhamServiceReference.SanPham sp) {
+            return base.Channel.Create(sp);
+        }
+        
+        public System.Threading.Tasks.Task<bool> CreateAsync(WinForm.SanPhamServiceReference.SanPham sp) {
+            return base.Channel.CreateAsync(sp);
+        }
+        
+        public bool Edit(WinForm.SanPhamServiceReference.SanPham sp, int ID) {
+            return base.Channel.Edit(sp, ID);
+        }
+        
+        public System.Threading.Tasks.Task<bool> EditAsync(WinForm.SanPhamServiceReference.SanPham sp, int ID) {
+            return base.Channel.EditAsync(sp, ID);
+        }
+        
+        public bool Delete(int ID) {
+            return base.Channel.Delete(ID);
+        }
+        
+        public System.Threading.Tasks.Task<bool> DeleteAsync(int ID) {
+            return base.Channel.DeleteAsync(ID);
+        }
+        
+        public WinForm.SanPhamServiceReference.SanPham[] listpro() {
+            return base.Channel.listpro();
+        }
+        
+        public System.Threading.Tasks.Task<WinForm.SanPhamServiceReference.SanPham[]> listproAsync() {
+            return base.Channel.listproAsync();
         }
     }
 }

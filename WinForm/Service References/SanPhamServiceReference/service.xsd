@@ -70,17 +70,17 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="ThongTinNhapSP">
+  <xs:element name="ChiTietSanPham">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/WcfUngDungWeb" minOccurs="0" name="pn" nillable="true" type="q8:PhieuNhap" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/WcfUngDungWeb" minOccurs="0" name="sp" nillable="true" type="q8:SanPham" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="ThongTinNhapSPResponse">
+  <xs:element name="ChiTietSanPhamResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="ThongTinNhapSPResult" nillable="true">
+        <xs:element minOccurs="0" name="ChiTietSanPhamResult" nillable="true">
           <xs:complexType>
             <xs:annotation>
               <xs:appinfo>
@@ -96,17 +96,17 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="ChiTietSanPham">
+  <xs:element name="ThongTinNhapSP">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/WcfUngDungWeb" minOccurs="0" name="sp" nillable="true" type="q9:SanPham" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/WcfUngDungWeb" minOccurs="0" name="pn" nillable="true" type="q9:PhieuNhap" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="ChiTietSanPhamResponse">
+  <xs:element name="ThongTinNhapSPResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="ChiTietSanPhamResult" nillable="true">
+        <xs:element minOccurs="0" name="ThongTinNhapSPResult" nillable="true">
           <xs:complexType>
             <xs:annotation>
               <xs:appinfo>
@@ -156,6 +156,199 @@
   <xs:element name="XoaSanPhamResponse">
     <xs:complexType>
       <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Spnew">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SpnewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/WcfUngDungWeb" minOccurs="0" name="SpnewResult" nillable="true" type="q13:ArrayOfSanPham" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Spfea">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SpfeaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/WcfUngDungWeb" minOccurs="0" name="SpfeaResult" nillable="true" type="q14:ArrayOfSanPham" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Sprun">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SprunResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/WcfUngDungWeb" minOccurs="0" name="SprunResult" nillable="true" type="q15:ArrayOfSanPham" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SpAcer">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SpAcerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/WcfUngDungWeb" minOccurs="0" name="SpAcerResult" nillable="true" type="q16:ArrayOfSanPham" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SpSam">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SpSamResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/WcfUngDungWeb" minOccurs="0" name="SpSamResult" nillable="true" type="q17:ArrayOfSanPham" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SpHP">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SpHPResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/WcfUngDungWeb" minOccurs="0" name="SpHPResult" nillable="true" type="q18:ArrayOfSanPham" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SpDell">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SpDellResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/WcfUngDungWeb" minOccurs="0" name="SpDellResult" nillable="true" type="q19:ArrayOfSanPham" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SpApple">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SpAppleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/WcfUngDungWeb" minOccurs="0" name="SpAppleResult" nillable="true" type="q20:ArrayOfSanPham" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Category">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CategoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/WcfUngDungWeb" minOccurs="0" name="CategoryResult" nillable="true" type="q21:ArrayOfSanPham" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Detail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DetailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/WcfUngDungWeb" minOccurs="0" name="DetailResult" nillable="true" type="q22:SanPham" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Searchid">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchidResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/WcfUngDungWeb" minOccurs="0" name="SearchidResult" nillable="true" type="q23:SanPham" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Create">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/WcfUngDungWeb" minOccurs="0" name="sp" nillable="true" type="q24:SanPham" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Edit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/WcfUngDungWeb" minOccurs="0" name="sp" nillable="true" type="q25:SanPham" />
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EditResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Delete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="listpro">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="listproResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/WcfUngDungWeb" minOccurs="0" name="listproResult" nillable="true" type="q26:ArrayOfSanPham" />
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
 </xs:schema>

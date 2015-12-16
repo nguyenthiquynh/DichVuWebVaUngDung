@@ -22,6 +22,7 @@ namespace WinForm
         
         WinForm.PhieuNhapServiceReference1.PhieuNhap pn1 = new WinForm.PhieuNhapServiceReference1.PhieuNhap();
         WinForm.SanPhamServiceReference.PhieuNhap pn = new WinForm.SanPhamServiceReference.PhieuNhap();
+
         CtPhieuNhap ctpn = new CtPhieuNhap();
         PhieuNhapService1Client PhieuNhapClient = new PhieuNhapService1Client();
         CtPhieuNhapService1Client CtPhieuNhapClient = new CtPhieuNhapService1Client();
@@ -48,12 +49,12 @@ namespace WinForm
         }
 
         float tongtien;
-        public void Ds_PhieuNhap()   //R
+        public void Ds_PhieuNhap()     //Hiển thị danh sách phiếu nhập 
         {
             dgvPhieuNhap.AutoGenerateColumns = false;
             dgvPhieuNhap.DataSource = PhieuNhapClient.HienThiPhieuNhap();
         }
-        public void Ds_CtPhieuNhap(string maphieunhap)  //R
+        public void Ds_CtPhieuNhap(string maphieunhap)  // Hiển thị chi tiết phiếu nhập theo phiếu nhập đã chọn
         {
             dgvChiTietPhieuNhap.AutoGenerateColumns = false;
             ctpn.MaPhieuNhap = maphieunhap;
@@ -61,7 +62,7 @@ namespace WinForm
         }
        
 
-        private void btnTimKiem_Click(object sender, EventArgs e)  //R
+        private void btnTimKiem_Click(object sender, EventArgs e)  // Hàm xử lý button TimKiem ( tab Phiếu Nhập )
         {
             try
             {
@@ -93,7 +94,15 @@ namespace WinForm
             }
         }
 
-        private void cbTimKiem_SelectedIndexChanged(object sender, EventArgs e)  //R
+        /// <summary>
+        /// Combobox tìm kiếm :
+        /// - Tìm theo Mã phiếu nhập 
+        /// - Tìm theo Nhà sản xuất
+        /// - Tìm theo Ngày nhập
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void cbTimKiem_SelectedIndexChanged(object sender, EventArgs e)  // Hàm xử lý combobox TimKiem (tab Phiếu Nhập)
         {
             if (cbTimKiem.Text == "Mã phiếu nhập")
             {
@@ -115,13 +124,19 @@ namespace WinForm
             }
         }
 
-        private void btnCapNhatLai_Click(object sender, EventArgs e) //R
+        private void btnCapNhatLai_Click(object sender, EventArgs e) // Hàm xử lý button Cập nhật lại (tab Phiếu Nhập )
         {
             Ds_PhieuNhap();
         }
 
+        /// <summary>
+        /// Thêm phiếu nhập:
+        /// - Tự phát sinh mã phiếu nhập có dạng :" PN + thoigian " ( thoigian = ngay/thang/nam hiện tại)
+        /// - Ngày nhập = ngày hiện tại
+        /// -
+        /// </summary>
         public string thoigian;
-        private void btnThem_Click(object sender, EventArgs e) //R
+        private void btnThem_Click(object sender, EventArgs e) // Hàm xử lý button thêm phiếu nhập
         {
             thoigian = DateTime.Now.ToString("yyyyMMddhhmmss");
             cbNhaSX.Enabled = true;
@@ -131,7 +146,7 @@ namespace WinForm
             btnThem.Enabled = false;
         }
 
-        private void btnLuu_Click(object sender, EventArgs e)  //R
+        private void btnLuu_Click(object sender, EventArgs e)  // Hàm xử lý button Lưu phiếu nhập (tab Phiếu Nhập)
         {
             try
             {
@@ -257,8 +272,8 @@ namespace WinForm
             DataTable dt = SanPhamClient.ThongTinNhapSP(pn).Tables[0];
             dgvBangNhap.DataSource = dt;
         }
-
-        private void dgvPhieuNhap_CellContentClick(object sender, DataGridViewCellEventArgs e) //R
+        // Click chọn phiếu nhập, tab chi tiết sẽ hiển thị chi tiết của phiếu nhập tương ứng
+        private void dgvPhieuNhap_CellContentClick(object sender, DataGridViewCellEventArgs e) 
         {
             string maphieunhap = dgvPhieuNhap.CurrentRow.Cells[1].Value.ToString();
             int nhasx_id = int.Parse(dgvPhieuNhap.CurrentRow.Cells[2].Value.ToString());

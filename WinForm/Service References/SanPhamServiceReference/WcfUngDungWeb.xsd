@@ -17,6 +17,7 @@
       <xs:element minOccurs="0" name="NhaSX_ID" type="xs:int" />
       <xs:element minOccurs="0" name="RAM" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="SP_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="TenNhaSX" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="TenSP" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>

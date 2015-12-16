@@ -29,6 +29,8 @@ namespace WcfUngDungWeb
         [OperationContract]
         DataSet ChiTietSanPham(SanPham sp);
         [OperationContract]
+         DataSet ThongTinNhapSP(PhieuNhap pn);
+        [OperationContract]
         void ThemSanPham(SanPham sp);
         [OperationContract]
         void SuaSanPham(SanPham sp);

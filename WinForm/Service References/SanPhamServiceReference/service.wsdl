@@ -38,17 +38,17 @@
   <wsdl:message name="ISanPhamService1_TimKiemSanPham_OutputMessage">
     <wsdl:part name="parameters" element="tns:TimKiemSanPhamResponse" />
   </wsdl:message>
-  <wsdl:message name="ISanPhamService1_ThongTinNhapSP_InputMessage">
-    <wsdl:part name="parameters" element="tns:ThongTinNhapSP" />
-  </wsdl:message>
-  <wsdl:message name="ISanPhamService1_ThongTinNhapSP_OutputMessage">
-    <wsdl:part name="parameters" element="tns:ThongTinNhapSPResponse" />
-  </wsdl:message>
   <wsdl:message name="ISanPhamService1_ChiTietSanPham_InputMessage">
     <wsdl:part name="parameters" element="tns:ChiTietSanPham" />
   </wsdl:message>
   <wsdl:message name="ISanPhamService1_ChiTietSanPham_OutputMessage">
     <wsdl:part name="parameters" element="tns:ChiTietSanPhamResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISanPhamService1_ThongTinNhapSP_InputMessage">
+    <wsdl:part name="parameters" element="tns:ThongTinNhapSP" />
+  </wsdl:message>
+  <wsdl:message name="ISanPhamService1_ThongTinNhapSP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ThongTinNhapSPResponse" />
   </wsdl:message>
   <wsdl:message name="ISanPhamService1_ThemSanPham_InputMessage">
     <wsdl:part name="parameters" element="tns:ThemSanPham" />
@@ -67,6 +67,96 @@
   </wsdl:message>
   <wsdl:message name="ISanPhamService1_XoaSanPham_OutputMessage">
     <wsdl:part name="parameters" element="tns:XoaSanPhamResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISanPhamService1_Spnew_InputMessage">
+    <wsdl:part name="parameters" element="tns:Spnew" />
+  </wsdl:message>
+  <wsdl:message name="ISanPhamService1_Spnew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SpnewResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISanPhamService1_Spfea_InputMessage">
+    <wsdl:part name="parameters" element="tns:Spfea" />
+  </wsdl:message>
+  <wsdl:message name="ISanPhamService1_Spfea_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SpfeaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISanPhamService1_Sprun_InputMessage">
+    <wsdl:part name="parameters" element="tns:Sprun" />
+  </wsdl:message>
+  <wsdl:message name="ISanPhamService1_Sprun_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SprunResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISanPhamService1_SpAcer_InputMessage">
+    <wsdl:part name="parameters" element="tns:SpAcer" />
+  </wsdl:message>
+  <wsdl:message name="ISanPhamService1_SpAcer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SpAcerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISanPhamService1_SpSam_InputMessage">
+    <wsdl:part name="parameters" element="tns:SpSam" />
+  </wsdl:message>
+  <wsdl:message name="ISanPhamService1_SpSam_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SpSamResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISanPhamService1_SpHP_InputMessage">
+    <wsdl:part name="parameters" element="tns:SpHP" />
+  </wsdl:message>
+  <wsdl:message name="ISanPhamService1_SpHP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SpHPResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISanPhamService1_SpDell_InputMessage">
+    <wsdl:part name="parameters" element="tns:SpDell" />
+  </wsdl:message>
+  <wsdl:message name="ISanPhamService1_SpDell_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SpDellResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISanPhamService1_SpApple_InputMessage">
+    <wsdl:part name="parameters" element="tns:SpApple" />
+  </wsdl:message>
+  <wsdl:message name="ISanPhamService1_SpApple_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SpAppleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISanPhamService1_Category_InputMessage">
+    <wsdl:part name="parameters" element="tns:Category" />
+  </wsdl:message>
+  <wsdl:message name="ISanPhamService1_Category_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISanPhamService1_Detail_InputMessage">
+    <wsdl:part name="parameters" element="tns:Detail" />
+  </wsdl:message>
+  <wsdl:message name="ISanPhamService1_Detail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISanPhamService1_Searchid_InputMessage">
+    <wsdl:part name="parameters" element="tns:Searchid" />
+  </wsdl:message>
+  <wsdl:message name="ISanPhamService1_Searchid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchidResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISanPhamService1_Create_InputMessage">
+    <wsdl:part name="parameters" element="tns:Create" />
+  </wsdl:message>
+  <wsdl:message name="ISanPhamService1_Create_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISanPhamService1_Edit_InputMessage">
+    <wsdl:part name="parameters" element="tns:Edit" />
+  </wsdl:message>
+  <wsdl:message name="ISanPhamService1_Edit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISanPhamService1_Delete_InputMessage">
+    <wsdl:part name="parameters" element="tns:Delete" />
+  </wsdl:message>
+  <wsdl:message name="ISanPhamService1_Delete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISanPhamService1_listpro_InputMessage">
+    <wsdl:part name="parameters" element="tns:listpro" />
+  </wsdl:message>
+  <wsdl:message name="ISanPhamService1_listpro_OutputMessage">
+    <wsdl:part name="parameters" element="tns:listproResponse" />
   </wsdl:message>
   <wsdl:portType name="ISanPhamService1">
     <wsdl:operation name="HienThiSanPhamFull">
@@ -89,13 +179,13 @@
       <wsdl:input wsaw:Action="http://tempuri.org/ISanPhamService1/TimKiemSanPham" message="tns:ISanPhamService1_TimKiemSanPham_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ISanPhamService1/TimKiemSanPhamResponse" message="tns:ISanPhamService1_TimKiemSanPham_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="ThongTinNhapSP">
-      <wsdl:input wsaw:Action="http://tempuri.org/ISanPhamService1/ThongTinNhapSP" message="tns:ISanPhamService1_ThongTinNhapSP_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/ISanPhamService1/ThongTinNhapSPResponse" message="tns:ISanPhamService1_ThongTinNhapSP_OutputMessage" />
-    </wsdl:operation>
     <wsdl:operation name="ChiTietSanPham">
       <wsdl:input wsaw:Action="http://tempuri.org/ISanPhamService1/ChiTietSanPham" message="tns:ISanPhamService1_ChiTietSanPham_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ISanPhamService1/ChiTietSanPhamResponse" message="tns:ISanPhamService1_ChiTietSanPham_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ThongTinNhapSP">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISanPhamService1/ThongTinNhapSP" message="tns:ISanPhamService1_ThongTinNhapSP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISanPhamService1/ThongTinNhapSPResponse" message="tns:ISanPhamService1_ThongTinNhapSP_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="ThemSanPham">
       <wsdl:input wsaw:Action="http://tempuri.org/ISanPhamService1/ThemSanPham" message="tns:ISanPhamService1_ThemSanPham_InputMessage" />
@@ -108,6 +198,66 @@
     <wsdl:operation name="XoaSanPham">
       <wsdl:input wsaw:Action="http://tempuri.org/ISanPhamService1/XoaSanPham" message="tns:ISanPhamService1_XoaSanPham_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ISanPhamService1/XoaSanPhamResponse" message="tns:ISanPhamService1_XoaSanPham_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Spnew">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISanPhamService1/Spnew" message="tns:ISanPhamService1_Spnew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISanPhamService1/SpnewResponse" message="tns:ISanPhamService1_Spnew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Spfea">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISanPhamService1/Spfea" message="tns:ISanPhamService1_Spfea_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISanPhamService1/SpfeaResponse" message="tns:ISanPhamService1_Spfea_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Sprun">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISanPhamService1/Sprun" message="tns:ISanPhamService1_Sprun_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISanPhamService1/SprunResponse" message="tns:ISanPhamService1_Sprun_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SpAcer">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISanPhamService1/SpAcer" message="tns:ISanPhamService1_SpAcer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISanPhamService1/SpAcerResponse" message="tns:ISanPhamService1_SpAcer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SpSam">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISanPhamService1/SpSam" message="tns:ISanPhamService1_SpSam_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISanPhamService1/SpSamResponse" message="tns:ISanPhamService1_SpSam_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SpHP">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISanPhamService1/SpHP" message="tns:ISanPhamService1_SpHP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISanPhamService1/SpHPResponse" message="tns:ISanPhamService1_SpHP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SpDell">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISanPhamService1/SpDell" message="tns:ISanPhamService1_SpDell_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISanPhamService1/SpDellResponse" message="tns:ISanPhamService1_SpDell_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SpApple">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISanPhamService1/SpApple" message="tns:ISanPhamService1_SpApple_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISanPhamService1/SpAppleResponse" message="tns:ISanPhamService1_SpApple_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Category">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISanPhamService1/Category" message="tns:ISanPhamService1_Category_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISanPhamService1/CategoryResponse" message="tns:ISanPhamService1_Category_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Detail">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISanPhamService1/Detail" message="tns:ISanPhamService1_Detail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISanPhamService1/DetailResponse" message="tns:ISanPhamService1_Detail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Searchid">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISanPhamService1/Searchid" message="tns:ISanPhamService1_Searchid_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISanPhamService1/SearchidResponse" message="tns:ISanPhamService1_Searchid_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Create">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISanPhamService1/Create" message="tns:ISanPhamService1_Create_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISanPhamService1/CreateResponse" message="tns:ISanPhamService1_Create_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Edit">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISanPhamService1/Edit" message="tns:ISanPhamService1_Edit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISanPhamService1/EditResponse" message="tns:ISanPhamService1_Edit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Delete">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISanPhamService1/Delete" message="tns:ISanPhamService1_Delete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISanPhamService1/DeleteResponse" message="tns:ISanPhamService1_Delete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="listpro">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISanPhamService1/listpro" message="tns:ISanPhamService1_listpro_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISanPhamService1/listproResponse" message="tns:ISanPhamService1_listpro_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ISanPhamService1" type="tns:ISanPhamService1">
@@ -157,8 +307,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="ThongTinNhapSP">
-      <soap:operation soapAction="http://tempuri.org/ISanPhamService1/ThongTinNhapSP" style="document" />
+    <wsdl:operation name="ChiTietSanPham">
+      <soap:operation soapAction="http://tempuri.org/ISanPhamService1/ChiTietSanPham" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -166,8 +316,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="ChiTietSanPham">
-      <soap:operation soapAction="http://tempuri.org/ISanPhamService1/ChiTietSanPham" style="document" />
+    <wsdl:operation name="ThongTinNhapSP">
+      <soap:operation soapAction="http://tempuri.org/ISanPhamService1/ThongTinNhapSP" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -195,6 +345,141 @@
     </wsdl:operation>
     <wsdl:operation name="XoaSanPham">
       <soap:operation soapAction="http://tempuri.org/ISanPhamService1/XoaSanPham" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Spnew">
+      <soap:operation soapAction="http://tempuri.org/ISanPhamService1/Spnew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Spfea">
+      <soap:operation soapAction="http://tempuri.org/ISanPhamService1/Spfea" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sprun">
+      <soap:operation soapAction="http://tempuri.org/ISanPhamService1/Sprun" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SpAcer">
+      <soap:operation soapAction="http://tempuri.org/ISanPhamService1/SpAcer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SpSam">
+      <soap:operation soapAction="http://tempuri.org/ISanPhamService1/SpSam" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SpHP">
+      <soap:operation soapAction="http://tempuri.org/ISanPhamService1/SpHP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SpDell">
+      <soap:operation soapAction="http://tempuri.org/ISanPhamService1/SpDell" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SpApple">
+      <soap:operation soapAction="http://tempuri.org/ISanPhamService1/SpApple" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Category">
+      <soap:operation soapAction="http://tempuri.org/ISanPhamService1/Category" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Detail">
+      <soap:operation soapAction="http://tempuri.org/ISanPhamService1/Detail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Searchid">
+      <soap:operation soapAction="http://tempuri.org/ISanPhamService1/Searchid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Create">
+      <soap:operation soapAction="http://tempuri.org/ISanPhamService1/Create" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Edit">
+      <soap:operation soapAction="http://tempuri.org/ISanPhamService1/Edit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Delete">
+      <soap:operation soapAction="http://tempuri.org/ISanPhamService1/Delete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listpro">
+      <soap:operation soapAction="http://tempuri.org/ISanPhamService1/listpro" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

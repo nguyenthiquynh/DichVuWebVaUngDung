@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d4d06caf-0b9f-4bab-a301-08922562e723" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4726d090-bd28-4992-aad6-fda90faa611d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,11 +22,11 @@
     <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/WcfUngDungWeb/SanPhamService1/mex" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="5663bfa6-727a-4f27-9dac-08cc85ce8fa6" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WcfUngDungWeb/SanPhamService1/mex" />
-    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="4b004f1d-161f-444f-9c0f-6a591125426d" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WcfUngDungWeb/SanPhamService1/mex" />
-    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="398e1bfe-deef-40e0-9977-1a8fc273eddc" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WcfUngDungWeb/SanPhamService1/mex" />
-    <MetadataFile FileName="WcfUngDungWeb.xsd" MetadataType="Schema" ID="a6e395fe-fc0c-4ae5-a554-f670c06e753b" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WcfUngDungWeb/SanPhamService1/mex" />
-    <MetadataFile FileName="service2.xsd" MetadataType="Schema" ID="0404399a-9b78-4d2d-83bf-b53ca9671450" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WcfUngDungWeb/SanPhamService1/mex" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="1ccd8e03-e22f-402c-b9fc-a28c7b23af48" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WcfUngDungWeb/SanPhamService1/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="59f3dd2c-ae46-4ec1-921d-eb99f3ff9b3e" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WcfUngDungWeb/SanPhamService1/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="4984ce2b-fdb7-4f5d-8b09-8e772148ae55" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WcfUngDungWeb/SanPhamService1/mex" />
+    <MetadataFile FileName="WcfUngDungWeb.xsd" MetadataType="Schema" ID="a51dd622-e9a7-4045-ae68-14611799156c" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WcfUngDungWeb/SanPhamService1/mex" />
+    <MetadataFile FileName="service2.xsd" MetadataType="Schema" ID="ac069222-1881-495b-8628-6db68c7ba4cf" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WcfUngDungWeb/SanPhamService1/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
